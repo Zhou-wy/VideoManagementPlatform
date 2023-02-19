@@ -7,9 +7,9 @@
 
 #include <QWidget>
 #include <QButtonGroup>
-#include "iconhelper/iconhelper.h"
-#include "cpumonitor/cpumonitor.h"
-#include "videopanel/videopanel.h"
+#include "iconHelper/iconhelper.h"
+#include "cpuMonitor/cpumonitor.h"
+#include "videoPanel/videopanel.h"
 //#include "../ffmpeg4.4.3/ffmpeg.h"
 
 QT_BEGIN_NAMESPACE

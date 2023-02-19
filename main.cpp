@@ -10,7 +10,6 @@
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
     SeViManPlat SVMP;
-//    std::cout << avformat_configuration() << std::endl; // 打印libavformat构建时配置信息。
     SVMP.setWindowTitle("安防视频监控管理平台");
     SVMP.show();
     return QApplication::exec();

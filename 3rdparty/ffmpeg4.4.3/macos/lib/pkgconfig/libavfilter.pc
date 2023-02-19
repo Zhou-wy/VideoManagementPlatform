@@ -1,0 +1,14 @@
+prefix=/opt/homebrew/Cellar/ffmpeg@4/4.4.3_2
+exec_prefix=${prefix}
+libdir=/opt/homebrew/Cellar/ffmpeg@4/4.4.3_2/lib
+includedir=/opt/homebrew/Cellar/ffmpeg@4/4.4.3_2/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 7.110.100
+Requires: 
+Requires.private: libswscale >= 5.9.100, libpostproc >= 55.9.100, libavformat >= 58.76.100, libavcodec >= 58.134.100, libswresample >= 3.9.100, libavresample >= 4.0.0, libavutil >= 56.70.100
+Conflicts:
+Libs: -L${libdir}  -lavfilter 
+Libs.private: -framework OpenGL -framework OpenGL -lm -L/opt/homebrew/Cellar/libsamplerate/0.2.2/lib -L/opt/homebrew/Cellar/rubberband/3.1.2/lib -lrubberband -framework Accelerate -lsamplerate -lstdc++ -L/opt/homebrew/Cellar/libvmaf/2.3.1/lib -lvmaf -pthread -L/opt/homebrew/Cellar/tesseract/5.3.0_1/lib -ltesseract -lcurl -L/opt/homebrew/Cellar/libass/0.17.0/lib -lass -L/opt/homebrew/Cellar/libvidstab/1.1.0/lib -lvidstab -lm -L/opt/homebrew/Cellar/zeromq/4.3.4/lib -lzmq -L/opt/homebrew/Cellar/zimg/3.0.4/lib -lzimg -framework CoreImage -framework AppKit -L/opt/homebrew/opt/freetype/lib -L/opt/homebrew/Cellar/fontconfig/2.14.1/lib -lfontconfig -lfreetype -L/opt/homebrew/opt/freetype/lib -lfreetype
+Cflags: -I${includedir}

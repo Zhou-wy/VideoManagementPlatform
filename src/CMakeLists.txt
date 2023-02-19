@@ -10,9 +10,9 @@ find_package(Qt5 COMPONENTS
         Widgets
         REQUIRED)
 
-add_subdirectory(cpumonitor)
-add_subdirectory(iconhelper)
-add_subdirectory(videopanel)
+add_subdirectory(cpuMonitor)
+add_subdirectory(iconHelper)
+add_subdirectory(videoPanel)
 
 set(EXTRA_LIBS ${EXTRA_LIBS} CpuMonitor IconHelper VideoPanel)
 

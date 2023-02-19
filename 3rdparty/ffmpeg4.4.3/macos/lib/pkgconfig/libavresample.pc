@@ -1,0 +1,14 @@
+prefix=/opt/homebrew/Cellar/ffmpeg@4/4.4.3_2
+exec_prefix=${prefix}
+libdir=/opt/homebrew/Cellar/ffmpeg@4/4.4.3_2/lib
+includedir=/opt/homebrew/Cellar/ffmpeg@4/4.4.3_2/include
+
+Name: libavresample
+Description: Libav audio resampling library
+Version: 4.0.0
+Requires: 
+Requires.private: libavutil >= 56.70.100
+Conflicts:
+Libs: -L${libdir}  -lavresample 
+Libs.private: -lm
+Cflags: -I${includedir}

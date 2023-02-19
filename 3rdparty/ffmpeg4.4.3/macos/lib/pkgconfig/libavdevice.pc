@@ -1,0 +1,14 @@
+prefix=/opt/homebrew/Cellar/ffmpeg@4/4.4.3_2
+exec_prefix=${prefix}
+libdir=/opt/homebrew/Cellar/ffmpeg@4/4.4.3_2/lib
+includedir=/opt/homebrew/Cellar/ffmpeg@4/4.4.3_2/include
+
+Name: libavdevice
+Description: FFmpeg device handling library
+Version: 58.13.100
+Requires: 
+Requires.private: libavfilter >= 7.110.100, libswscale >= 5.9.100, libpostproc >= 55.9.100, libavformat >= 58.76.100, libavcodec >= 58.134.100, libswresample >= 3.9.100, libavresample >= 4.0.0, libavutil >= 56.70.100
+Conflicts:
+Libs: -L${libdir}  -lavdevice 
+Libs.private: -framework Foundation -framework AudioToolbox -framework CoreAudio -lm -framework AVFoundation -framework CoreVideo -framework CoreMedia -framework CoreGraphics -L/opt/homebrew/Cellar/libxcb/1.15/lib -lxcb -L/opt/homebrew/Cellar/libxcb/1.15/lib -lxcb-shm -L/opt/homebrew/Cellar/libxcb/1.15/lib -lxcb-shape -L/opt/homebrew/Cellar/libxcb/1.15/lib -lxcb-xfixes -framework AudioToolbox -pthread -L/opt/homebrew/lib -lSDL2
+Cflags: -I${includedir}
