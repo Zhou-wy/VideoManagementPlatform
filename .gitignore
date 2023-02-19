@@ -1,2 +1,4 @@
 0build-debug/
 bin/
+.idea
+.DS_Store
