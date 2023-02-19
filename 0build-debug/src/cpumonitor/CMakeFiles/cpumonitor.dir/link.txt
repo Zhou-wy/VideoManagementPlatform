@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../lib/libCpuMonitor.a CMakeFiles/CpuMonitor.dir/CpuMonitor_autogen/mocs_compilation.cpp.o CMakeFiles/CpuMonitor.dir/jqcpumonitor.cpp.o
+/usr/bin/ranlib ../../../lib/libCpuMonitor.a
