@@ -740,6 +740,7 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
       </layout>
      </widget>
      <widget class="QWidget" name="page_2"/>
+     <widget class="QWidget" name="page_3"/>
     </widget>
    </item>
   </layout>

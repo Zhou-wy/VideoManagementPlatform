@@ -13,8 +13,9 @@ find_package(Qt5 COMPONENTS
 add_subdirectory(cpuMonitor)
 add_subdirectory(iconHelper)
 add_subdirectory(videoPanel)
+add_subdirectory(playFFmpeg)
 
-set(EXTRA_LIBS ${EXTRA_LIBS} CpuMonitor IconHelper VideoPanel)
+set(EXTRA_LIBS ${EXTRA_LIBS} CpuMonitor IconHelper VideoPanel PlayFFmpeg)
 
 qt_add_resources(resource.qrc)
 add_library(${PROJECT_NAME} sevimanplat.cpp sevimanplat.h sevimanplat.ui)

@@ -10,6 +10,7 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_VERBOSE_MAKEFILEON ON)
 set(CMAKE_CXX_FLAGS   "-g")                     # 调试信息
 set(CMAKE_CXX_FLAGS   "-Wall")                  # 开启所有警告
+set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations")
 
 # 设置输出bin文件路径
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)

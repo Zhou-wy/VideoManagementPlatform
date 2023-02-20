@@ -1,5 +1,4 @@
-﻿#pragma execution_character_set("utf-8")
-
+﻿
 #include "videobox.h"
 #include "qmenu.h"
 #include "qaction.h"

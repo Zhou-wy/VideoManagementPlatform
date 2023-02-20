@@ -2,12 +2,12 @@
 // Created by zhouwy on 2023/2/15.
 //
 // You may need to build the project (run Qt uic code generator) to get "ui_SeViManPlat.h" resolved
-#pragma execution_character_set("utf-8")
 
 #include "sevimanplat.h"
 #include "ui_sevimanplat.h"
 #include <QList>
 #include <QToolButton>
+#include <QsizePolicy>
 
 SeViManPlat::SeViManPlat(QWidget *parent) :
         QWidget(parent), ui(new Ui::SeViManPlat) {
@@ -16,8 +16,7 @@ SeViManPlat::SeViManPlat(QWidget *parent) :
     this->initTimer();
     this->initCameraList();
     this->initCameraLayout();
-//    this->initPlayWidget();
-
+    this->initPlayWidget();
 }
 
 SeViManPlat::~SeViManPlat() {
@@ -163,12 +162,17 @@ void SeViManPlat::loadStyle(const QString &qssFile)
     }
 }
 
-//void SeViManPlat::initPlayWidget() {
-//    playWidget = new FFmpegWidget();
-//    playWidget->setObjectName(QString::fromUtf8("通道1"));
-//    QSizePolicy sizePolicy(QSizePolicy(QSizePolicy::Preferred,QSizePolicy::Expanding));
-//    sizePolicy.setHorizontalStretch(0);
-//    sizePolicy.setVerticalStretch(0);
-//    sizePolicy.setHeightForWidth(playWidget->sizePolicy().hasHeightForWidth());
-//    playWidget->setSizePolicy(sizePolicy);
-//}
+void SeViManPlat::initPlayWidget() {
+    QVBoxLayout* verticalLayout = new QVBoxLayout(videoWidget->getVideoWidgetList().at(1));
+    videoPlayWidget = new FFmpegWidget(videoWidget->getVideoWidgetList().at(1));
+    QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding);
+    sizePolicy.setHorizontalStretch(0);
+    sizePolicy.setVerticalStretch(0);
+    sizePolicy.setHeightForWidth(videoPlayWidget);
+    videoWidget->setSizePolicy(sizePolicy);
+    verticalLayout->addWidget(videoPlayWidget);
+
+    QString urls = "rtsp://admin:admin123@192.168.0.213:554/cam/realmonitor?channel=1&subtype=0";
+    videoPlayWidget->setUrl(urls);
+    videoPlayWidget->open();
+}

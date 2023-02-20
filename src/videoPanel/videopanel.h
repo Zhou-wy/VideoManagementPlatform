@@ -13,18 +13,22 @@
 #include <QWidget>
 
 class QMenu;
+
 class QLabel;
+
 class QGridLayout;
+
 class VideoBox;
 
 #ifdef quc
 class Q_DECL_EXPORT VideoPanel : public QWidget
 #else
+
 class VideoPanel : public QWidget
 #endif
 
 {
-    Q_OBJECT
+Q_OBJECT
 
 public:
     explicit VideoPanel(QWidget *parent = 0);
@@ -45,22 +49,34 @@ private:
     VideoBox *videoBox;         //通道布局类
 
 public:
-    QSize sizeHint()            const;
-    QSize minimumSizeHint()     const;
+    QSize sizeHint() const;
+
+    QSize minimumSizeHint() const;
+
+    QWidgetList getVideoWidgetList();
 
 private slots:
+
     void initControl();
+
     void initForm();
+
     void initMenu();
+
     void full();
+
     void poll();
 
 private slots:
+
     void play_video_all();
+
     void snapshot_video_one();
-    void snapshot_video_all(); 
+
+    void snapshot_video_all();
 
 signals:
+
     //全屏切换信号
     void fullScreen(bool full);
 };

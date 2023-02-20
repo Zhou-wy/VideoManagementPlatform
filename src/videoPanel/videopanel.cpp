@@ -1,4 +1,4 @@
-﻿#pragma execution_character_set("utf-8")
+﻿
 
 #include "videopanel.h"
 #include "videobox.h"
@@ -9,16 +9,14 @@
 #include "qtimer.h"
 #include "qdebug.h"
 
-VideoPanel::VideoPanel(QWidget *parent) : QWidget(parent)
-{
+VideoPanel::VideoPanel(QWidget *parent) : QWidget(parent) {
     this->initControl();
     this->initForm();
     this->initMenu();
     QTimer::singleShot(1000, this, SLOT(play_video_all()));
 }
 
-bool VideoPanel::eventFilter(QObject *watched, QEvent *event)
-{
+bool VideoPanel::eventFilter(QObject *watched, QEvent *event) {
     if (event->type() == QEvent::MouseButtonDblClick) {
         QLabel *widget = (QLabel *) watched;
         if (!videoMax) {
@@ -33,7 +31,7 @@ bool VideoPanel::eventFilter(QObject *watched, QEvent *event)
 
         widget->setFocus();
     } else if (event->type() == QEvent::MouseButtonPress) {
-        QMouseEvent *mouseEvent = (QMouseEvent *)event;
+        QMouseEvent *mouseEvent = (QMouseEvent *) event;
         if (mouseEvent->button() == Qt::RightButton) {
             videoMenu->exec(QCursor::pos());
         }
@@ -42,26 +40,22 @@ bool VideoPanel::eventFilter(QObject *watched, QEvent *event)
     return QWidget::eventFilter(watched, event);
 }
 
-QSize VideoPanel::sizeHint() const
-{
+QSize VideoPanel::sizeHint() const {
     return QSize(800, 600);
 }
 
-QSize VideoPanel::minimumSizeHint() const
-{
+QSize VideoPanel::minimumSizeHint() const {
     return QSize(80, 60);
 }
 
-void VideoPanel::initControl()
-{
+void VideoPanel::initControl() {
     gridLayout = new QGridLayout;
     gridLayout->setSpacing(1);
     gridLayout->setContentsMargins(0, 0, 0, 0);
     this->setLayout(gridLayout);
 }
 
-void VideoPanel::initForm()
-{
+void VideoPanel::initForm() {
     //设置样式表
 #ifndef no_style
     QStringList qss;
@@ -90,8 +84,7 @@ void VideoPanel::initForm()
     }
 }
 
-void VideoPanel::initMenu()
-{
+void VideoPanel::initMenu() {
     videoMenu = new QMenu(this);
 
     //单独关联信号槽
@@ -121,8 +114,7 @@ void VideoPanel::initMenu()
     videoBox->show_video_all();
 }
 
-void VideoPanel::full()
-{
+void VideoPanel::full() {
     if (actionFull->text() == "切换全屏模式") {
         emit fullScreen(true);
         actionFull->setText("切换正常模式");
@@ -134,8 +126,7 @@ void VideoPanel::full()
     //执行全屏处理
 }
 
-void VideoPanel::poll()
-{
+void VideoPanel::poll() {
     if (actionPoll->text() == "启动轮询视频") {
         actionPoll->setText("停止轮询视频");
     } else {
@@ -145,17 +136,18 @@ void VideoPanel::poll()
     //执行轮询处理
 }
 
-void VideoPanel::play_video_all()
-{
-    qDebug()<<"this a test";
+QWidgetList VideoPanel::getVideoWidgetList() {
+    return this->widgets;
 }
 
-void VideoPanel::snapshot_video_one()
-{
+void VideoPanel::play_video_all() {
+//    qDebug()<<"this a test";
+}
+
+void VideoPanel::snapshot_video_one() {
 
 }
 
-void VideoPanel::snapshot_video_all()
-{
+void VideoPanel::snapshot_video_all() {
 
 }

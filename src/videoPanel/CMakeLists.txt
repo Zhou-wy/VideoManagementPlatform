@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
 project(VideoPanel)
 
-file(GLOB_RECURSE CURRENT_HEADERS  *.h *.hpp *.cuh)
+file(GLOB_RECURSE CURRENT_HEADERS  *.h *.hpp)
 file(GLOB CURRENT_SOURCES  *.cpp *.cu)
 
 source_group("Include" FILES ${CURRENT_HEADERS}) 

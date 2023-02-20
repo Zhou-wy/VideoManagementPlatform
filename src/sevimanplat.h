@@ -10,7 +10,7 @@
 #include "iconHelper/iconhelper.h"
 #include "cpuMonitor/cpumonitor.h"
 #include "videoPanel/videopanel.h"
-//#include "../ffmpeg4.4.3/ffmpeg.h"
+#include "playFFmpeg/ffmpeg.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class SeViManPlat; }
@@ -53,7 +53,7 @@ private:
     QTimer *timer;
     VideoPanel *videoWidget;
     QVBoxLayout *vectorLayout;
-//    FFmpegWidget *playWidget;
+    FFmpegWidget *videoPlayWidget;
 };
 
 
