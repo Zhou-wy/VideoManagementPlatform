@@ -163,8 +163,8 @@ void SeViManPlat::loadStyle(const QString &qssFile)
 }
 
 void SeViManPlat::initPlayWidget() {
-    QVBoxLayout* verticalLayout = new QVBoxLayout(videoWidget->getVideoWidgetList().at(1));
-    videoPlayWidget = new FFmpegWidget(videoWidget->getVideoWidgetList().at(1));
+    QVBoxLayout* verticalLayout = new QVBoxLayout(videoWidget->getVideoWidgetList().at(0));
+    videoPlayWidget = new FFmpegWidget(videoWidget->getVideoWidgetList().at(0));
     QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding);
     sizePolicy.setHorizontalStretch(0);
     sizePolicy.setVerticalStretch(0);
