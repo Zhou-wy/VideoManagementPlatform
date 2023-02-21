@@ -44,16 +44,18 @@ public:
 public slots:
 
     void onTimerOut();
-
+private:
+    void destroyAll();
 private:
     Ui::SeViManPlat *ui;
     QList<int> icons;
-    int iconSize;
-    QString CPUMon;
-    QTimer *timer;
-    VideoPanel *videoWidget;
-    QVBoxLayout *vectorLayout;
-    FFmpegWidget *videoPlayWidget;
+    QTimer *cpuMonTimer;
+    VideoPanel *videoWidget; // 视频面板
+    QVBoxLayout *videoWidgetLayout; // 视频面板布局
+
+    QList<FFmpegWidget*> videoPlay; // 视频播放
+    QList<QVBoxLayout*> videoPlayLayout; // 视频播放
+
 };
 
 

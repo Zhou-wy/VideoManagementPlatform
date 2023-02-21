@@ -17,37 +17,37 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
 
+# 判断操作系统
+if(CMAKE_SYSTEM_NAME MATCHES "Linux")
+    message(STATUS "current platform: Linux ")
+
+elseif(CMAKE_SYSTEM_NAME MATCHES "Windows")
+    message(STATUS "current platform: Windows")
+
+elseif(CMAKE_SYSTEM_NAME MATCHES "Darwin")
+    message(STATUS "current platform: MacOS")
+else()
+    message(STATUS "other platform: ${CMAKE_SYSTEM_NAME}")
+endif()
+
+# 导入第三方库
+include(cmake/findQt5.cmake) # Qt5
+include(cmake/findFFmpeg.cmake) # FFmpeg
+
+# 导入QT中的资源文件
 set(QRC_SOURCE_FILES src/resource.qrc src/qss.qrc)
-# find QT5
-set(CMAKE_PREFIX_PATH "/opt/homebrew/Cellar/qt@5/5.15.8_1/lib/cmake/Qt5")
-# Qt5
-find_package(Qt5 COMPONENTS
-        Core
-        Gui
-        Widgets
-        REQUIRED)
 qt5_add_resources(QRC_FILES ${QRC_SOURCE_FILES})
-
-# find ffmpeg
-set(FFMPEG_DIR ${CMAKE_SOURCE_DIR}/3rdparty/ffmpeg4.4.3/macos) # FFmpeg的安装目录，可以通过命令"brew info ffmpeg"获取
-
-include_directories(${FFMPEG_DIR}/include) # 头文件搜索路径
-link_directories(${FFMPEG_DIR}/lib) # 动态链接库或静态链接库的搜索路径
-
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/src)
 
 add_executable(${PROJECT_NAME} main.cpp ${QRC_FILES} )
 
 target_link_libraries(${PROJECT_NAME} vidManPlatUi
-        Qt5::Core
-        Qt5::Gui
-        Qt5::Widgets
+        ${Qt5_Libs} # 定义在 findQt5.cmake 中
         avcodec)
 
 # 单元测试
 add_subdirectory(test)
 enable_testing()
-#add_executable(test_ffmpeg test/testFFmpeg.cpp)
 add_test(NAME test_ffmpeg
         COMMAND ${CMAKE_SOURCE_DIR}/bin/test_ffmpeg)

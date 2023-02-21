@@ -462,7 +462,7 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
      <property name="currentIndex">
       <number>0</number>
      </property>
-     <widget class="QWidget" name="page">
+     <widget class="QWidget" name="page_1">
       <property name="styleSheet">
        <string notr="true"/>
       </property>
@@ -741,6 +741,8 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
      </widget>
      <widget class="QWidget" name="page_2"/>
      <widget class="QWidget" name="page_3"/>
+     <widget class="QWidget" name="page_4"/>
+     <widget class="QWidget" name="page_5"/>
     </widget>
    </item>
   </layout>

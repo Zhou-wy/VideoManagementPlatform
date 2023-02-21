@@ -9,6 +9,7 @@
 #include <QToolButton>
 #include <QsizePolicy>
 
+
 SeViManPlat::SeViManPlat(QWidget *parent) :
         QWidget(parent), ui(new Ui::SeViManPlat) {
     ui->setupUi(this);
@@ -20,6 +21,7 @@ SeViManPlat::SeViManPlat(QWidget *parent) :
 }
 
 SeViManPlat::~SeViManPlat() {
+    destroyAll();
     delete ui;
 }
 
@@ -30,25 +32,24 @@ void SeViManPlat::initTimer() {
     ui->cpuLabel->setText(QString("   CPU ") + JQCPUMonitor::cpuUsagePercentageDisplayString());
 
     //新建一个QTimer对象
-    timer = new QTimer();
+    cpuMonTimer = new QTimer();
     //设置定时器每个多少毫秒发送一个timeout()信号
-    timer->setInterval(1000);
+    cpuMonTimer->setInterval(1000);
     //启动定时器
-    timer->start();
-    connect(timer, SIGNAL(timeout()), this, SLOT(onTimerOut()));
+    cpuMonTimer->start();
+    connect(cpuMonTimer, SIGNAL(timeout()), this, SLOT(onTimerOut()));
 
     this->loadStyle(":/qss/blacksoft.css");
 }
 
 void SeViManPlat::initMenuPbt() {
-    iconSize = 40;
     //图标对应图形字体值
     icons << 0xea07 << 0xea14 << 0xea38 << 0xe608 << 0xe61b;
     //设置获取CPU占用率
     JQCPUMonitor::initialize();
     //设置样式表
     QStringList qss;
-    qss << QString("QWidget#widget_title QAbstractButton{min-height:%1px;max-height:%1px;}").arg(80);
+    qss << QString("QWidget#widget_title QAbstractButton{min-height:%1px;max-height:%1px;}").arg(85);
     this->setStyleSheet(qss.join(""));
     this->initMainBtnGroup();
 }
@@ -70,9 +71,9 @@ void SeViManPlat::initMainBtnGroup() {
     IconHelper::StyleColor styleColor;
     styleColor.defaultBorder = true;
     styleColor.position = "bottom";
-    styleColor.iconSize = 25;
-    styleColor.iconWidth = 25;
-    styleColor.iconHeight = 25;
+    styleColor.iconSize = 35;
+    styleColor.iconWidth = 35;
+    styleColor.iconHeight = 35;
     styleColor.borderWidth = 3;
     styleColor.borderColor = "#A279C5";
     styleColor.setColor("#292929", "#B6D7E3", "#10689A", "#F0F0F0");
@@ -132,13 +133,12 @@ void SeViManPlat::initCameraList() {
 
 void SeViManPlat::initCameraLayout() {
     videoWidget = new VideoPanel(ui->videoPanwidget);
-    vectorLayout = new QVBoxLayout(ui->videoPanwidget);
-    vectorLayout->addWidget(videoWidget);
+    videoWidgetLayout = new QVBoxLayout(ui->videoPanwidget);
+    videoWidgetLayout->addWidget(videoWidget);
 }
 
 
-void SeViManPlat::loadStyle(const QString &qssFile)
-{
+void SeViManPlat::loadStyle(const QString &qssFile) {
     //加载样式表
     QString qss;
     QFile file(qssFile);
@@ -163,16 +163,38 @@ void SeViManPlat::loadStyle(const QString &qssFile)
 }
 
 void SeViManPlat::initPlayWidget() {
-    QVBoxLayout* verticalLayout = new QVBoxLayout(videoWidget->getVideoWidgetList().at(0));
-    videoPlayWidget = new FFmpegWidget(videoWidget->getVideoWidgetList().at(0));
-    QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding);
-    sizePolicy.setHorizontalStretch(0);
-    sizePolicy.setVerticalStretch(0);
-    sizePolicy.setHeightForWidth(videoPlayWidget);
-    videoWidget->setSizePolicy(sizePolicy);
-    verticalLayout->addWidget(videoPlayWidget);
+    for (int i = 0; i < 64; i++) {
+        videoPlay[i] = new FFmpegWidget(videoWidget->getVideoWidgetList().at(i));
+        videoPlayLayout[i] = new QVBoxLayout(videoWidget->getVideoWidgetList().at(i));
+        videoPlayLayout[i]->addWidget(videoPlay[i]);
+    }
+//    QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding);
+//    sizePolicy.setHorizontalStretch(0);
+//    sizePolicy.setVerticalStretch(0);
+//    sizePolicy.setHeightForWidth(videoPlayWidget);
+//    videoWidget->setSizePolicy(sizePolicy);
+
 
     QString urls = "rtsp://admin:admin123@192.168.0.213:554/cam/realmonitor?channel=1&subtype=0";
-    videoPlayWidget->setUrl(urls);
-    videoPlayWidget->open();
+    videoPlay[0]->setUrl(urls);
+    videoPlay[0]->open();
+
+    videoPlay[1]->setUrl(urls);
+    videoPlay[1]->open();
+
+    videoPlay[2]->setUrl(urls);
+    videoPlay[2]->open();
+
+    videoPlay[3]->setUrl(urls);
+    videoPlay[3]->open();
 }
+
+void SeViManPlat::destroyAll() {
+    delete cpuMonTimer;
+    delete videoWidget;
+    delete videoWidgetLayout;
+    qDeleteAll(videoPlay);
+    qDeleteAll(videoPlayLayout);
+}
+
+
