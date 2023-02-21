@@ -1,0 +1,58 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"src/playFFmpeg/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"id" : "PlayFFmpeg_autogen::@2ffd910cc6a6ab224bf9",
+	"isGeneratorProvided" : true,
+	"name" : "PlayFFmpeg_autogen",
+	"paths" : 
+	{
+		"build" : "src/playFFmpeg",
+		"source" : "src/playFFmpeg"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "0build-linux/src/playFFmpeg/CMakeFiles/PlayFFmpeg_autogen",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "0build-linux/src/playFFmpeg/CMakeFiles/PlayFFmpeg_autogen.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

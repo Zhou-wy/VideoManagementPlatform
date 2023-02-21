@@ -4,7 +4,6 @@
 //
 // Created by zhouwy on 2023/2/19.
 //
-#pragma execution_character_set("utf-8")
 #include <iostream>
 #include "../src/playFFmpeg/ffmpeg.h"
 

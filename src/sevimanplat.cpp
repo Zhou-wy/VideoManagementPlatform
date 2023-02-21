@@ -7,7 +7,7 @@
 #include "ui_sevimanplat.h"
 #include <QList>
 #include <QToolButton>
-#include <QsizePolicy>
+//#include <QsizePolicy>
 
 
 SeViManPlat::SeViManPlat(QWidget *parent) :
@@ -18,6 +18,8 @@ SeViManPlat::SeViManPlat(QWidget *parent) :
     this->initCameraList();
     this->initCameraLayout();
     this->initPlayWidget();
+
+    connect(ui->addVideoDevice, SIGNAL(clicked(bool)), this, SLOT(addVideoDevice()));
 }
 
 SeViManPlat::~SeViManPlat() {
@@ -49,7 +51,7 @@ void SeViManPlat::initMenuPbt() {
     JQCPUMonitor::initialize();
     //设置样式表
     QStringList qss;
-    qss << QString("QWidget#widget_title QAbstractButton{min-height:%1px;max-height:%1px;}").arg(85);
+    qss << QString("QWidget#widget_title QAbstractButton{min-height:%1px;max-height:%1px;}").arg(70);
     this->setStyleSheet(qss.join(""));
     this->initMainBtnGroup();
 }
@@ -163,30 +165,29 @@ void SeViManPlat::loadStyle(const QString &qssFile) {
 }
 
 void SeViManPlat::initPlayWidget() {
-    for (int i = 0; i < 64; i++) {
-        videoPlay[i] = new FFmpegWidget(videoWidget->getVideoWidgetList().at(i));
-        videoPlayLayout[i] = new QVBoxLayout(videoWidget->getVideoWidgetList().at(i));
-        videoPlayLayout[i]->addWidget(videoPlay[i]);
-    }
+//    for (int i = 0; i < 64; i++) {
+//        videoPlay[i] = new FFmpegWidget(videoWidget->getVideoWidgetList().at(i));
+//        videoPlayLayout[i] = new QVBoxLayout(videoWidget->getVideoWidgetList().at(i));
+//        videoPlayLayout[i]->addWidget(videoPlay[i]);
+//    }
 //    QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding);
 //    sizePolicy.setHorizontalStretch(0);
 //    sizePolicy.setVerticalStretch(0);
 //    sizePolicy.setHeightForWidth(videoPlayWidget);
 //    videoWidget->setSizePolicy(sizePolicy);
 
-
-    QString urls = "rtsp://admin:admin123@192.168.0.213:554/cam/realmonitor?channel=1&subtype=0";
-    videoPlay[0]->setUrl(urls);
-    videoPlay[0]->open();
-
-    videoPlay[1]->setUrl(urls);
-    videoPlay[1]->open();
-
-    videoPlay[2]->setUrl(urls);
-    videoPlay[2]->open();
-
-    videoPlay[3]->setUrl(urls);
-    videoPlay[3]->open();
+//    QString urls = "rtsp://admin:admin123@192.168.0.213:554/cam/realmonitor?channel=1&subtype=0";
+//    FFmpegWidget* newVideo_1 = new FFmpegWidget(videoWidget->getVideoWidgetList().at(0));
+//    QVBoxLayout* videoPlayLayout_1 = new QVBoxLayout(videoWidget->getVideoWidgetList().at(0));
+//    videoPlayLayout_1->addWidget(newVideo_1);
+//    newVideo_1->setUrl(urls);
+//    newVideo_1->open();
+//
+//    FFmpegWidget* newVideo_2 = new FFmpegWidget(videoWidget->getVideoWidgetList().at(1));
+//    QVBoxLayout* videoPlayLayout_2 = new QVBoxLayout(videoWidget->getVideoWidgetList().at(1));
+//    videoPlayLayout_2->addWidget(newVideo_2);
+//    newVideo_2->setUrl(urls);
+//    newVideo_2->open();
 }
 
 void SeViManPlat::destroyAll() {
@@ -196,5 +197,12 @@ void SeViManPlat::destroyAll() {
     qDeleteAll(videoPlay);
     qDeleteAll(videoPlayLayout);
 }
+
+void SeViManPlat::addVideoDevice() {
+
+    this->addVideoTool = new addVideo;
+    this->addVideoTool->show();
+}
+
 
 

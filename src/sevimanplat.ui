@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1342</width>
-    <height>924</height>
+    <width>1177</width>
+    <height>910</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Songti SC</family>
+    <pointsize>18</pointsize>
+   </font>
   </property>
   <property name="tabletTracking">
    <bool>false</bool>
@@ -466,7 +472,7 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
       <property name="styleSheet">
        <string notr="true"/>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="4,1">
+      <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,1">
        <property name="spacing">
         <number>0</number>
        </property>
@@ -486,7 +492,7 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
         <widget class="QWidget" name="videoPanwidget" native="true">
          <property name="minimumSize">
           <size>
-           <width>800</width>
+           <width>850</width>
            <height>800</height>
           </size>
          </property>
@@ -500,13 +506,25 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
        </item>
        <item>
         <widget class="QWidget" name="widget_2" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>270</width>
+           <height>810</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>270</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <family>Songti SC</family>
            <pointsize>18</pointsize>
           </font>
          </property>
-         <layout class="QVBoxLayout" name="verticalLayout_5">
+         <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,10,10">
           <property name="spacing">
            <number>0</number>
           </property>
@@ -522,6 +540,40 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
           <property name="bottomMargin">
            <number>0</number>
           </property>
+          <item>
+           <widget class="QWidget" name="widget_3" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="addVideoDevice">
+               <property name="font">
+                <font>
+                 <family>Songti SC</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>新增摄像头</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
           <item alignment="Qt::AlignHCenter">
            <widget class="QTreeWidget" name="camDeviceList">
             <property name="minimumSize">
@@ -550,6 +602,9 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
             </property>
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoExpandDelay">
+             <number>1</number>
             </property>
             <attribute name="headerVisible">
              <bool>true</bool>
@@ -666,33 +721,6 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
               </property>
              </item>
             </item>
-            <item>
-             <property name="text">
-              <string>网络视频流</string>
-             </property>
-             <property name="font">
-              <font>
-               <family>Songti SC</family>
-               <pointsize>16</pointsize>
-              </font>
-             </property>
-             <property name="icon">
-              <iconset resource="resource.qrc">
-               <normaloff>:/qss/icon/video_close.png</normaloff>
-               <normalon>:/qss/icon/video_open.png</normalon>:/qss/icon/video_close.png</iconset>
-             </property>
-             <item>
-              <property name="text">
-               <string>示例视频流</string>
-              </property>
-              <property name="font">
-               <font>
-                <family>Songti SC</family>
-                <pointsize>14</pointsize>
-               </font>
-              </property>
-             </item>
-            </item>
            </widget>
           </item>
           <item alignment="Qt::AlignHCenter">
@@ -702,6 +730,9 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
               <family>Songti SC</family>
               <pointsize>18</pointsize>
              </font>
+            </property>
+            <property name="autoExpandDelay">
+             <number>1</number>
             </property>
             <attribute name="headerVisible">
              <bool>true</bool>
@@ -713,7 +744,7 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
              <number>1</number>
             </attribute>
             <attribute name="headerDefaultSectionSize">
-             <number>200</number>
+             <number>100</number>
             </attribute>
             <attribute name="headerHighlightSections">
              <bool>false</bool>

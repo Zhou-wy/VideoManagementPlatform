@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.15)
 project(VideoManPlat)
 
 set(CMAKE_CXX_STANDARD 11)
@@ -20,10 +20,8 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
 # 判断操作系统
 if(CMAKE_SYSTEM_NAME MATCHES "Linux")
     message(STATUS "current platform: Linux ")
-
 elseif(CMAKE_SYSTEM_NAME MATCHES "Windows")
     message(STATUS "current platform: Windows")
-
 elseif(CMAKE_SYSTEM_NAME MATCHES "Darwin")
     message(STATUS "current platform: MacOS")
 else()

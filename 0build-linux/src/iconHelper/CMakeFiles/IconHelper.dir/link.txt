@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../lib/libIconHelper.a  CMakeFiles/IconHelper.dir/IconHelper_autogen/mocs_compilation.cpp.o CMakeFiles/IconHelper.dir/iconhelper.cpp.o
+/usr/bin/ranlib ../../../lib/libIconHelper.a

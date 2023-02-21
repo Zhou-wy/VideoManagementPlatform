@@ -1,4 +1,5 @@
-0build-debug/
+0build-mac/
+0build-linux/
 bin/
 .idea/
 .DS_Store

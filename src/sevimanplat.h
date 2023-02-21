@@ -11,6 +11,7 @@
 #include "cpuMonitor/cpumonitor.h"
 #include "videoPanel/videopanel.h"
 #include "playFFmpeg/ffmpeg.h"
+#include "addVideoDevice/addvideo.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class SeViManPlat; }
@@ -44,8 +45,12 @@ public:
 public slots:
 
     void onTimerOut();
+
+    void addVideoDevice(); // 添加摄像头槽函数
+
 private:
     void destroyAll();
+
 private:
     Ui::SeViManPlat *ui;
     QList<int> icons;
@@ -53,8 +58,10 @@ private:
     VideoPanel *videoWidget; // 视频面板
     QVBoxLayout *videoWidgetLayout; // 视频面板布局
 
-    QList<FFmpegWidget*> videoPlay; // 视频播放
-    QList<QVBoxLayout*> videoPlayLayout; // 视频播放
+    QList<FFmpegWidget *> videoPlay; // 视频播放
+    QList<QVBoxLayout *> videoPlayLayout; // 视频播放
+
+    addVideo* addVideoTool; // 添加摄像头
 
 };
 

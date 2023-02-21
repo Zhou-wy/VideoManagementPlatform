@@ -9,7 +9,7 @@
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
     SeViManPlat SVMP;
-    SVMP.setWindowTitle("安防视频监控管理平台");
+//    SVMP.setWindowTitle("安防视频监控管理平台");
     SVMP.show();
     return QApplication::exec();
 }

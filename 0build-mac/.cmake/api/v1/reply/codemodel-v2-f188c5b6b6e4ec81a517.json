@@ -1,0 +1,396 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						7
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						6,
+						7
+					]
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"jsonFile" : "directory-src-Debug-b6cf2213fc5053b67c22.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						14,
+						15
+					]
+				},
+				{
+					"build" : "src/cpuMonitor",
+					"jsonFile" : "directory-src.cpuMonitor-Debug-2116007895cfcd4ec694.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "src/cpuMonitor",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				},
+				{
+					"build" : "src/iconHelper",
+					"jsonFile" : "directory-src.iconHelper-Debug-a2b84e49d7b7067ce2dc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 3,
+					"source" : "src/iconHelper",
+					"targetIndexes" : 
+					[
+						2,
+						3
+					]
+				},
+				{
+					"build" : "src/videoPanel",
+					"jsonFile" : "directory-src.videoPanel-Debug-63d7ce0ac78a91a0f649.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 4,
+					"source" : "src/videoPanel",
+					"targetIndexes" : 
+					[
+						8,
+						9
+					]
+				},
+				{
+					"build" : "src/playFFmpeg",
+					"jsonFile" : "directory-src.playFFmpeg-Debug-6315491ddd3e387430f5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 5,
+					"source" : "src/playFFmpeg",
+					"targetIndexes" : 
+					[
+						4,
+						5
+					]
+				},
+				{
+					"build" : "src/addVideoDevice",
+					"jsonFile" : "directory-src.addVideoDevice-Debug-f080f93a10797e1e0635.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 6,
+					"source" : "src/addVideoDevice",
+					"targetIndexes" : 
+					[
+						10,
+						11
+					]
+				},
+				{
+					"build" : "test",
+					"jsonFile" : "directory-test-Debug-451c0598f41488bb20b9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 7,
+					"source" : "test",
+					"targetIndexes" : 
+					[
+						12,
+						13
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						7
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "VideoManPlat",
+					"targetIndexes" : 
+					[
+						6,
+						7
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "vidManPlatUi",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						14,
+						15
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "CpuMonitor",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "IconHelper",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						2,
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "VideoPanel",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						8,
+						9
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "PlayFFmpeg",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						4,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						6
+					],
+					"name" : "addVideo",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						10,
+						11
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						7
+					],
+					"name" : "test_ffmpeg",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						12,
+						13
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "CpuMonitor::@874d147f76f76d2c647b",
+					"jsonFile" : "target-CpuMonitor-Debug-ff920236fdd8516b64e1.json",
+					"name" : "CpuMonitor",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "CpuMonitor_autogen::@874d147f76f76d2c647b",
+					"jsonFile" : "target-CpuMonitor_autogen-Debug-964514694490ffe23bcb.json",
+					"name" : "CpuMonitor_autogen",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "IconHelper::@f0fdf5ef21887b867222",
+					"jsonFile" : "target-IconHelper-Debug-d41cda4b369f9e5d91a6.json",
+					"name" : "IconHelper",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "IconHelper_autogen::@f0fdf5ef21887b867222",
+					"jsonFile" : "target-IconHelper_autogen-Debug-8912d48b4dcde05a2e43.json",
+					"name" : "IconHelper_autogen",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "PlayFFmpeg::@2ffd910cc6a6ab224bf9",
+					"jsonFile" : "target-PlayFFmpeg-Debug-1a87e11ac488a06916fb.json",
+					"name" : "PlayFFmpeg",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "PlayFFmpeg_autogen::@2ffd910cc6a6ab224bf9",
+					"jsonFile" : "target-PlayFFmpeg_autogen-Debug-eff3ce442cad1e959b1a.json",
+					"name" : "PlayFFmpeg_autogen",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "VideoManPlat::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-VideoManPlat-Debug-c37c0c26ed027c9c7414.json",
+					"name" : "VideoManPlat",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "VideoManPlat_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-VideoManPlat_autogen-Debug-1332e07c185627c96080.json",
+					"name" : "VideoManPlat_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "VideoPanel::@d5898b692044102cb1d1",
+					"jsonFile" : "target-VideoPanel-Debug-4e8206ea1933cfa21eee.json",
+					"name" : "VideoPanel",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "VideoPanel_autogen::@d5898b692044102cb1d1",
+					"jsonFile" : "target-VideoPanel_autogen-Debug-30b58de9fb6c445f0c6b.json",
+					"name" : "VideoPanel_autogen",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "addVideo::@d6568711fa9a46b9ea6c",
+					"jsonFile" : "target-addVideo-Debug-90a9b55958d7c28bf02a.json",
+					"name" : "addVideo",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "addVideo_autogen::@d6568711fa9a46b9ea6c",
+					"jsonFile" : "target-addVideo_autogen-Debug-e81bc3d02803b2091fd8.json",
+					"name" : "addVideo_autogen",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "test_ffmpeg::@36f028580bb02cc8272a",
+					"jsonFile" : "target-test_ffmpeg-Debug-36343fa62feb8b0b8d1f.json",
+					"name" : "test_ffmpeg",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "test_ffmpeg_autogen::@36f028580bb02cc8272a",
+					"jsonFile" : "target-test_ffmpeg_autogen-Debug-0961d3d2da609ecb0b0d.json",
+					"name" : "test_ffmpeg_autogen",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "vidManPlatUi::@145eef247bfb46b6828c",
+					"jsonFile" : "target-vidManPlatUi-Debug-55dab5b63a88e9edf018.json",
+					"name" : "vidManPlatUi",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "vidManPlatUi_autogen::@145eef247bfb46b6828c",
+					"jsonFile" : "target-vidManPlatUi_autogen-Debug-0fdeeb6fa6844bbd2cb6.json",
+					"name" : "vidManPlatUi_autogen",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/zwy/CppProject/VidManPlat/0build-mac",
+		"source" : "/Users/zwy/CppProject/VidManPlat"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

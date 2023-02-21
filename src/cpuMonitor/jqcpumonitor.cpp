@@ -93,7 +93,6 @@ void JQCPUMonitor::run()
     while ( continueFlag_ )
     {
         QThread::msleep( 1200 );
-
         tick();
     }
 }
@@ -161,7 +160,7 @@ void JQCPUMonitor::tick()
     }
 
     const auto &&dataList = QString( file.readLine() ).split( ' ', QString::SkipEmptyParts );
-    qDebug() << dataList;
+//    qDebug() << dataList;
 
     if ( dataList.size() < 4 )
     {
