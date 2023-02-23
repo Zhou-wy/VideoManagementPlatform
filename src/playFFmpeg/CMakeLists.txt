@@ -15,5 +15,5 @@ include(${CMAKE_SOURCE_DIR}/cmake/findFFmpeg.cmake)
 add_library(${PROJECT_NAME} STATIC ${CURRENT_HEADERS} ${CURRENT_SOURCES})
 target_link_libraries(${PROJECT_NAME}
         ${Qt5_Libs}
-        avcodec avformat avutil avfilter swscale)
+        avcodec avformat avutil avfilter swscale swresample)
 set(LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/lib)

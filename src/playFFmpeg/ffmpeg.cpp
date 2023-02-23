@@ -3,8 +3,7 @@
 //
 #include "ffmpeg.h"
 
-FFmpegThread::FFmpegThread(QObject *parent) : QThread(parent)
-{
+FFmpegThread::FFmpegThread(QObject *parent) : QThread(parent) {
     setObjectName("FFmpegThread");
     stopped = false;
     isPlay = false;
@@ -38,8 +37,7 @@ FFmpegThread::FFmpegThread(QObject *parent) : QThread(parent)
 }
 
 //一个软件中只需要初始化一次就行
-void FFmpegThread::initlib()
-{
+void FFmpegThread::initlib() {
     static QMutex mutex;
     QMutexLocker locker(&mutex);
     static bool isInit = false;
@@ -54,7 +52,8 @@ void FFmpegThread::initlib()
         avformat_network_init();
 
         isInit = true;
-        qDebug() << TIMEMS << "init ffmpeg lib ok" << " version:" << FFMPEG_VERSION;
+//        qDebug() << TIMEMS << "init ffmpeg lib ok" << " version:" << FFMPEG_VERSION;
+        INFO("init ffmpeg lib ok! version: %s", FFMPEG_VERSION);
 #if 0
         //输出所有支持的解码器名称
         QStringList listCodeName;
@@ -64,13 +63,13 @@ void FFmpegThread::initlib()
             code = code->next;
         }
 
-        qDebug() << TIMEMS << listCodeName;
+//        qDebug() << TIMEMS << listCodeName;
+//        INFO("%s %s", TIMEMS, listCodeName);
 #endif
     }
 }
 
-bool FFmpegThread::init()
-{
+bool FFmpegThread::init() {
     //在打开码流前指定各种参数比如:探测时间/超时时间/最大延时等
     //设置缓存大小,1080p可将值调大
     av_dict_set(&options, "buffer_size", "8192000", 0);
@@ -88,7 +87,8 @@ bool FFmpegThread::init()
 
     int result = avformat_open_input(&avFormatContext, url.toStdString().data(), NULL, &options);
     if (result < 0) {
-        qDebug() << TIMEMS << "open input error" << url;
+//        qDebug() << TIMEMS << "open input error" << url;
+        INFOE("open input error : %s", url.toStdString().c_str());
         return false;
     }
 
@@ -100,7 +100,8 @@ bool FFmpegThread::init()
     //获取流信息
     result = avformat_find_stream_info(avFormatContext, NULL);
     if (result < 0) {
-        qDebug() << TIMEMS << "find stream info error";
+//        qDebug() << TIMEMS << "find stream info error";
+        INFOE("find stream info error");
         return false;
     }
 
@@ -108,7 +109,8 @@ bool FFmpegThread::init()
     if (1) {
         videoStreamIndex = av_find_best_stream(avFormatContext, AVMEDIA_TYPE_VIDEO, -1, -1, &videoDecoder, 0);
         if (videoStreamIndex < 0) {
-            qDebug() << TIMEMS << "find video stream index error";
+//            qDebug() << TIMEMS << "find video stream index error";
+            INFOE("find video stream index error");
             return false;
         }
 
@@ -120,7 +122,8 @@ bool FFmpegThread::init()
         videoDecoder = avcodec_find_decoder(videoCodec->codec_id);
         //videoDecoder = avcodec_find_decoder_by_name("h264_qsv");
         if (videoDecoder == NULL) {
-            qDebug() << TIMEMS << "video decoder not found";
+//            qDebug() << TIMEMS << "video decoder not found";
+            INFOE("video decoder not found");
             return false;
         }
 
@@ -131,7 +134,8 @@ bool FFmpegThread::init()
         //打开视频解码器
         result = avcodec_open2(videoCodec, videoDecoder, NULL);
         if (result < 0) {
-            qDebug() << TIMEMS << "open video codec error";
+//            qDebug() << TIMEMS << "open video codec error";
+            INFOE("open video codec error");
             return false;
         }
 
@@ -141,14 +145,16 @@ bool FFmpegThread::init()
 
         //如果没有获取到宽高则返回
         if (videoWidth == 0 || videoHeight == 0) {
-            qDebug() << TIMEMS << "find width height error";
+            //qDebug() << TIMEMS << "find width height error";
+            INFOE("find width height error");
             return false;
         }
 
         QString videoInfo = QString("视频流信息 -> 索引: %1  解码: %2  格式: %3  时长: %4 秒  分辨率: %5*%6")
                 .arg(videoStreamIndex).arg(videoDecoder->name).arg(avFormatContext->iformat->name)
                 .arg((avFormatContext->duration) / 1000000).arg(videoWidth).arg(videoHeight);
-        qDebug() << TIMEMS << videoInfo;
+//        qDebug() << TIMEMS << videoInfo;
+        INFOV(videoInfo.toStdString().c_str());
     }
     //----------视频流部分开始----------
 
@@ -165,7 +171,8 @@ bool FFmpegThread::init()
 
         //有些没有音频流,所以这里不用返回
         if (audioStreamIndex == -1) {
-            qDebug() << TIMEMS << "find audio stream index error";
+//            qDebug() << TIMEMS << "find audio stream index error";
+            INFOE("find audio stream index error");
         } else {
             //获取音频流
             AVStream *audioStream = avFormatContext->streams[audioStreamIndex];
@@ -175,21 +182,24 @@ bool FFmpegThread::init()
             audioDecoder = avcodec_find_decoder(audioCodec->codec_id);
             //audioDecoder = avcodec_find_decoder_by_name("aac");
             if (audioDecoder == NULL) {
-                qDebug() << TIMEMS << "audio codec not found";
+//                qDebug() << TIMEMS << "audio codec not found";
+                INFOE("audio codec not found");
                 return false;
             }
 
             //打开音频解码器
             result = avcodec_open2(audioCodec, audioDecoder, NULL);
             if (result < 0) {
-                qDebug() << TIMEMS << "open audio codec error";
+//                qDebug() << TIMEMS << "open audio codec error";
+                INFOE("open audio codec error");
                 return false;
             }
 
             QString audioInfo = QString("音频流信息 -> 索引: %1  解码: %2  比特率: %3  声道数: %4  采样: %5")
                     .arg(audioStreamIndex).arg(audioDecoder->name).arg(avFormatContext->bit_rate)
                     .arg(audioCodec->channels).arg(audioCodec->sample_rate);
-            qDebug() << TIMEMS << audioInfo;
+//            qDebug() << TIMEMS << audioInfo;
+            INFOV(audioInfo.toStdString().c_str());
         }
     }
     //----------音频流部分结束----------
@@ -203,7 +213,7 @@ bool FFmpegThread::init()
     //比较上一次文件的宽度高度,当改变时,需要重新分配内存
     if (oldWidth != videoWidth || oldHeight != videoHeight) {
         int byte = avpicture_get_size(AV_PIX_FMT_RGB32, videoWidth, videoHeight);
-        buffer = (uint8_t *)av_malloc(byte * sizeof(uint8_t));
+        buffer = (uint8_t *) av_malloc(byte * sizeof(uint8_t));
         oldWidth = videoWidth;
         oldHeight = videoHeight;
     }
@@ -223,7 +233,8 @@ bool FFmpegThread::init()
     av_image_fill_arrays(avFrame3->data, avFrame3->linesize, buffer, dstFormat, videoWidth, videoHeight, 1);
 
     //图像转换
-    swsContext = sws_getContext(videoWidth, videoHeight, srcFormat, videoWidth, videoHeight, dstFormat, flags, NULL, NULL, NULL);
+    swsContext = sws_getContext(videoWidth, videoHeight, srcFormat, videoWidth, videoHeight, dstFormat, flags, NULL,
+                                NULL, NULL);
 
     //输出视频信息
     //av_dump_format(avFormatContext, 0, url.toStdString().data(), 0);
@@ -232,8 +243,7 @@ bool FFmpegThread::init()
     return true;
 }
 
-void FFmpegThread::run()
-{
+void FFmpegThread::run() {
     while (!stopped) {
         //根据标志位执行初始化操作
         if (isPlay) {
@@ -264,11 +274,12 @@ void FFmpegThread::run()
 
                 if (frameFinish >= 0) {
                     //将数据转成一张图片
-                    sws_scale(swsContext, (const uint8_t *const *)avFrame2->data, avFrame2->linesize, 0, videoHeight, avFrame3->data, avFrame3->linesize);
+                    sws_scale(swsContext, (const uint8_t *const *) avFrame2->data, avFrame2->linesize, 0, videoHeight,
+                              avFrame3->data, avFrame3->linesize);
 
                     //以下两种方法都可以
                     //QImage image(avFrame3->data[0], videoWidth, videoHeight, QImage::Format_RGB32);
-                    QImage image((uchar *)buffer, videoWidth, videoHeight, QImage::Format_RGB32);
+                    QImage image((uchar *) buffer, videoWidth, videoHeight, QImage::Format_RGB32);
                     if (!image.isNull()) {
                         emit receiveImage(image);
                     }
@@ -289,16 +300,14 @@ void FFmpegThread::run()
     free();
     stopped = false;
     isPlay = false;
-    qDebug() << TIMEMS << "stop ffmpeg thread";
+//    qDebug() << TIMEMS << "stop ffmpeg thread";
 }
 
-void FFmpegThread::setUrl(const QString &url)
-{
+void FFmpegThread::setUrl(const QString &url) {
     this->url = url;
 }
 
-void FFmpegThread::free()
-{
+void FFmpegThread::free() {
     if (swsContext != NULL) {
         sws_freeContext(swsContext);
         swsContext = NULL;
@@ -343,43 +352,36 @@ void FFmpegThread::free()
     //qDebug() << TIMEMS << "close ffmpeg ok";
 }
 
-void FFmpegThread::play()
-{
+void FFmpegThread::play() {
     //通过标志位让线程执行初始化
     isPlay = true;
 }
 
-void FFmpegThread::pause()
-{
+void FFmpegThread::pause() {
 
 }
 
-void FFmpegThread::next()
-{
+void FFmpegThread::next() {
 
 }
 
-void FFmpegThread::stop()
-{
+void FFmpegThread::stop() {
     //通过标志位让线程停止
     stopped = true;
 }
 
 //实时视频显示窗体类
-FFmpegWidget::FFmpegWidget(QWidget *parent) : QWidget(parent)
-{
+FFmpegWidget::FFmpegWidget(QWidget *parent) : QWidget(parent) {
     thread = new FFmpegThread(this);
     connect(thread, SIGNAL(receiveImage(QImage)), this, SLOT(updateImage(QImage)));
     image = QImage();
 }
 
-FFmpegWidget::~FFmpegWidget()
-{
+FFmpegWidget::~FFmpegWidget() {
     close();
 }
 
-void FFmpegWidget::paintEvent(QPaintEvent *)
-{
+void FFmpegWidget::paintEvent(QPaintEvent *) {
     if (image.isNull()) {
         return;
     }
@@ -398,20 +400,17 @@ void FFmpegWidget::paintEvent(QPaintEvent *)
 #endif
 }
 
-void FFmpegWidget::updateImage(const QImage &image)
-{
+void FFmpegWidget::updateImage(const QImage &image) {
     //this->image = image.copy();
     this->image = image;
     this->update();
 }
 
-void FFmpegWidget::setUrl(const QString &url)
-{
+void FFmpegWidget::setUrl(const QString &url) {
     thread->setUrl(url);
 }
 
-void FFmpegWidget::open()
-{
+void FFmpegWidget::open() {
     //qDebug() << TIMEMS << "open video" << objectName();
     clear();
 
@@ -419,18 +418,15 @@ void FFmpegWidget::open()
     thread->start();
 }
 
-void FFmpegWidget::pause()
-{
+void FFmpegWidget::pause() {
     thread->pause();
 }
 
-void FFmpegWidget::next()
-{
+void FFmpegWidget::next() {
     thread->next();
 }
 
-void FFmpegWidget::close()
-{
+void FFmpegWidget::close() {
     //qDebug() << TIMEMS << "close video" << objectName();
     if (thread->isRunning()) {
         thread->stop();
@@ -441,8 +437,7 @@ void FFmpegWidget::close()
     QTimer::singleShot(1, this, SLOT(clear()));
 }
 
-void FFmpegWidget::clear()
-{
+void FFmpegWidget::clear() {
     image = QImage();
     update();
 }

@@ -8,10 +8,11 @@
 #include <QWidget>
 #include <QButtonGroup>
 #include "iconHelper/iconhelper.h"
-#include "cpuMonitor/cpumonitor.h"
+#include "utils/cpumonitor.h"
 #include "videoPanel/videopanel.h"
 #include "playFFmpeg/ffmpeg.h"
 #include "addVideoDevice/addvideo.h"
+#include "utils/Json.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class SeViManPlat; }
@@ -21,7 +22,7 @@ class SeViManPlat : public QWidget {
 Q_OBJECT
 
 public:
-    explicit SeViManPlat(QWidget *parent = nullptr);
+    explicit SeViManPlat(const QString& video_conf_json, const QString& log_save_dir, QWidget *parent = nullptr);
 
     ~SeViManPlat() override;
 
@@ -38,7 +39,7 @@ public:
 
     void initCameraLayout();
 
-    void initPlayWidget();
+    void initVideoPlay(); // 设置视频播放
 
     void loadStyle(const QString &qssFile);
 
@@ -46,7 +47,9 @@ public slots:
 
     void onTimerOut();
 
-    void addVideoDevice(); // 添加摄像头槽函数
+    void addVideoDialog(); // 添加摄像头槽函数
+
+    void addVideoPlay();
 
 private:
     void destroyAll();
@@ -61,8 +64,9 @@ private:
     QList<FFmpegWidget *> videoPlay; // 视频播放
     QList<QVBoxLayout *> videoPlayLayout; // 视频播放
 
-    addVideo* addVideoTool; // 添加摄像头
-
+    addVideo *addVideoTool; // 添加摄像头
+    QString m_video_conf_json;
+    QString m_log_save_dir;
 };
 
 

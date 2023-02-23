@@ -1,5 +1,0 @@
-/usr/local/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /home/zwy/CWorkspace/VidManPlat -B /home/zwy/CWorkspace/VidManPlat/0build-linux
--- current platform: Linux 
--- Configuring done
--- Generating done
--- Build files have been written to: /home/zwy/CWorkspace/VidManPlat/0build-linux

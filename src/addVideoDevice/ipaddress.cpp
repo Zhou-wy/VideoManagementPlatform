@@ -7,7 +7,7 @@
 #include "qevent.h"
 #include "qdebug.h"
 
-IPAddress::IPAddress(QWidget *parent) : QWidget(parent)
+IPAddress::IPAddress(QLineEdit *parent) : QLineEdit(parent)
 {
     bgColor = "#FFFFFF";
     borderColor = "#A6B5B8";

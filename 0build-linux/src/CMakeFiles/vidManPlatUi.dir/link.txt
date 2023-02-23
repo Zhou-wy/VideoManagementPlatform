@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../lib/libvidManPlatUi.a  CMakeFiles/vidManPlatUi.dir/vidManPlatUi_autogen/mocs_compilation.cpp.o CMakeFiles/vidManPlatUi.dir/sevimanplat.cpp.o CMakeFiles/vidManPlatUi.dir/vidManPlatUi_autogen/EWIEGA46WW/qrc_resource.cpp.o
-/usr/bin/ranlib ../../lib/libvidManPlatUi.a

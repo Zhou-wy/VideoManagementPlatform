@@ -4,122 +4,121 @@
 
 // You may need to build the project (run Qt uic code generator) to get "ui_addVideo.h" resolved
 
-#include "addvideo.h"
-#include "ui_addVideo.h"
 #include <QString>
 #include <QMessageBox>
-#include <QJsonDocument>    // Json文档
-#include <QJsonObject>      // Json对象
-#include <QJsonParseError>  // Json异常捕捉
 #include <QFile>            // 文件读写
-#include <utility>
+#include <QDebug>
+
+#include "addvideo.h"
+#include "ui_addVideo.h"
+
+#include "../utils/iLogger.h"
 
 
-VideoDevInfo::VideoDevInfo(QString &ip, int &port, QString &userName, QString &passWD, QString &type) : m_ip(ip), m_port(port),
-                                                                                                m_userName(userName),
-                                                                                                m_passWord(passWD),
-                                                                                                m_type(type) {
-
-}
-
-
-void VideoDevInfo::setVideoIP(QString ip) {
-    m_ip = std::move(ip);
-}
-
-void VideoDevInfo::setVideoPort(int port) {
-    m_port = port;
-}
-
-void VideoDevInfo::setVideoUserName(QString userName) {
-    m_userName = std::move(userName);
-}
-
-void VideoDevInfo::setVideoPassWord(QString passWD) {
-    m_passWord = std::move(passWD);
-}
-
-void VideoDevInfo::setVideoType(QString type) {
-    m_type = std::move(type);
-}
-
-QString VideoDevInfo::getVideoIP() {
-    return m_ip;
-}
-
-int VideoDevInfo::getVideoPort() {
-    return m_port;
-}
-
-QString VideoDevInfo::getVideoUserName() {
-    return m_userName;
-}
-
-QString VideoDevInfo::getVideoPassWord() {
-    return m_passWord;
-}
-
-QString VideoDevInfo::getVideoType(){
-    return m_type;
-}
-
-addVideo::addVideo(QWidget *parent) :
-        QDialog(parent), ui(new Ui::addVideo) {
+addVideo::addVideo(QString &video_conf_json, QWidget *parent) :
+        QDialog(parent), ui(new Ui::addVideo) , m_video_conf_json(video_conf_json){
     ui->setupUi(this);
-    connect(ui->CancelPbt, SIGNAL(clicked(bool)), this, SLOT(close()));
-    connect(ui->addWebVideo, SIGNAL(clicked(bool)), this, SLOT(addWebVideoPage()));
-    connect(ui->addLocalVideo, SIGNAL(clicked(bool)), this, SLOT(addLocalVideoPage()));
+    ui->videoTypeBox->setCurrentIndex(0);
+    ui->stackedWidget->setCurrentIndex(0);
 
-    connect(ui->savePbt, SIGNAL(clicked(bool)), this, SLOT(saveVideoListConf()));
+    connect(ui->CancelPbt, SIGNAL(clicked(bool)), this, SLOT(close()));
+    connect(ui->savePbt, SIGNAL(clicked(bool)), this, SLOT(saveVideoConf()));
+    connect(ui->videoTypeBox, SIGNAL(currentIndexChanged(int)), ui->stackedWidget, SLOT(setCurrentIndex(int)));
 }
 
 addVideo::~addVideo() {
+    delete videoConf;
     delete ui;
 }
 
-void addVideo::addWebVideoPage() {
-    ui->stackedWidget->setCurrentIndex(0);
-}
-
-void addVideo::addLocalVideoPage() {
-    ui->stackedWidget->setCurrentIndex(1);
-}
-
+/*
+ * 保存摄像头配置
+ * */
 void addVideo::saveVideoListConf() {
-//    qDebug() << "saveVideoListConf";
-//    videoConf->setVideoIP(ui->ipEdit->text());
-//    videoConf->setVideoPort(ui->portEdit->text().toInt());
-//    videoConf->setVideoUserName(ui->usrNameEdit->text());
-//    videoConf->setVideoPassWord(ui->passWordEdit->text());
-//    videoConf->setVideoType(ui->videoTypeBox->currentText());
-//
-//    qDebug()<< videoConf->getVideoType();
-//
-//    if (nullptr == videoConf) {
-//        QMessageBox::critical(this, tr("ERROR"), tr("保存信息有误，或者某项为空"), QMessageBox::Close);
-//    } else {
-//        QFile file("/Users/zwy/CppProject/VidManPlat/bin/workspace/videoListConf.json");
-//        if (!file.open(QIODevice::ReadWrite)) {
-//            qDebug() << "File open error";
-//        } else {
-//            qDebug() << "File open!";
-//        }
-//        // 使用QJsonObject对象插入键值对。
-//        QJsonObject jsonObject;
-//        jsonObject.insert("type", videoConf->getVideoType());
-//        jsonObject.insert("ip", videoConf->getVideoIP());
-//        jsonObject.insert("port", videoConf->getVideoPort());
-//        jsonObject.insert("userName", videoConf->getVideoUserName());
-//        jsonObject.insert("passWord", videoConf->getVideoPassWord());
-//
-//        // 使用QJsonDocument设置该json对象
-//        QJsonDocument jsonDoc;
-//        jsonDoc.setObject(jsonObject);
-//
-//        // 将json以文本形式写入文件并关闭文件。
-//        file.write(jsonDoc.toJson());
-//        file.close();
-//        this->close();
-//        qDebug() << "Write to file";
-//    }
+    videoConf = new VideoInfo;
+    videoConf->m_ip = QString(ui->ipEdit->text());
+    videoConf->m_port = QString(ui->portEdit->text());
+    videoConf->m_userName = QString(ui->usrNameEdit->text());
+    videoConf->m_passWord = QString(ui->passWordEdit->text());
+    videoConf->m_type = QString(ui->videoTypeBox->currentText());
+
+
+    Json VideoConfJson(m_video_conf_json, true);
+    if (VideoConfJson.getString("VideoCount") == "") {
+        VideoCount = 0;
+    } else {
+        VideoCount = VideoConfJson.getString("VideoCount").toInt();
+        VideoCount += 1;
+    }
+    if (videoConf->m_type == "RTSP") {
+        if (videoConf->m_ip == "" || videoConf->m_type == "" || videoConf->m_passWord == "" ||
+            videoConf->m_userName == "" || videoConf->m_port == "") {
+            INFOW(QString("rtsp video" + QString::number(VideoCount) +
+                          " fails to be enabled. Check the device").toStdString().c_str());
+        } else {
+            VideoConfJson.set("video" + QString::number(VideoCount) + ".ip", videoConf->m_ip);
+            VideoConfJson.set("video" + QString::number(VideoCount) + ".port", videoConf->m_port);
+            VideoConfJson.set("video" + QString::number(VideoCount) + ".username", videoConf->m_userName);
+            VideoConfJson.set("video" + QString::number(VideoCount) + ".password", videoConf->m_passWord);
+            VideoConfJson.set("video" + QString::number(VideoCount) + ".type", videoConf->m_type);
+        }
+    } else if (videoConf->m_type == "RTMP") {
+        QString url = ui->rtmp_url->text();
+        if (url == "")
+            INFOW(QString("rtmp video" + QString::number(VideoCount) +
+                          " fails to be enabled. Check the device").toStdString().c_str());
+        else {
+            VideoConfJson.set("video" + QString::number(VideoCount) + ".type", videoConf->m_type);
+            VideoConfJson.set("video" + QString::number(VideoCount) + ".url", url);
+        }
+    } else if (videoConf->m_type == "HTTP-FLV") {
+        QString url = ui->http_flv_url->text();
+        if (url == "")
+            INFOW(QString("fttp flv video" + QString::number(VideoCount) +
+                          " fails to be enabled. Check the device").toStdString().c_str());
+        else {
+            VideoConfJson.set("video" + QString::number(VideoCount) + ".type", videoConf->m_type);
+            VideoConfJson.set("video" + QString::number(VideoCount) + ".url", url);
+        }
+
+    } else if (videoConf->m_type == "Local-Camera") {
+        QString dev = QString(ui->localCamDevice->currentText());
+        if (dev == "")
+            INFOW(QString("local camera video" + QString::number(VideoCount) +
+                          " fails to be enabled. Check the device").toStdString().c_str());
+        else {
+            VideoConfJson.set("video" + QString::number(VideoCount) + ".type", videoConf->m_type);
+            VideoConfJson.set("video" + QString::number(VideoCount) + ".url", dev);
+        }
+
+    } else {
+        INFOE("save video config error");
+    }
+    VideoConfJson.set("VideoCount", QString::number(VideoCount));
+    VideoConfJson.save(m_video_conf_json);
+    INFO("save video%d config info successfully", VideoCount);
+    this->close();
+}
+
+void addVideo::saveVideoConf() {
+    if (QMessageBox::question(this, tr("Quit"), tr("请确认新增摄像头信息无误"), QMessageBox::Yes, QMessageBox::No) ==
+        QMessageBox::Yes) {
+        QDialog::accept();//不会将事件传递给组件的父组件
+        INFO("save");
+        saveVideoListConf();
+
+    } else {
+        QDialog::reject();
+        INFO("cancel");
+    }
+}
+
+void addVideo::closeEvent(QCloseEvent *e) {
+    //    if (QMessageBox::question(this, tr("Quit"), tr("请确认取消吗？"), QMessageBox::Yes,QMessageBox::No ) == QMessageBox::Yes) {
+    //        QDialog::accept();//不会将事件传递给组件的父组件
+    //    } else {
+    //        QDialog::reject();
+    //    }
+    QDialog::accept();//不会将事件传递给组件的父组件
+    QDialog::closeEvent(e);
 }

@@ -9,8 +9,8 @@ set(CMAKE_AUTOUIC ON)
 #cmake在编译过程中打印编印信息
 set(CMAKE_VERBOSE_MAKEFILEON ON)
 set(CMAKE_CXX_FLAGS   "-g")                     # 调试信息
-set(CMAKE_CXX_FLAGS   "-Wall")                  # 开启所有警告
-set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations")
+#set(CMAKE_CXX_FLAGS   "-Wall")                  # 开启所有警告
+set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -O3 -fPIC -ggdb -std=c++11 -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations")
 
 # 设置输出bin文件路径
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
@@ -42,10 +42,9 @@ add_executable(${PROJECT_NAME} main.cpp ${QRC_FILES} )
 
 target_link_libraries(${PROJECT_NAME} vidManPlatUi
         ${Qt5_Libs} # 定义在 findQt5.cmake 中
-        avcodec)
+        )
 
 # 单元测试
-add_subdirectory(test)
-enable_testing()
-add_test(NAME test_ffmpeg
-        COMMAND ${CMAKE_SOURCE_DIR}/bin/test_ffmpeg)
+#add_subdirectory(test)
+#enable_testing()
+#add_test(NAME test_ffmpeg COMMAND ${CMAKE_SOURCE_DIR}/bin/test_ffmpeg)

@@ -3,13 +3,13 @@
 //
 
 #include <QApplication>
-#include <iostream>
 #include "src/sevimanplat.h"
-
+#include "src/utils/iLogger.h"
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
-    SeViManPlat SVMP;
-//    SVMP.setWindowTitle("安防视频监控管理平台");
+    INFO("================start========================");
+    SeViManPlat SVMP("/home/zwy/CWorkspace/VidManPlat/conf/videoListConf.json","/home/zwy/CWorkspace/VidManPlat/conf");
+    SVMP.setWindowTitle("安防视频监控管理平台");
     SVMP.show();
     return QApplication::exec();
 }

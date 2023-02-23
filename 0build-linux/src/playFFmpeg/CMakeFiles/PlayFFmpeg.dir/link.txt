@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../../lib/libPlayFFmpeg.a  CMakeFiles/PlayFFmpeg.dir/PlayFFmpeg_autogen/mocs_compilation.cpp.o CMakeFiles/PlayFFmpeg.dir/ffmpeg.cpp.o
-/usr/bin/ranlib ../../../lib/libPlayFFmpeg.a

@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../../lib/libaddVideo.a  CMakeFiles/addVideo.dir/addVideo_autogen/mocs_compilation.cpp.o CMakeFiles/addVideo.dir/addvideo.cpp.o CMakeFiles/addVideo.dir/ipaddress.cpp.o
-/usr/bin/ranlib ../../../lib/libaddVideo.a

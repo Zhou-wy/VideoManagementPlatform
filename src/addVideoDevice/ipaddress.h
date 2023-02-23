@@ -11,7 +11,7 @@
  * 6. 可设置背景色、边框颜色、边框圆角角度。
  */
 
-#include <QWidget>
+#include <QLineEdit>
 
 class QLabel;
 class QLineEdit;
@@ -19,7 +19,7 @@ class QLineEdit;
 #ifdef quc
 class Q_DECL_EXPORT IPAddress : public QWidget
 #else
-class IPAddress : public QWidget
+class IPAddress : public QLineEdit
 #endif
 
 {
@@ -28,7 +28,7 @@ class IPAddress : public QWidget
     Q_PROPERTY(QString ip READ getIP WRITE setIP)
 
 public:
-    explicit IPAddress(QWidget *parent = 0);
+    explicit IPAddress(QLineEdit *parent = 0);
 
 protected:
     bool eventFilter(QObject *watched, QEvent *event);

@@ -11,7 +11,7 @@
 #endif
 
 #include "ffmpeghead.h"
-
+#include "../utils/iLogger.h"
 class FFmpegThread : public QThread
 {
 Q_OBJECT

@@ -3,23 +3,25 @@
 //
 // You may need to build the project (run Qt uic code generator) to get "ui_SeViManPlat.h" resolved
 
-#include "sevimanplat.h"
-#include "ui_sevimanplat.h"
 #include <QList>
 #include <QToolButton>
-//#include <QsizePolicy>
+
+#include "sevimanplat.h"
+#include "ui_sevimanplat.h"
+#include "utils/iLogger.h"
 
 
-SeViManPlat::SeViManPlat(QWidget *parent) :
-        QWidget(parent), ui(new Ui::SeViManPlat) {
+SeViManPlat::SeViManPlat(const QString &video_conf_json, const QString &log_save_dir, QWidget *parent) :
+        QWidget(parent), ui(new Ui::SeViManPlat), m_video_conf_json(video_conf_json), m_log_save_dir(log_save_dir) {
     ui->setupUi(this);
     this->initMenuPbt();
     this->initTimer();
-    this->initCameraList();
     this->initCameraLayout();
-    this->initPlayWidget();
+    this->initVideoPlay();
+    iLogger::set_logger_save_directory(m_log_save_dir.toStdString());
 
-    connect(ui->addVideoDevice, SIGNAL(clicked(bool)), this, SLOT(addVideoDevice()));
+    connect(ui->addVideoDevice, SIGNAL(clicked(bool)), this, SLOT(addVideoDialog()));
+
 }
 
 SeViManPlat::~SeViManPlat() {
@@ -104,35 +106,6 @@ void SeViManPlat::onTimerOut() {
     ui->cpuLabel->setText(QString("   CPU ") + JQCPUMonitor::cpuUsagePercentageDisplayString());
 }
 
-void SeViManPlat::initCameraList() {
-//    ui->camDeviceList->set
-//    ui->camDeviceList->header()->setMinimumHeight(30);
-//    ui->camContorlList->setHeaderLabel("设备控制");
-//    ui->camContorlList->header()->setMinimumHeight(30);
-
-    //定义第一个树形组 网络摄像头项
-//    QTreeWidget *WebcamGroup = new QTreeWidget(ui->camDeviceList);
-//    WebcamGroup->setText(0, QStringLiteral("网络摄像头"));
-
-//    QTreeWidget* Webcam_1 = new QTreeWidget(WebcamGroup);
-//    Webcam_1->setText(0, "摄像头#1");  //设置子项显示的文本
-//
-//    QTreeWidget* Webcam_1_Main_stream = new QTreeWidget(Webcam_1);
-//    Webcam_1_Main_stream->setText(0, "主码流");  //设置子项显示的文本
-//
-//    QTreeWidget* Webcam_1_Auxiliary_stream = new QTreeWidget(Webcam_1);
-//    Webcam_1_Auxiliary_stream->setText(0, "主码流");  //设置子项显示的文本
-//
-//
-//    //定义第二个树形组 本地摄像头项
-//    QTreeWidget *camGroup = new QTreeWidget(ui->camDeviceList);
-//    camGroup->setText(0, QStringLiteral("本地摄像头"));
-//
-//    //定义第二个树形组 本地视频项
-//    QTreeWidget *localVideo = new QTreeWidget(ui->camDeviceList);
-//    localVideo->setText(0, QStringLiteral("本地视频"));
-}
-
 void SeViManPlat::initCameraLayout() {
     videoWidget = new VideoPanel(ui->videoPanwidget);
     videoWidgetLayout = new QVBoxLayout(ui->videoPanwidget);
@@ -164,30 +137,88 @@ void SeViManPlat::loadStyle(const QString &qssFile) {
     }
 }
 
-void SeViManPlat::initPlayWidget() {
-//    for (int i = 0; i < 64; i++) {
-//        videoPlay[i] = new FFmpegWidget(videoWidget->getVideoWidgetList().at(i));
-//        videoPlayLayout[i] = new QVBoxLayout(videoWidget->getVideoWidgetList().at(i));
-//        videoPlayLayout[i]->addWidget(videoPlay[i]);
-//    }
-//    QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding);
-//    sizePolicy.setHorizontalStretch(0);
-//    sizePolicy.setVerticalStretch(0);
-//    sizePolicy.setHeightForWidth(videoPlayWidget);
-//    videoWidget->setSizePolicy(sizePolicy);
+void SeViManPlat::initVideoPlay() {
+    Json ReadVideoConfJson(m_video_conf_json, true);
+    if (ReadVideoConfJson.getString("VideoCount") == "") {
+        INFOE("videoListConf 文件为空");
+    } else {
+        int videoCount = ReadVideoConfJson.getString("VideoCount").toInt();
+        for (int i = 0; i < videoCount; ++i) { // 遍历所有的摄像头配置
 
-//    QString urls = "rtsp://admin:admin123@192.168.0.213:554/cam/realmonitor?channel=1&subtype=0";
-//    FFmpegWidget* newVideo_1 = new FFmpegWidget(videoWidget->getVideoWidgetList().at(0));
-//    QVBoxLayout* videoPlayLayout_1 = new QVBoxLayout(videoWidget->getVideoWidgetList().at(0));
-//    videoPlayLayout_1->addWidget(newVideo_1);
-//    newVideo_1->setUrl(urls);
-//    newVideo_1->open();
-//
-//    FFmpegWidget* newVideo_2 = new FFmpegWidget(videoWidget->getVideoWidgetList().at(1));
-//    QVBoxLayout* videoPlayLayout_2 = new QVBoxLayout(videoWidget->getVideoWidgetList().at(1));
-//    videoPlayLayout_2->addWidget(newVideo_2);
-//    newVideo_2->setUrl(urls);
-//    newVideo_2->open();
+            QString video_type = ReadVideoConfJson.getString("video" + QString::number(i + 1) + ".type");
+            QString video_name = "video" + QString::number(i + 1);
+            if (video_type == "RTSP") {
+                /*
+                格式说明：
+                1、username: 设备登录用户名。例如admin。
+                2、password: 设备登录密码。例如admin123。
+                3、ip: 设备IP地址。例如192.168.0.213
+                4、port: 端口号默认为554，若为默认可不填写。
+                5、channel: 通道号，起始为1。例如通道2，则为channel=2。
+                6、subtype: 码流类型，主码流为0（即subtype=0），辅码流为1（即subtype=1）。
+                 例如：
+                     const string videoStreamAddress = "rtsp://admin:admin123@192.168.0.213:554/cam/realmonitor?channel=1&subtype=0";
+                */
+                //主码流
+                QString main_code_stream = "rtsp://" + ReadVideoConfJson.getString(video_name + ".username") + ":" +
+                                           ReadVideoConfJson.getString(video_name + ".password") + "@" +
+                                           ReadVideoConfJson.getString(video_name + ".ip") + ":" +
+                                           ReadVideoConfJson.getString(video_name + ".port") +
+                                           "/cam/realmonitor?channel=1&subtype=0";
+                //辅码流
+                QString Auxiliary_code_stream =
+                        "rtsp://" + ReadVideoConfJson.getString(video_name + ".username") + ":" +
+                        ReadVideoConfJson.getString(video_name + ".password") + "@" +
+                        ReadVideoConfJson.getString(video_name + ".ip") + ":" +
+                        ReadVideoConfJson.getString(video_name + ".port") +
+                        "/cam/realmonitor?channel=1&subtype=1";
+
+                INFO(main_code_stream.toStdString().c_str());
+                FFmpegWidget *newVideo = new FFmpegWidget(videoWidget->getVideoWidgetList().at(i));
+                QVBoxLayout *newPlayLayout = new QVBoxLayout(videoWidget->getVideoWidgetList().at(i));
+                newPlayLayout->addWidget(newVideo);
+                newVideo->setUrl(main_code_stream);
+                newVideo->open();
+
+            } else if (video_type == "RTMP") {
+                QString url = ReadVideoConfJson.getString(video_name + ".url");
+                if (url == "") {
+                    QMessageBox::critical(this, tr("ERROR"), tr(QString(
+                                                  "打开视频" + video_name + "有误，请检查摄像头信息").toStdString().c_str()),
+                                          QMessageBox::Close);
+                } else {
+                    INFO("%s : %s", video_name.toStdString().c_str(), url.toStdString().c_str());
+                    FFmpegWidget *newVideo = new FFmpegWidget(videoWidget->getVideoWidgetList().at(i));
+                    QVBoxLayout *newPlayLayout = new QVBoxLayout(videoWidget->getVideoWidgetList().at(i));
+                    newPlayLayout->addWidget(newVideo);
+                    newVideo->setUrl(url);
+                    newVideo->open();
+                }
+
+            } else if (video_type == "HTTP-FLV") {
+                QString url = ReadVideoConfJson.getString(video_name + ".url");
+                if (url == "") {
+                    QMessageBox::critical(this, tr("ERROR"), tr(QString(
+                                                  "打开视频" + video_name + "有误，请检查摄像头信息").toStdString().c_str()),
+                                          QMessageBox::Close);
+                } else {
+                    INFO("%s : %s", video_name.toStdString().c_str(), url.toStdString().c_str());
+                    FFmpegWidget *newVideo = new FFmpegWidget(videoWidget->getVideoWidgetList().at(i));
+                    QVBoxLayout *newPlayLayout = new QVBoxLayout(videoWidget->getVideoWidgetList().at(i));
+                    newPlayLayout->addWidget(newVideo);
+                    newVideo->setUrl(url);
+                    newVideo->open();
+                }
+
+            } else if (video_type == "Local-Camera") {
+
+            } else {
+                INFOE("This video%d type is %s, which does not belong to the preset video type!", i,
+                      video_type.toStdString().c_str());
+            }
+
+        }
+    }
 }
 
 void SeViManPlat::destroyAll() {
@@ -198,11 +229,16 @@ void SeViManPlat::destroyAll() {
     qDeleteAll(videoPlayLayout);
 }
 
-void SeViManPlat::addVideoDevice() {
-
-    this->addVideoTool = new addVideo;
+void SeViManPlat::addVideoDialog() {
+    this->addVideoTool = new addVideo(m_video_conf_json, this);
+    connect(this->addVideoTool, SIGNAL(finished(int)), this, SLOT(addVideoPlay()));
     this->addVideoTool->show();
 }
+
+void SeViManPlat::addVideoPlay() {
+    this->initVideoPlay();
+}
+
 
 
 

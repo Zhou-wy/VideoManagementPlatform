@@ -1,5 +1,0 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/usr/bin/make -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -G "CodeBlocks - Unix Makefiles" -S /Users/zwy/CppProject/VidManPlat -B /Users/zwy/CppProject/VidManPlat/0build-mac
--- current platform: MacOS
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/zwy/CppProject/VidManPlat/0build-mac

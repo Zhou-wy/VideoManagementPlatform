@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../../lib/libVideoPanel.a  CMakeFiles/VideoPanel.dir/VideoPanel_autogen/mocs_compilation.cpp.o CMakeFiles/VideoPanel.dir/videobox.cpp.o CMakeFiles/VideoPanel.dir/videopanel.cpp.o
-/usr/bin/ranlib ../../../lib/libVideoPanel.a
