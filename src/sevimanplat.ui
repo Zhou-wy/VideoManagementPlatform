@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1177</width>
-    <height>910</height>
+    <width>1248</width>
+    <height>702</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1248</width>
+    <height>702</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>3480</width>
+    <height>2160</height>
+   </size>
   </property>
   <property name="font">
    <font>
@@ -492,8 +504,8 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
         <widget class="QWidget" name="videoPanwidget" native="true">
          <property name="minimumSize">
           <size>
-           <width>850</width>
-           <height>800</height>
+           <width>800</width>
+           <height>600</height>
           </size>
          </property>
          <property name="font">
@@ -509,7 +521,7 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
          <property name="minimumSize">
           <size>
            <width>270</width>
-           <height>810</height>
+           <height>600</height>
           </size>
          </property>
          <property name="maximumSize">
@@ -661,11 +673,6 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
                <pointsize>16</pointsize>
               </font>
              </property>
-             <property name="icon">
-              <iconset resource="resource.qrc">
-               <normaloff>:/qss/icon/web_cam_close.png</normaloff>
-               <normalon>:/qss/icon/web_cam_open.png</normalon>:/qss/icon/web_cam_close.png</iconset>
-             </property>
              <item>
               <property name="text">
                <string>示例摄像头</string>
@@ -713,11 +720,6 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
                <family>Songti SC</family>
                <pointsize>16</pointsize>
               </font>
-             </property>
-             <property name="icon">
-              <iconset resource="resource.qrc">
-               <normaloff>:/qss/icon/localcam_close.png</normaloff>
-               <normalon>:/qss/icon/localcam_open.png</normalon>:/qss/icon/localcam_close.png</iconset>
              </property>
              <item>
               <property name="text">

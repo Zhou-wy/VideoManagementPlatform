@@ -43,7 +43,7 @@ void SeViManPlat::initTimer() {
     cpuMonTimer->start();
     connect(cpuMonTimer, SIGNAL(timeout()), this, SLOT(onTimerOut()));
 
-    this->loadStyle(":/qss/blacksoft.css");
+    this->loadStyle(":/qss/lightblue.css");
 }
 
 void SeViManPlat::initMenuPbt() {
@@ -52,9 +52,9 @@ void SeViManPlat::initMenuPbt() {
     //设置获取CPU占用率
     JQCPUMonitor::initialize();
     //设置样式表
-    QStringList qss;
-    qss << QString("QWidget#widget_title QAbstractButton{min-height:%1px;max-height:%1px;}").arg(70);
-    this->setStyleSheet(qss.join(""));
+//    QStringList qss;
+//    qss << QString("QWidget#widget_title QAbstractButton{min-height:%1px;max-height:%1px;}").arg(70);
+//    this->setStyleSheet(qss.join(""));
     this->initMainBtnGroup();
 }
 
@@ -79,7 +79,7 @@ void SeViManPlat::initMainBtnGroup() {
     styleColor.iconWidth = 35;
     styleColor.iconHeight = 35;
     styleColor.borderWidth = 3;
-    styleColor.borderColor = "#A279C5";
+//    styleColor.borderColor = "#A279C5";
     styleColor.setColor("#292929", "#B6D7E3", "#10689A", "#F0F0F0");
     IconHelper::setStyle(ui->widget_title, btnGroup->buttons(), icons, styleColor);
 
@@ -173,6 +173,21 @@ void SeViManPlat::initVideoPlay() {
                         ReadVideoConfJson.getString(video_name + ".ip") + ":" +
                         ReadVideoConfJson.getString(video_name + ".port") +
                         "/cam/realmonitor?channel=1&subtype=1";
+
+                // 设置右侧设备树
+                QTreeWidgetItem* webCamRoot = ui->camDeviceList->topLevelItem(0);
+                // 创建子节点
+                auto* webCamItem = new QTreeWidgetItem();
+                webCamItem->setText(0, "摄像头"+QString::number(i+1));
+                webCamRoot->addChild(webCamItem);
+
+                // 创建主码流和辅码流
+                auto* webCamMain_code_stream = new QTreeWidgetItem();
+                webCamMain_code_stream->setText(0, "主码流");
+                webCamItem->addChild(webCamMain_code_stream);
+                auto* webCamAuxiliary_code_stream = new QTreeWidgetItem();
+                webCamAuxiliary_code_stream->setText(0, "辅码流");
+                webCamItem->addChild(webCamAuxiliary_code_stream);
 
                 // TODO: 后期补充切换主码流和辅码流逻辑，现用主码流代替
                 url = true ? main_code_stream : Auxiliary_code_stream;
