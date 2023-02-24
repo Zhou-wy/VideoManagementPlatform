@@ -143,6 +143,7 @@ void SeViManPlat::initVideoPlay() {
         INFOE("videoListConf 文件为空");
     } else {
         int videoCount = ReadVideoConfJson.getString("VideoCount").toInt();
+        QString url = "";
         for (int i = 0; i < videoCount; ++i) { // 遍历所有的摄像头配置
 
             QString video_type = ReadVideoConfJson.getString("video" + QString::number(i + 1) + ".type");
@@ -173,50 +174,44 @@ void SeViManPlat::initVideoPlay() {
                         ReadVideoConfJson.getString(video_name + ".port") +
                         "/cam/realmonitor?channel=1&subtype=1";
 
+                // TODO: 后期补充切换主码流和辅码流逻辑，现用主码流代替
+                url = true ? main_code_stream : Auxiliary_code_stream;
                 INFO(main_code_stream.toStdString().c_str());
-                FFmpegWidget *newVideo = new FFmpegWidget(videoWidget->getVideoWidgetList().at(i));
-                QVBoxLayout *newPlayLayout = new QVBoxLayout(videoWidget->getVideoWidgetList().at(i));
-                newPlayLayout->addWidget(newVideo);
-                newVideo->setUrl(main_code_stream);
-                newVideo->open();
-
             } else if (video_type == "RTMP") {
-                QString url = ReadVideoConfJson.getString(video_name + ".url");
+                url = ReadVideoConfJson.getString(video_name + ".url");
                 if (url == "") {
                     QMessageBox::critical(this, tr("ERROR"), tr(QString(
                                                   "打开视频" + video_name + "有误，请检查摄像头信息").toStdString().c_str()),
                                           QMessageBox::Close);
-                } else {
+                    continue;
+                } else
                     INFO("%s : %s", video_name.toStdString().c_str(), url.toStdString().c_str());
-                    FFmpegWidget *newVideo = new FFmpegWidget(videoWidget->getVideoWidgetList().at(i));
-                    QVBoxLayout *newPlayLayout = new QVBoxLayout(videoWidget->getVideoWidgetList().at(i));
-                    newPlayLayout->addWidget(newVideo);
-                    newVideo->setUrl(url);
-                    newVideo->open();
-                }
 
             } else if (video_type == "HTTP-FLV") {
-                QString url = ReadVideoConfJson.getString(video_name + ".url");
+                url = ReadVideoConfJson.getString(video_name + ".url");
                 if (url == "") {
                     QMessageBox::critical(this, tr("ERROR"), tr(QString(
                                                   "打开视频" + video_name + "有误，请检查摄像头信息").toStdString().c_str()),
                                           QMessageBox::Close);
-                } else {
+                    continue;
+                } else
                     INFO("%s : %s", video_name.toStdString().c_str(), url.toStdString().c_str());
-                    FFmpegWidget *newVideo = new FFmpegWidget(videoWidget->getVideoWidgetList().at(i));
-                    QVBoxLayout *newPlayLayout = new QVBoxLayout(videoWidget->getVideoWidgetList().at(i));
-                    newPlayLayout->addWidget(newVideo);
-                    newVideo->setUrl(url);
-                    newVideo->open();
-                }
 
             } else if (video_type == "Local-Camera") {
-
-            } else {
+                INFO("%s : %s", video_name.toStdString().c_str(), video_type.toStdString().c_str());
+            } else
                 INFOE("This video%d type is %s, which does not belong to the preset video type!", i,
                       video_type.toStdString().c_str());
-            }
 
+            if (videoPlay.length() == videoPlayLayout.length() and videoPlay.length() <= i) {
+                this->videoPlay.append(new FFmpegWidget(videoWidget->getVideoWidgetList().at(i)));
+                this->videoPlayLayout.append(new QVBoxLayout(videoWidget->getVideoWidgetList().at(i)));
+                this->videoPlay.length();
+
+                this->videoPlayLayout.at(i)->addWidget(this->videoPlay.at(i));
+                this->videoPlay.at(i)->setUrl(url);
+                this->videoPlay.at(i)->open();
+            }
         }
     }
 }
@@ -225,6 +220,7 @@ void SeViManPlat::destroyAll() {
     delete cpuMonTimer;
     delete videoWidget;
     delete videoWidgetLayout;
+    delete addVideoTool;
     qDeleteAll(videoPlay);
     qDeleteAll(videoPlayLayout);
 }

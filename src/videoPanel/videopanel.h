@@ -76,7 +76,6 @@ private slots:
     void snapshot_video_all();
 
 signals:
-
     //全屏切换信号
     void fullScreen(bool full);
 };

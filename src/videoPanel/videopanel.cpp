@@ -67,7 +67,7 @@ void VideoPanel::initForm() {
 
     videoMax = false;
     videoCount = 64;
-    videoType = "1_16";
+    videoType = "1_6"; //初始化页面布局
 
     for (int i = 0; i < videoCount; ++i) {
         QLabel *widget = new QLabel;

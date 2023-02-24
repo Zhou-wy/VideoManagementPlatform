@@ -62,7 +62,7 @@ private:
     QVBoxLayout *videoWidgetLayout; // 视频面板布局
 
     QList<FFmpegWidget *> videoPlay; // 视频播放
-    QList<QVBoxLayout *> videoPlayLayout; // 视频播放
+    QList<QVBoxLayout *> videoPlayLayout; // 视频播放布局
 
     addVideo *addVideoTool; // 添加摄像头
     QString m_video_conf_json;

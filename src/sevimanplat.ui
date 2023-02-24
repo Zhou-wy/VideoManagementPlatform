@@ -560,6 +560,18 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
              </property>
              <item>
               <widget class="QPushButton" name="addVideoDevice">
+               <property name="minimumSize">
+                <size>
+                 <width>250</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>250</width>
+                 <height>16777215</height>
+                </size>
+               </property>
                <property name="font">
                 <font>
                  <family>Songti SC</family>
