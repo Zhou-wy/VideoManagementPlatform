@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1248</width>
-    <height>702</height>
+    <width>1267</width>
+    <height>843</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -55,7 +55,7 @@
      <property name="minimumSize">
       <size>
        <width>0</width>
-       <height>100</height>
+       <height>105</height>
       </size>
      </property>
      <property name="maximumSize">
@@ -574,7 +574,7 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
               <widget class="QPushButton" name="addVideoDevice">
                <property name="minimumSize">
                 <size>
-                 <width>250</width>
+                 <width>260</width>
                  <height>0</height>
                 </size>
                </property>

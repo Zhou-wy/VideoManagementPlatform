@@ -52,8 +52,8 @@ void FFmpegThread::initlib() {
         avformat_network_init();
 
         isInit = true;
-//        qDebug() << TIMEMS << "init ffmpeg lib ok" << " version:" << FFMPEG_VERSION;
-        INFO("init ffmpeg lib ok! version: %s", FFMPEG_VERSION);
+        qDebug() << TIMEMS << "init ffmpeg lib ok" << " version:" << FFMPEG_VERSION;
+//        INFO("init ffmpeg lib ok! version: %s", FFMPEG_VERSION);
 #if 0
         //输出所有支持的解码器名称
         QStringList listCodeName;
@@ -88,7 +88,7 @@ bool FFmpegThread::init() {
     int result = avformat_open_input(&avFormatContext, url.toStdString().data(), NULL, &options);
     if (result < 0) {
 //        qDebug() << TIMEMS << "open input error" << url;
-        INFOE("open input error : %s", url.toStdString().c_str());
+//        INFOE("open input error : %s", url.toStdString().c_str());
         return false;
     }
 
@@ -101,7 +101,7 @@ bool FFmpegThread::init() {
     result = avformat_find_stream_info(avFormatContext, NULL);
     if (result < 0) {
 //        qDebug() << TIMEMS << "find stream info error";
-        INFOE("find stream info error");
+//        INFOE("find stream info error");
         return false;
     }
 
@@ -109,8 +109,8 @@ bool FFmpegThread::init() {
     if (1) {
         videoStreamIndex = av_find_best_stream(avFormatContext, AVMEDIA_TYPE_VIDEO, -1, -1, &videoDecoder, 0);
         if (videoStreamIndex < 0) {
-//            qDebug() << TIMEMS << "find video stream index error";
-            INFOE("find video stream index error");
+            qDebug() << TIMEMS << "find video stream index error";
+//            INFOE("find video stream index error");
             return false;
         }
 
@@ -122,8 +122,8 @@ bool FFmpegThread::init() {
         videoDecoder = avcodec_find_decoder(videoCodec->codec_id);
         //videoDecoder = avcodec_find_decoder_by_name("h264_qsv");
         if (videoDecoder == NULL) {
-//            qDebug() << TIMEMS << "video decoder not found";
-            INFOE("video decoder not found");
+            qDebug() << TIMEMS << "video decoder not found";
+//            INFOE("video decoder not found");
             return false;
         }
 
@@ -134,8 +134,8 @@ bool FFmpegThread::init() {
         //打开视频解码器
         result = avcodec_open2(videoCodec, videoDecoder, NULL);
         if (result < 0) {
-//            qDebug() << TIMEMS << "open video codec error";
-            INFOE("open video codec error");
+            qDebug() << TIMEMS << "open video codec error";
+//            INFOE("open video codec error");
             return false;
         }
 
@@ -145,16 +145,16 @@ bool FFmpegThread::init() {
 
         //如果没有获取到宽高则返回
         if (videoWidth == 0 || videoHeight == 0) {
-            //qDebug() << TIMEMS << "find width height error";
-            INFOE("find width height error");
+            qDebug() << TIMEMS << "find width height error";
+//            INFOE("find width height error");
             return false;
         }
 
         QString videoInfo = QString("视频流信息 -> 索引: %1  解码: %2  格式: %3  时长: %4 秒  分辨率: %5*%6")
                 .arg(videoStreamIndex).arg(videoDecoder->name).arg(avFormatContext->iformat->name)
                 .arg((avFormatContext->duration) / 1000000).arg(videoWidth).arg(videoHeight);
-//        qDebug() << TIMEMS << videoInfo;
-        INFOV(videoInfo.toStdString().c_str());
+        qDebug() << TIMEMS << videoInfo;
+//        INFOV(videoInfo.toStdString().c_str());
     }
     //----------视频流部分开始----------
 
@@ -171,8 +171,8 @@ bool FFmpegThread::init() {
 
         //有些没有音频流,所以这里不用返回
         if (audioStreamIndex == -1) {
-//            qDebug() << TIMEMS << "find audio stream index error";
-            INFOE("find audio stream index error");
+            qDebug() << TIMEMS << "find audio stream index error";
+//            INFOE("find audio stream index error");
         } else {
             //获取音频流
             AVStream *audioStream = avFormatContext->streams[audioStreamIndex];
@@ -182,24 +182,24 @@ bool FFmpegThread::init() {
             audioDecoder = avcodec_find_decoder(audioCodec->codec_id);
             //audioDecoder = avcodec_find_decoder_by_name("aac");
             if (audioDecoder == NULL) {
-//                qDebug() << TIMEMS << "audio codec not found";
-                INFOE("audio codec not found");
+                qDebug() << TIMEMS << "audio codec not found";
+//                INFOE("audio codec not found");
                 return false;
             }
 
             //打开音频解码器
             result = avcodec_open2(audioCodec, audioDecoder, NULL);
             if (result < 0) {
-//                qDebug() << TIMEMS << "open audio codec error";
-                INFOE("open audio codec error");
+                qDebug() << TIMEMS << "open audio codec error";
+//                INFOE("open audio codec error");
                 return false;
             }
 
             QString audioInfo = QString("音频流信息 -> 索引: %1  解码: %2  比特率: %3  声道数: %4  采样: %5")
                     .arg(audioStreamIndex).arg(audioDecoder->name).arg(avFormatContext->bit_rate)
                     .arg(audioCodec->channels).arg(audioCodec->sample_rate);
-//            qDebug() << TIMEMS << audioInfo;
-            INFOV(audioInfo.toStdString().c_str());
+            qDebug() << TIMEMS << audioInfo;
+//            INFOV(audioInfo.toStdString().c_str());
         }
     }
     //----------音频流部分结束----------

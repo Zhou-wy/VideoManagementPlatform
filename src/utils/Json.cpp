@@ -38,7 +38,7 @@ JsonPrivate::JsonPrivate(const QString &jsonOrJsonFilePath, bool fromFile) {
         } else {
             valid = false;
             errorString = QString("Cannot open the file: %1").arg(jsonOrJsonFilePath);
-            INFOE(errorString.toStdString().c_str());
+//            INFOE(errorString.toStdString().c_str());
             return;
         }
         file.close();

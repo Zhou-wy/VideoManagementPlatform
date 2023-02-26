@@ -12,11 +12,11 @@
 #include "addvideo.h"
 #include "ui_addVideo.h"
 
-#include "../utils/iLogger.h"
+//#include "../utils/iLogger.h"
 
 
 addVideo::addVideo(QString &video_conf_json, QWidget *parent) :
-        QDialog(parent), ui(new Ui::addVideo) , m_video_conf_json(video_conf_json){
+        QDialog(parent), ui(new Ui::addVideo), m_video_conf_json(video_conf_json) {
     ui->setupUi(this);
     ui->videoTypeBox->setCurrentIndex(0);
     ui->stackedWidget->setCurrentIndex(0);
@@ -53,8 +53,8 @@ void addVideo::saveVideoListConf() {
     if (videoConf->m_type == "RTSP") {
         if (videoConf->m_ip == "" || videoConf->m_type == "" || videoConf->m_passWord == "" ||
             videoConf->m_userName == "" || videoConf->m_port == "") {
-            INFOW(QString("rtsp video" + QString::number(VideoCount) +
-                          " fails to be enabled. Check the device").toStdString().c_str());
+//            INFOW(QString("rtsp video" + QString::number(VideoCount) +
+//                          " fails to be enabled. Check the device").toStdString().c_str());
         } else {
             VideoConfJson.set("video" + QString::number(VideoCount) + ".ip", videoConf->m_ip);
             VideoConfJson.set("video" + QString::number(VideoCount) + ".port", videoConf->m_port);
@@ -65,8 +65,8 @@ void addVideo::saveVideoListConf() {
     } else if (videoConf->m_type == "RTMP") {
         QString url = ui->rtmp_url->text();
         if (url == "")
-            INFOW(QString("rtmp video" + QString::number(VideoCount) +
-                          " fails to be enabled. Check the device").toStdString().c_str());
+            qDebug() << QString("rtmp video" + QString::number(VideoCount) +
+                                " fails to be enabled. Check the device");
         else {
             VideoConfJson.set("video" + QString::number(VideoCount) + ".type", videoConf->m_type);
             VideoConfJson.set("video" + QString::number(VideoCount) + ".url", url);
@@ -74,8 +74,8 @@ void addVideo::saveVideoListConf() {
     } else if (videoConf->m_type == "HTTP-FLV") {
         QString url = ui->http_flv_url->text();
         if (url == "")
-            INFOW(QString("fttp flv video" + QString::number(VideoCount) +
-                          " fails to be enabled. Check the device").toStdString().c_str());
+            qDebug() << QString("fttp flv video" + QString::number(VideoCount) +
+                                " fails to be enabled. Check the device");
         else {
             VideoConfJson.set("video" + QString::number(VideoCount) + ".type", videoConf->m_type);
             VideoConfJson.set("video" + QString::number(VideoCount) + ".url", url);
@@ -84,19 +84,19 @@ void addVideo::saveVideoListConf() {
     } else if (videoConf->m_type == "Local-Camera") {
         QString dev = QString(ui->localCamDevice->currentText());
         if (dev == "")
-            INFOW(QString("local camera video" + QString::number(VideoCount) +
-                          " fails to be enabled. Check the device").toStdString().c_str());
+            qDebug() << QString("local camera video" + QString::number(VideoCount) +
+                                " fails to be enabled. Check the device");
         else {
             VideoConfJson.set("video" + QString::number(VideoCount) + ".type", videoConf->m_type);
             VideoConfJson.set("video" + QString::number(VideoCount) + ".url", dev);
         }
 
     } else {
-        INFOE("save video config error");
+        qDebug("save video config error");
     }
     VideoConfJson.set("VideoCount", QString::number(VideoCount));
     VideoConfJson.save(m_video_conf_json);
-    INFO("save video%d config info successfully", VideoCount);
+    qDebug("save video%d config info successfully", VideoCount);
     this->close();
 }
 
@@ -104,12 +104,12 @@ void addVideo::saveVideoConf() {
     if (QMessageBox::question(this, tr("Quit"), tr("请确认新增摄像头信息无误"), QMessageBox::Yes, QMessageBox::No) ==
         QMessageBox::Yes) {
         QDialog::accept();//不会将事件传递给组件的父组件
-        INFO("save");
+//        INFO("save");
         saveVideoListConf();
 
     } else {
         QDialog::reject();
-        INFO("cancel");
+//        INFO("cancel");
     }
 }
 

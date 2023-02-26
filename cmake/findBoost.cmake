@@ -1,0 +1,13 @@
+if(CMAKE_SYSTEM_NAME MATCHES "Linux")
+    set(BOOST_DIR ${CMAKE_SOURCE_DIR}/3rdparty/boost1.81/linux)
+elseif(CMAKE_SYSTEM_NAME MATCHES "Windows")
+    message(STATUS "current platform: Windows")
+    set(BOOST_DIR ${CMAKE_SOURCE_DIR}/3rdparty/boost1.81/windows)
+elseif(CMAKE_SYSTEM_NAME MATCHES "Darwin")
+    set(BOOST_DIR ${CMAKE_SOURCE_DIR}/3rdparty/boost1.81/macos) # FFmpeg的安装目录，可以通过命令"brew info ffmpeg"获取
+else()
+    message(STATUS "other platform: ${CMAKE_SYSTEM_NAME}")
+endif()
+
+include_directories(${BOOST_DIR}/include) # 头文件搜索路径
+link_directories(${BOOST_DIR}/lib) # 动态链接库或静态链接库的搜索路径

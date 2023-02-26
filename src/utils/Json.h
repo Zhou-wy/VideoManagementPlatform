@@ -11,7 +11,7 @@
 #include <QJsonValue>
 #include <QJsonObject>
 #include <QJsonDocument>
-#include "../utils/iLogger.h"
+
 struct JsonPrivate;
 
 /**

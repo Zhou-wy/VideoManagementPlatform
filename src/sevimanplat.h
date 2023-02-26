@@ -18,24 +18,31 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class SeViManPlat; }
 QT_END_NAMESPACE
 
+typedef struct _videoConf {
+    QString video_name;
+    QList<QString> urls;
+    bool operator==(const _videoConf &other) const{
+        return (video_name == other.video_name) && (urls == other.urls);
+    }
+} VideoConf;
+
+
+
 class SeViManPlat : public QWidget {
 Q_OBJECT
 
 public:
-    explicit SeViManPlat(const QString& video_conf_json, const QString& log_save_dir, QWidget *parent = nullptr);
+    explicit SeViManPlat(const QString &video_conf_json, const QString &log_save_dir, QWidget *parent = nullptr);
 
     ~SeViManPlat() override;
 
 public:
-    void initMainBtnGroup();
 
     void initBtn(QButtonGroup *btnGroup, bool textBesideIcon);
 
     void initMenuPbt();
 
     void initTimer();
-
-    void initCameraList();
 
     void initCameraLayout();
 
@@ -50,6 +57,8 @@ public slots:
     void addVideoDialog(); // 添加摄像头槽函数
 
     void addVideoPlay();
+
+    void onTreeViewClicked(const QModelIndex &index);
 
 private:
     void destroyAll();
@@ -67,6 +76,7 @@ private:
     addVideo *addVideoTool; // 添加摄像头
     QString m_video_conf_json;
     QString m_log_save_dir;
+    QList<VideoConf *> m_videoConf;
 };
 
 

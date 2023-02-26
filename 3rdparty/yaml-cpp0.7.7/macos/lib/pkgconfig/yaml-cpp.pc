@@ -1,0 +1,11 @@
+prefix=/Users/zwy/CppProject/VidManPlat/3rdparty/yaml-cpp0.7.7/macos
+exec_prefix=${prefix}
+includedir=/Users/zwy/CppProject/VidManPlat/3rdparty/yaml-cpp0.7.7/macos/include
+libdir=/Users/zwy/CppProject/VidManPlat/3rdparty/yaml-cpp0.7.7/macos/lib
+
+Name: Yaml-cpp
+Description: A YAML parser and emitter for C++
+Version: 0.7.0
+Requires:
+Libs: -L${libdir} -lyaml-cpp
+Cflags: -I${includedir}

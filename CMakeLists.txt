@@ -31,6 +31,8 @@ endif()
 # 导入第三方库
 include(cmake/findQt5.cmake) # Qt5
 include(cmake/findFFmpeg.cmake) # FFmpeg
+include(cmake/findBoost.cmake)
+include(cmake/findYaml.cmake)
 
 # 导入QT中的资源文件
 set(QRC_SOURCE_FILES src/resource.qrc src/qss.qrc)
