@@ -43,9 +43,8 @@ public slots:
 
     void saveVideoConf();
 
-
 private:
-    Ui::addVideo *ui;
+    Ui::addVideo* ui;
     VideoInfo *videoConf; // 每个摄像头的配置
     unsigned int VideoCount = 0; // 记录多少个摄像头
     QString m_video_conf_json;

@@ -8,8 +8,6 @@
 
 #include "sevimanplat.h"
 #include "ui_sevimanplat.h"
-#include "utils/log.hpp"
-#include "utils/yamlconfig.hpp"
 
 SeViManPlat::SeViManPlat(const QString &video_conf_json, const QString &log_save_dir, QWidget *parent) :
         QWidget(parent), ui(new Ui::SeViManPlat), m_video_conf_json(video_conf_json), m_log_save_dir(log_save_dir) {
@@ -18,7 +16,6 @@ SeViManPlat::SeViManPlat(const QString &video_conf_json, const QString &log_save
     this->initTimer();
     this->initCameraLayout();
     this->initVideoPlay();
-//    iLogger::set_logger_save_directory(m_log_save_dir.toStdString());
 
     connect(ui->addVideoDevice, SIGNAL(clicked(bool)), this, SLOT(addVideoDialog()));
     connect(ui->camDeviceList, SIGNAL(clicked(const QModelIndex&)), this, SLOT(onTreeViewClicked(const QModelIndex&)));
@@ -235,7 +232,6 @@ void SeViManPlat::destroyAll() {
     delete cpuMonTimer;
     delete videoWidget;
     delete videoWidgetLayout;
-    delete addVideoTool;
     qDeleteAll(videoPlay);
     qDeleteAll(videoPlayLayout);
     qDeleteAll(m_videoConf);

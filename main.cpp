@@ -4,11 +4,10 @@
 
 #include <QApplication>
 #include "src/sevimanplat.h"
-//#include "src/utils/iLogger.h"
+
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
-//    INFO("================start========================");
-    SeViManPlat SVMP("/Users/zwy/CppProject/VidManPlat/conf/videoListConf.json","/Users/zwy/CppProject/VidManPlat/conf");
+    SeViManPlat SVMP("C:/Users/zwy/Desktop/VidManPlat/conf/videoListConf.json","C:/Users/zwy/Desktop/VidManPlat/conf");
     SVMP.setWindowTitle("安防视频监控管理平台");
     SVMP.show();
     return QApplication::exec();

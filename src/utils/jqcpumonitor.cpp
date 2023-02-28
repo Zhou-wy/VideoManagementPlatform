@@ -10,7 +10,8 @@
 
 // Windows lib import
 #ifdef Q_OS_WIN
-#   Headers "qt_windows.h"
+//#   Headers "qt_windows.h"
+#include "qt_windows.h"
 #endif
 
 // macOS lib import

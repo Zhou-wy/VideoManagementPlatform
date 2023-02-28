@@ -1,0 +1,410 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "C:/Users/zwy/Desktop/VidManPlat/bin/VideoManPlat.exe"
+		},
+		{
+			"path" : "C:/Users/zwy/Desktop/VidManPlat/bin/VideoManPlat.pdb"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"link_directories",
+			"include",
+			"target_link_libraries",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt",
+			"cmake/3drparty.cmake",
+			"src/utils/CMakeLists.txt",
+			"src/playFFmpeg/CMakeLists.txt",
+			"src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 47,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 39,
+				"parent" : 0
+			},
+			{
+				"file" : 1,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 32,
+				"parent" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 33,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 49,
+				"parent" : 0
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 15,
+				"parent" : 7
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 15,
+				"parent" : 9
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 3,
+				"file" : 4,
+				"line" : 19,
+				"parent" : 11
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 29,
+				"parent" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 30,
+				"parent" : 3
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -fdiagnostics-color=always"
+				},
+				{
+					"fragment" : "-std=gnu++11"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 6,
+					"define" : "QT_CORE_LIB"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "QT_GUI_LIB"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "QT_WIDGETS_LIB"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 0,
+					"path" : "C:/Users/zwy/Desktop/VidManPlat/0build-windows/VideoManPlat_autogen/include"
+				},
+				{
+					"backtrace" : 13,
+					"path" : "C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "C:/Users/zwy/Desktop/VidManPlat/3rdparty/gLog/include"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "D:/Qt5.12.5/5.12.5/mingw73_64/include"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "D:/Qt5.12.5/5.12.5/mingw73_64/./mkspecs/win32-g++"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "D:/Qt5.12.5/5.12.5/mingw73_64/include/QtANGLE"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					6
+				],
+				"standard" : "11"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "VideoManPlat_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "vidManPlatUi::@145eef247bfb46b6828c"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "PlayFFmpeg::@2ffd910cc6a6ab224bf9"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "utils::@f1b38b22aeb65474a6c5"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "addVideo::@d6568711fa9a46b9ea6c"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "IconHelper::@f0fdf5ef21887b867222"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "VideoPanel::@d5898b692044102cb1d1"
+		}
+	],
+	"id" : "VideoManPlat::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-static-libgcc",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-LC:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/lib",
+				"role" : "libraryPath"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-LC:/Users/zwy/Desktop/VidManPlat/3rdparty/gLog/lib",
+				"role" : "libraryPath"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "C:/Users/zwy/Desktop/VidManPlat/lib/libvidManPlatUi.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "C:/Users/zwy/Desktop/VidManPlat/lib/libutils.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "C:/Users/zwy/Desktop/VidManPlat/lib/libIconHelper.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "C:/Users/zwy/Desktop/VidManPlat/lib/libVideoPanel.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "C:/Users/zwy/Desktop/VidManPlat/lib/libPlayFFmpeg.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "C:/Users/zwy/Desktop/VidManPlat/lib/libaddVideo.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "-lavcodec",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "-lavformat",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "-lavutil",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "-lavfilter",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "-lswresample",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "D:/Qt5.12.5/5.12.5/mingw73_64/lib/libQt5Widgetsd.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "D:/Qt5.12.5/5.12.5/mingw73_64/lib/libQt5Guid.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "D:/Qt5.12.5/5.12.5/mingw73_64/lib/libQt5Cored.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "-lswscale",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "VideoManPlat",
+	"nameOnDisk" : "VideoManPlat.exe",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				4,
+				5
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "0build-windows/VideoManPlat_autogen/mocs_compilation.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "main.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "0build-windows/qrc_resource.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "0build-windows/qrc_qss.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"path" : "src/resource.qrc",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"path" : "src/qss.qrc",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "EXECUTABLE"
+}

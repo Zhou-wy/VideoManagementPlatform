@@ -7,6 +7,7 @@
 
 #include <QWidget>
 #include <QButtonGroup>
+
 #include "iconHelper/iconhelper.h"
 #include "utils/cpumonitor.h"
 #include "videoPanel/videopanel.h"

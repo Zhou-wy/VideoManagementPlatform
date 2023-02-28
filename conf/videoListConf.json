@@ -6,6 +6,5 @@
         "port": "554",
         "type": "RTSP",
         "username": "admin"
-    },
-    "videoCount": "0"
+    }
 }

@@ -1,0 +1,112 @@
+{
+	"BUILD_DIR" : "C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/addVideoDevice/addVideo_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/zwy/Desktop/VidManPlat/0build-windows",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/addVideoDevice",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/zwy/Desktop/VidManPlat/src/addVideoDevice",
+	"CMAKE_EXECUTABLE" : "C:/Program Files/JetBrains/CLion 2022.3.2/bin/cmake/win/x64/bin/cmake.exe",
+	"CMAKE_LIST_FILES" : 
+	[
+		"C:/Users/zwy/Desktop/VidManPlat/src/addVideoDevice/CMakeLists.txt",
+		"C:/Users/zwy/Desktop/VidManPlat/cmake/3drparty.cmake",
+		"D:/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"D:/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5/Qt5Config.cmake",
+		"D:/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake",
+		"D:/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake",
+		"D:/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake",
+		"D:/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake",
+		"D:/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake",
+		"D:/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake",
+		"D:/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake"
+	],
+	"CMAKE_SOURCE_DIR" : "C:/Users/zwy/Desktop/VidManPlat",
+	"DEP_FILE" : "",
+	"DEP_FILE_RULE_NAME" : "",
+	"HEADERS" : 
+	[
+		[
+			"C:/Users/zwy/Desktop/VidManPlat/src/addVideoDevice/addvideo.h",
+			"MU",
+			"EWIEGA46WW/moc_addvideo.cpp",
+			null
+		],
+		[
+			"C:/Users/zwy/Desktop/VidManPlat/src/addVideoDevice/ipaddress.h",
+			"MU",
+			"EWIEGA46WW/moc_ipaddress.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/addVideoDevice/addVideo_autogen/include",
+	"MOC_COMPILATION_FILE" : "C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/addVideoDevice/addVideo_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include",
+		"C:/Users/zwy/Desktop/VidManPlat/3rdparty/gLog/include",
+		"C:/Users/zwy/Desktop/VidManPlat/src/3rdparty/ffmpeg4/include",
+		"C:/Users/zwy/Desktop/VidManPlat/src/3rdparty/gLog/include",
+		"C:/Users/zwy/Desktop/VidManPlat/src/addVideoDevice/3rdparty/ffmpeg4/include",
+		"C:/Users/zwy/Desktop/VidManPlat/src/addVideoDevice/3rdparty/gLog/include",
+		"D:/Qt5.12.5/5.12.5/mingw73_64/include",
+		"D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore",
+		"D:/Qt5.12.5/5.12.5/mingw73_64/mkspecs/win32-g++",
+		"D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui",
+		"D:/Qt5.12.5/5.12.5/mingw73_64/include/QtANGLE",
+		"D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets",
+		"C:/Users/zwy/scoop/apps/gcc/current/include",
+		"D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++",
+		"D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32",
+		"D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward",
+		"D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include",
+		"D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed",
+		"D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"D:/Qt5.12.5/Tools/mingw730_64/bin/g++.exe",
+		"-dM",
+		"-E",
+		"-c",
+		"C:/Program Files/JetBrains/CLion 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/addVideoDevice/addVideo_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 8,
+	"PARSE_CACHE_FILE" : "C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/addVideoDevice/CMakeFiles/addVideo_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "D:/Qt5.12.5/5.12.5/mingw73_64/bin/moc.exe",
+	"QT_UIC_EXECUTABLE" : "D:/Qt5.12.5/5.12.5/mingw73_64/bin/uic.exe",
+	"QT_VERSION_MAJOR" : 5,
+	"QT_VERSION_MINOR" : 12,
+	"SETTINGS_FILE" : "C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/addVideoDevice/CMakeFiles/addVideo_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"C:/Users/zwy/Desktop/VidManPlat/src/addVideoDevice/addvideo.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/zwy/Desktop/VidManPlat/src/addVideoDevice/ipaddress.cpp",
+			"MU",
+			null
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}
