@@ -1,6 +1,6 @@
 src/iconHelper/CMakeFiles/IconHelper.dir/IconHelper_autogen/mocs_compilation.cpp.obj: \
- C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/iconHelper/IconHelper_autogen/mocs_compilation.cpp \
- C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/iconHelper/IconHelper_autogen/EWIEGA46WW/moc_iconhelper.cpp \
+ C:\Users\zwy\Desktop\VidManPlat\0build-windows\src\iconHelper\IconHelper_autogen\mocs_compilation.cpp \
+ C:\Users\zwy\Desktop\VidManPlat\0build-windows\src\iconHelper\IconHelper_autogen\EWIEGA46WW/moc_iconhelper.cpp \
  C:/Users/zwy/Desktop/VidManPlat/src/iconHelper/iconhelper.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/QtGui \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/QtGuiDepends \

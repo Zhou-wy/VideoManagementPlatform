@@ -1,6 +1,6 @@
 src/videoPanel/CMakeFiles/VideoPanel.dir/videobox.cpp.obj: \
- C:/Users/zwy/Desktop/VidManPlat/src/videoPanel/videobox.cpp \
- C:/Users/zwy/Desktop/VidManPlat/src/videoPanel/videobox.h \
+ C:\Users\zwy\Desktop\VidManPlat\src\videoPanel\videobox.cpp \
+ C:\Users\zwy\Desktop\VidManPlat\src\videoPanel\videobox.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QObject \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qobject.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qobjectdefs.h \

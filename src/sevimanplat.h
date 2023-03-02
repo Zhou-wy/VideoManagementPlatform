@@ -8,6 +8,7 @@
 #include <QWidget>
 #include <QButtonGroup>
 
+
 #include "iconHelper/iconhelper.h"
 #include "utils/cpumonitor.h"
 #include "videoPanel/videopanel.h"
@@ -50,6 +51,8 @@ public:
     void initVideoPlay(); // 设置视频播放
 
     void loadStyle(const QString &qssFile);
+
+    void initLogger();
 
 public slots:
 

@@ -15,5 +15,5 @@ add_library(${PROJECT_NAME} STATIC ${CURRENT_HEADERS} ${CURRENT_SOURCES})
 target_link_libraries(${PROJECT_NAME}
         ${Qt5_Libs}
         pthread
-        ${YAMLCPP_LIBRARIES})
+        spdlog)
 set(LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/lib)

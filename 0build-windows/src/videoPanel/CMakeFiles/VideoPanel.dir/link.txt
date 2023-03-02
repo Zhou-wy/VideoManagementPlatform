@@ -1,2 +1,2 @@
-D:/Qt5.12.5/Tools/mingw730_64/bin/ar.exe qc C:/Users/zwy/Desktop/VidManPlat/lib/libVideoPanel.a CMakeFiles/VideoPanel.dir/VideoPanel_autogen/mocs_compilation.cpp.obj CMakeFiles/VideoPanel.dir/videobox.cpp.obj CMakeFiles/VideoPanel.dir/videopanel.cpp.obj
-D:/Qt5.12.5/Tools/mingw730_64/bin/ranlib.exe C:/Users/zwy/Desktop/VidManPlat/lib/libVideoPanel.a
+D:\Qt5.12.5\Tools\mingw730_64\bin\ar.exe qc C:\Users\zwy\Desktop\VidManPlat\lib\libVideoPanel.a CMakeFiles/VideoPanel.dir/VideoPanel_autogen/mocs_compilation.cpp.obj CMakeFiles/VideoPanel.dir/videobox.cpp.obj CMakeFiles/VideoPanel.dir/videopanel.cpp.obj
+D:\Qt5.12.5\Tools\mingw730_64\bin\ranlib.exe C:\Users\zwy\Desktop\VidManPlat\lib\libVideoPanel.a

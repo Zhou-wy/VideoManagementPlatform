@@ -2,5 +2,7 @@
 C:/Users/zwy/Desktop/VidManPlat/src/utils/Json.h
 C:/Users/zwy/Desktop/VidManPlat/src/utils/cpumonitor.h
  mmc:Q_OBJECT
+C:/Users/zwy/Desktop/VidManPlat/src/utils/iLOG.hpp
 C:/Users/zwy/Desktop/VidManPlat/src/utils/Json.cpp
+C:/Users/zwy/Desktop/VidManPlat/src/utils/iLOG.cpp
 C:/Users/zwy/Desktop/VidManPlat/src/utils/jqcpumonitor.cpp

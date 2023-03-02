@@ -45,9 +45,9 @@
 	"MOC_INCLUDES" : 
 	[
 		"C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include",
-		"C:/Users/zwy/Desktop/VidManPlat/3rdparty/gLog/include",
+		"C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include",
 		"C:/Users/zwy/Desktop/VidManPlat/src/3rdparty/ffmpeg4/include",
-		"C:/Users/zwy/Desktop/VidManPlat/src/3rdparty/gLog/include",
+		"C:/Users/zwy/Desktop/VidManPlat/src/3rdparty/spdlog/include",
 		"D:/Qt5.12.5/5.12.5/mingw73_64/include",
 		"D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore",
 		"D:/Qt5.12.5/5.12.5/mingw73_64/mkspecs/win32-g++",

@@ -1,5 +1,5 @@
 CMakeFiles/VideoManPlat.dir/main.cpp.obj: \
- C:/Users/zwy/Desktop/VidManPlat/main.cpp \
+ C:\Users\zwy\Desktop\VidManPlat\main.cpp \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/QApplication \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qapplication.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -241,7 +241,7 @@ CMakeFiles/VideoManPlat.dir/main.cpp.obj: \
  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/refwrap.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qhash.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qshareddata.h \
- C:/Users/zwy/Desktop/VidManPlat/src/sevimanplat.h \
+ C:\Users\zwy\Desktop\VidManPlat\src/sevimanplat.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/QWidget \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qwidget.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qmargins.h \
@@ -273,7 +273,7 @@ CMakeFiles/VideoManPlat.dir/main.cpp.obj: \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qkeysequence.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/QButtonGroup \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qbuttongroup.h \
- C:/Users/zwy/Desktop/VidManPlat/src/iconHelper/iconhelper.h \
+ C:\Users\zwy\Desktop\VidManPlat\src/iconHelper/iconhelper.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/QtGui \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/QtGuiDepends \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QtCore \
@@ -1049,17 +1049,17 @@ CMakeFiles/VideoManPlat.dir/main.cpp.obj: \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qwidgetaction.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qwizard.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qtwidgetsversion.h \
- C:/Users/zwy/Desktop/VidManPlat/src/utils/cpumonitor.h \
+ C:\Users\zwy\Desktop\VidManPlat\src/utils/cpumonitor.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QObject \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QDateTime \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QMutex \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QThread \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QPointer \
- C:/Users/zwy/Desktop/VidManPlat/src/utils/cpumonitor.inc \
- C:/Users/zwy/Desktop/VidManPlat/src/utils/cpumonitor.h \
- C:/Users/zwy/Desktop/VidManPlat/src/videoPanel/videopanel.h \
- C:/Users/zwy/Desktop/VidManPlat/src/playFFmpeg/ffmpeg.h \
- C:/Users/zwy/Desktop/VidManPlat/src/playFFmpeg/ffmpeghead.h \
+ C:\Users\zwy\Desktop\VidManPlat\src/utils/cpumonitor.inc \
+ C:\Users\zwy\Desktop\VidManPlat\src/utils/cpumonitor.h \
+ C:\Users\zwy\Desktop\VidManPlat\src/videoPanel/videopanel.h \
+ C:\Users\zwy\Desktop\VidManPlat\src/playFFmpeg/ffmpeg.h \
+ C:\Users\zwy\Desktop\VidManPlat\src/playFFmpeg/ffmpeghead.h \
  C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include/libavutil/opt.h \
  C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include/libavutil/rational.h \
  C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include/libavutil/attributes.h \
@@ -1120,7 +1120,7 @@ CMakeFiles/VideoManPlat.dir/main.cpp.obj: \
  C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include/libavfilter/avfilter.h \
  C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include/libavfilter/version.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qdatetime.h \
- C:/Users/zwy/Desktop/VidManPlat/src/addVideoDevice/addvideo.h \
+ C:\Users\zwy\Desktop\VidManPlat\src/addVideoDevice/addvideo.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/QDialog \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QString \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/QMessageBox \
@@ -1129,4 +1129,4 @@ CMakeFiles/VideoManPlat.dir/main.cpp.obj: \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QJsonValue \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QJsonObject \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QJsonDocument \
- C:/Users/zwy/Desktop/VidManPlat/src/utils/Json.h
+ C:\Users\zwy\Desktop\VidManPlat\src/utils/Json.h

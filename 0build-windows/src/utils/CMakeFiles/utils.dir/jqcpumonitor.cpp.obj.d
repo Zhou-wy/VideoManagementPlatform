@@ -1,6 +1,6 @@
 src/utils/CMakeFiles/utils.dir/jqcpumonitor.cpp.obj: \
- C:/Users/zwy/Desktop/VidManPlat/src/utils/jqcpumonitor.cpp \
- C:/Users/zwy/Desktop/VidManPlat/src/utils/cpumonitor.h \
+ C:\Users\zwy\Desktop\VidManPlat\src\utils\jqcpumonitor.cpp \
+ C:\Users\zwy\Desktop\VidManPlat\src\utils\cpumonitor.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QObject \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qobject.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qobjectdefs.h \
@@ -249,7 +249,7 @@ src/utils/CMakeFiles/utils.dir/jqcpumonitor.cpp.obj: \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qpointer.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qsharedpointer.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qsharedpointer_impl.h \
- C:/Users/zwy/Desktop/VidManPlat/src/utils/cpumonitor.inc \
+ C:\Users\zwy\Desktop\VidManPlat\src\utils\cpumonitor.inc \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QDebug \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qdebug.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qmap.h \

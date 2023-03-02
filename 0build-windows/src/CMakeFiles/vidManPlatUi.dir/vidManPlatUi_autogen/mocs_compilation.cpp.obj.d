@@ -1,6 +1,6 @@
 src/CMakeFiles/vidManPlatUi.dir/vidManPlatUi_autogen/mocs_compilation.cpp.obj: \
- C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/vidManPlatUi_autogen/mocs_compilation.cpp \
- C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/vidManPlatUi_autogen/EWIEGA46WW/moc_sevimanplat.cpp \
+ C:\Users\zwy\Desktop\VidManPlat\0build-windows\src\vidManPlatUi_autogen\mocs_compilation.cpp \
+ C:\Users\zwy\Desktop\VidManPlat\0build-windows\src\vidManPlatUi_autogen\EWIEGA46WW/moc_sevimanplat.cpp \
  C:/Users/zwy/Desktop/VidManPlat/src/sevimanplat.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/QWidget \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qwidget.h \

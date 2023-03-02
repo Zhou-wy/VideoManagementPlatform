@@ -1,5 +1,5 @@
 src/CMakeFiles/vidManPlatUi.dir/sevimanplat.cpp.obj: \
- C:/Users/zwy/Desktop/VidManPlat/src/sevimanplat.cpp \
+ C:\Users\zwy\Desktop\VidManPlat\src\sevimanplat.cpp \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QList \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qlist.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qalgorithms.h \
@@ -262,12 +262,12 @@ src/CMakeFiles/vidManPlatUi.dir/sevimanplat.cpp.obj: \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qfontinfo.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qsizepolicy.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qcursor.h \
- C:/Users/zwy/Desktop/VidManPlat/src/sevimanplat.h \
+ C:\Users\zwy\Desktop\VidManPlat\src\sevimanplat.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/QWidget \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qwidget.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/QButtonGroup \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qbuttongroup.h \
- C:/Users/zwy/Desktop/VidManPlat/src/iconHelper/iconhelper.h \
+ C:\Users\zwy\Desktop\VidManPlat\src\iconHelper/iconhelper.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/QtGui \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/QtGuiDepends \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QtCore \
@@ -1050,17 +1050,17 @@ src/CMakeFiles/vidManPlatUi.dir/sevimanplat.cpp.obj: \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qwidgetaction.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qwizard.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qtwidgetsversion.h \
- C:/Users/zwy/Desktop/VidManPlat/src/utils/cpumonitor.h \
+ C:\Users\zwy\Desktop\VidManPlat\src\utils/cpumonitor.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QObject \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QDateTime \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QMutex \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QThread \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QPointer \
- C:/Users/zwy/Desktop/VidManPlat/src/utils/cpumonitor.inc \
- C:/Users/zwy/Desktop/VidManPlat/src/utils/cpumonitor.h \
- C:/Users/zwy/Desktop/VidManPlat/src/videoPanel/videopanel.h \
- C:/Users/zwy/Desktop/VidManPlat/src/playFFmpeg/ffmpeg.h \
- C:/Users/zwy/Desktop/VidManPlat/src/playFFmpeg/ffmpeghead.h \
+ C:\Users\zwy\Desktop\VidManPlat\src\utils/cpumonitor.inc \
+ C:\Users\zwy\Desktop\VidManPlat\src\utils/cpumonitor.h \
+ C:\Users\zwy\Desktop\VidManPlat\src\videoPanel/videopanel.h \
+ C:\Users\zwy\Desktop\VidManPlat\src\playFFmpeg/ffmpeg.h \
+ C:\Users\zwy\Desktop\VidManPlat\src\playFFmpeg/ffmpeghead.h \
  C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include/libavutil/opt.h \
  C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include/libavutil/rational.h \
  C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include/libavutil/attributes.h \
@@ -1121,7 +1121,7 @@ src/CMakeFiles/vidManPlatUi.dir/sevimanplat.cpp.obj: \
  C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include/libavfilter/avfilter.h \
  C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include/libavfilter/version.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qdatetime.h \
- C:/Users/zwy/Desktop/VidManPlat/src/addVideoDevice/addvideo.h \
+ C:\Users\zwy\Desktop\VidManPlat\src\addVideoDevice/addvideo.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/QDialog \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QString \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/QMessageBox \
@@ -1130,7 +1130,7 @@ src/CMakeFiles/vidManPlatUi.dir/sevimanplat.cpp.obj: \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QJsonValue \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QJsonObject \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QJsonDocument \
- C:/Users/zwy/Desktop/VidManPlat/src/utils/Json.h \
+ C:\Users\zwy\Desktop\VidManPlat\src\utils/Json.h \
  C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/vidManPlatUi_autogen/include/ui_sevimanplat.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/QApplication \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/QHBoxLayout \
@@ -1142,4 +1142,75 @@ src/CMakeFiles/vidManPlatUi.dir/sevimanplat.cpp.obj: \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/QStackedWidget \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/QToolButton \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/QTreeWidget \
- D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/QVBoxLayout
+ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/QVBoxLayout \
+ C:\Users\zwy\Desktop\VidManPlat\src\utils/iLOG.hpp \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/spdlog.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/common.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/tweakme.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/null_mutex.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/fmt.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/core.h \
+ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cstring \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/format.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/core.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/format-inl.h \
+ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/climits \
+ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cstdarg \
+ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/locale \
+ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/locale_facets_nonio.h \
+ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
+ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
+ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/codecvt.h \
+ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/locale_facets_nonio.tcc \
+ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/locale_conv.h \
+ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stringfwd.h \
+ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h \
+ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/codecvt.h \
+ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/unique_ptr.h \
+ D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/io.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/format.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/common-inl.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/registry.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/periodic_worker.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/periodic_worker-inl.h \
+ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/unordered_map \
+ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/hashtable.h \
+ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/hashtable_policy.h \
+ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/unordered_map.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/registry-inl.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/logger.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/log_msg.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/log_msg-inl.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/os.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/os-inl.h \
+ D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/sys/stat.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/windows_include.h \
+ D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/share.h \
+ D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/direct.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/backtracer.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/log_msg_buffer.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/log_msg_buffer-inl.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/circular_q.h \
+ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cassert \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/backtracer-inl.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/logger-inl.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/sink.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/formatter.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/sink-inl.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/pattern_formatter.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/pattern_formatter-inl.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/fmt_helper.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/wincolor_sink.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/console_globals.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/wincolor_sink-inl.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/version.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/synchronous_factory.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/spdlog-inl.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/basic_file_sink.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/file_helper.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/file_helper-inl.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/base_sink.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/base_sink-inl.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/basic_file_sink-inl.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/stdout_color_sinks.h \
+ C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/stdout_color_sinks-inl.h

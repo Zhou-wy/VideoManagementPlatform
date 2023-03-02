@@ -1,6 +1,6 @@
 src/videoPanel/CMakeFiles/VideoPanel.dir/VideoPanel_autogen/mocs_compilation.cpp.obj: \
- C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/videoPanel/VideoPanel_autogen/mocs_compilation.cpp \
- C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/videoPanel/VideoPanel_autogen/EWIEGA46WW/moc_videobox.cpp \
+ C:\Users\zwy\Desktop\VidManPlat\0build-windows\src\videoPanel\VideoPanel_autogen\mocs_compilation.cpp \
+ C:\Users\zwy\Desktop\VidManPlat\0build-windows\src\videoPanel\VideoPanel_autogen\EWIEGA46WW/moc_videobox.cpp \
  C:/Users/zwy/Desktop/VidManPlat/src/videoPanel/videobox.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QObject \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qobject.h \
@@ -268,5 +268,5 @@ src/videoPanel/CMakeFiles/VideoPanel.dir/VideoPanel_autogen/mocs_compilation.cpp
  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/refwrap.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QList \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qlist.h \
- C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/videoPanel/VideoPanel_autogen/EWIEGA46WW/moc_videopanel.cpp \
+ C:\Users\zwy\Desktop\VidManPlat\0build-windows\src\videoPanel\VideoPanel_autogen\EWIEGA46WW/moc_videopanel.cpp \
  C:/Users/zwy/Desktop/VidManPlat/src/videoPanel/videopanel.h

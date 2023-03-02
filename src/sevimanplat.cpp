@@ -8,6 +8,8 @@
 
 #include "sevimanplat.h"
 #include "ui_sevimanplat.h"
+#include "utils/iLOG.hpp"
+
 
 SeViManPlat::SeViManPlat(const QString &video_conf_json, const QString &log_save_dir, QWidget *parent) :
         QWidget(parent), ui(new Ui::SeViManPlat), m_video_conf_json(video_conf_json), m_log_save_dir(log_save_dir) {
@@ -16,7 +18,7 @@ SeViManPlat::SeViManPlat(const QString &video_conf_json, const QString &log_save
     this->initTimer();
     this->initCameraLayout();
     this->initVideoPlay();
-
+    this->initLogger();
     connect(ui->addVideoDevice, SIGNAL(clicked(bool)), this, SLOT(addVideoDialog()));
     connect(ui->camDeviceList, SIGNAL(clicked(const QModelIndex&)), this, SLOT(onTreeViewClicked(const QModelIndex&)));
 
@@ -25,6 +27,20 @@ SeViManPlat::SeViManPlat(const QString &video_conf_json, const QString &log_save
 SeViManPlat::~SeViManPlat() {
     destroyAll();
     delete ui;
+}
+
+void SeViManPlat::initLogger() {
+    // 获取名为"myLogger"的logger
+    Logger &logger = LoggerManager::getLogger("root");
+    // 设置logger级别为info
+    logger.setLevel(spdlog::level::debug);
+    logger.setSaveDir("C:/Users/zwy/Desktop/VideoManagementPlatform-windows/log");
+    DEBUG_FMT(logger, "test %d", 12);
+    INFO_FMT(logger, "hello {}", "world");
+    WARN_FMT(logger, "test %s", "str");
+    ERROR_FMT(logger, "test %f", 3.14);
+    FATAL_FMT(logger, "end");
+
 }
 
 void SeViManPlat::initTimer() {
@@ -222,7 +238,7 @@ void SeViManPlat::initVideoPlay() {
             this->videoPlay.at(i)->setUrl(url);
             this->videoPlay.at(i)->open();
 
-            delete videoConf_i;
+//            delete videoConf_i;
         }
     }
     ReadVideoConfJson.save(m_video_conf_json);
@@ -299,8 +315,7 @@ void SeViManPlat::addVideoPlay() {
                 webCamAuxiliary_code_stream->setText(0, "辅码流");
                 webCamItem->addChild(webCamAuxiliary_code_stream);
 
-                // TODO: 后期补充切换主码流和辅码流逻辑，现用主码流代替
-                url = true ? main_code_stream : Auxiliary_code_stream;
+                url = main_code_stream;
 //                INFO("%s : %s", video_name.toStdString().c_str(), url.toStdString().c_str());
             } else if (video_type == "RTMP") {
                 url = ReadVideoConfJson.getString(video_name + ".url");
@@ -336,7 +351,7 @@ void SeViManPlat::addVideoPlay() {
             this->videoPlayLayout.at(videoCount - 1)->addWidget(this->videoPlay.at(videoCount - 1));
             this->videoPlay.at(videoCount - 1)->setUrl(url);
             this->videoPlay.at(videoCount - 1)->open();
-            delete videoConf_i;
+//            delete videoConf_i;
         }
     }
     ReadVideoConfJson.save(m_video_conf_json);
@@ -359,30 +374,20 @@ void SeViManPlat::onTreeViewClicked(const QModelIndex &index) {
         int video_i = parentData.toString().split("摄像头").at(1).toInt();
         QString url = "";
         QString findVideoName = "video" + QString::number(video_i);
-//        INFO("clicked the video %d, len m_videoConf: %d", video_i, m_videoConf.length());
+        qDebug("clicked the video %d, len m_videoConf: %d", video_i, m_videoConf.length());
 
-                foreach (auto item, this->m_videoConf) {
-                if (item->video_name == findVideoName) {
-                    if (!item->urls.isEmpty() && row >= 0 && row < item->urls.size()) {
-                        url = item->urls.at(row);
-                    } else {
-//                        INFOE("ERROR+++++++++");
-                        break;
-                    }
+        for (auto item: this->m_videoConf) {
+            if (item->video_name == findVideoName)
+                if (!item->urls.isEmpty() && row >= 0 && row < item->urls.size()) {
+                    url = item->urls[row];
                 }
-            }
-
-
-        // 检查是否找到了匹配的VideoConf对象
+        }
+        qDebug() << "url: " << url;
         if (url != "") {
-//            INFO("%d 切换成功，url: %s ", video_i - 1, url.toStdString().c_str());
-
-            url = (*m_videoConf.begin())->urls.at(row);
             this->videoPlay.at(video_i - 1)->close();
             this->videoPlay.at(video_i - 1)->setUrl(url);
             this->videoPlay.at(video_i - 1)->open();
         } else {
-//            INFOE("%d 切换失败，url: 为空", video_i - 1);
             qDebug() << "切换失败";
         }
     }

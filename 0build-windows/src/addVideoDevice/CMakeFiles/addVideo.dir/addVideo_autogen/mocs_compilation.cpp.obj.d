@@ -1,6 +1,6 @@
 src/addVideoDevice/CMakeFiles/addVideo.dir/addVideo_autogen/mocs_compilation.cpp.obj: \
- C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/addVideoDevice/addVideo_autogen/mocs_compilation.cpp \
- C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/addVideoDevice/addVideo_autogen/EWIEGA46WW/moc_addvideo.cpp \
+ C:\Users\zwy\Desktop\VidManPlat\0build-windows\src\addVideoDevice\addVideo_autogen\mocs_compilation.cpp \
+ C:\Users\zwy\Desktop\VidManPlat\0build-windows\src\addVideoDevice\addVideo_autogen\EWIEGA46WW/moc_addvideo.cpp \
  C:/Users/zwy/Desktop/VidManPlat/src/addVideoDevice/addvideo.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/QDialog \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qdialog.h \
@@ -275,7 +275,7 @@ src/addVideoDevice/CMakeFiles/addVideo.dir/addVideo_autogen/mocs_compilation.cpp
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qjsonobject.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QJsonDocument \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qjsondocument.h \
- C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/addVideoDevice/addVideo_autogen/EWIEGA46WW/moc_ipaddress.cpp \
+ C:\Users\zwy\Desktop\VidManPlat\0build-windows\src\addVideoDevice\addVideo_autogen\EWIEGA46WW/moc_ipaddress.cpp \
  C:/Users/zwy/Desktop/VidManPlat/src/addVideoDevice/ipaddress.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/QLineEdit \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qlineedit.h \

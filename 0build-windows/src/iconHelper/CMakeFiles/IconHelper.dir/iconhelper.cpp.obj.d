@@ -1,6 +1,6 @@
 src/iconHelper/CMakeFiles/IconHelper.dir/iconhelper.cpp.obj: \
- C:/Users/zwy/Desktop/VidManPlat/src/iconHelper/iconhelper.cpp \
- C:/Users/zwy/Desktop/VidManPlat/src/iconHelper/iconhelper.h \
+ C:\Users\zwy\Desktop\VidManPlat\src\iconHelper\iconhelper.cpp \
+ C:\Users\zwy\Desktop\VidManPlat\src\iconHelper\iconhelper.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/QtGui \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/QtGuiDepends \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QtCore \

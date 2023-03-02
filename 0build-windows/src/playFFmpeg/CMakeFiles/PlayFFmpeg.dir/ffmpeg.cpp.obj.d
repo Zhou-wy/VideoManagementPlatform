@@ -1,6 +1,6 @@
 src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/ffmpeg.cpp.obj: \
- C:/Users/zwy/Desktop/VidManPlat/src/playFFmpeg/ffmpeg.cpp \
- C:/Users/zwy/Desktop/VidManPlat/src/playFFmpeg/ffmpeg.h \
+ C:\Users\zwy\Desktop\VidManPlat\src\playFFmpeg\ffmpeg.cpp \
+ C:\Users\zwy\Desktop\VidManPlat\src\playFFmpeg\ffmpeg.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/QtGui \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/QtGuiDepends \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QtCore \
@@ -1045,7 +1045,7 @@ src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/ffmpeg.cpp.obj: \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qwidgetaction.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qwizard.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qtwidgetsversion.h \
- C:/Users/zwy/Desktop/VidManPlat/src/playFFmpeg/ffmpeghead.h \
+ C:\Users\zwy\Desktop\VidManPlat\src\playFFmpeg\ffmpeghead.h \
  C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include/libavutil/opt.h \
  C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include/libavutil/rational.h \
  C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include/libavutil/attributes.h \

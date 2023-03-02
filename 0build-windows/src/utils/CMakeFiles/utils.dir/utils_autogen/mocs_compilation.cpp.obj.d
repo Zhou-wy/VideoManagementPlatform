@@ -1,6 +1,6 @@
 src/utils/CMakeFiles/utils.dir/utils_autogen/mocs_compilation.cpp.obj: \
- C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/utils/utils_autogen/mocs_compilation.cpp \
- C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/utils/utils_autogen/EWIEGA46WW/moc_cpumonitor.cpp \
+ C:\Users\zwy\Desktop\VidManPlat\0build-windows\src\utils\utils_autogen\mocs_compilation.cpp \
+ C:\Users\zwy\Desktop\VidManPlat\0build-windows\src\utils\utils_autogen\EWIEGA46WW/moc_cpumonitor.cpp \
  C:/Users/zwy/Desktop/VidManPlat/src/utils/cpumonitor.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QObject \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qobject.h \

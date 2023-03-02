@@ -1,6 +1,6 @@
 src/addVideoDevice/CMakeFiles/addVideo.dir/ipaddress.cpp.obj: \
- C:/Users/zwy/Desktop/VidManPlat/src/addVideoDevice/ipaddress.cpp \
- C:/Users/zwy/Desktop/VidManPlat/src/addVideoDevice/ipaddress.h \
+ C:\Users\zwy\Desktop\VidManPlat\src\addVideoDevice\ipaddress.cpp \
+ C:\Users\zwy\Desktop\VidManPlat\src\addVideoDevice\ipaddress.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/QLineEdit \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qlineedit.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \

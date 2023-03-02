@@ -12,12 +12,11 @@ add_subdirectory(addVideoDevice)
 set(CMAKE_EXE_LINKER_FLAGS "-static")
 
 set(EXTRA_LIBS ${EXTRA_LIBS} utils IconHelper VideoPanel PlayFFmpeg addVideo)
-link_directories(C:/Users/zwy/Desktop/VidManPlat/3rdparty/system/lib)
+
 #qt_add_resources(resource.qrc)
 add_library(${PROJECT_NAME} sevimanplat.cpp sevimanplat.h sevimanplat.ui resource.qrc)
 
 target_link_libraries(${PROJECT_NAME}
         ${Qt5_Libs}
         ${EXTRA_LIBS}
-        swscale
         )

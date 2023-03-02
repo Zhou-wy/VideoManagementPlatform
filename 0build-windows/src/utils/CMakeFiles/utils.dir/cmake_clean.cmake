@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "C:/Users/zwy/Desktop/VidManPlat/lib/libutils.pdb"
   "CMakeFiles/utils.dir/Json.cpp.obj"
   "CMakeFiles/utils.dir/Json.cpp.obj.d"
+  "CMakeFiles/utils.dir/iLOG.cpp.obj"
+  "CMakeFiles/utils.dir/iLOG.cpp.obj.d"
   "CMakeFiles/utils.dir/jqcpumonitor.cpp.obj"
   "CMakeFiles/utils.dir/jqcpumonitor.cpp.obj.d"
   "CMakeFiles/utils.dir/utils_autogen/mocs_compilation.cpp.obj"

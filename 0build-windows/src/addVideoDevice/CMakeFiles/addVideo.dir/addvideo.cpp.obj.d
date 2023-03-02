@@ -1,5 +1,5 @@
 src/addVideoDevice/CMakeFiles/addVideo.dir/addvideo.cpp.obj: \
- C:/Users/zwy/Desktop/VidManPlat/src/addVideoDevice/addvideo.cpp \
+ C:\Users\zwy\Desktop\VidManPlat\src\addVideoDevice\addvideo.cpp \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QString \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qstring.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qchar.h \
@@ -275,7 +275,7 @@ src/addVideoDevice/CMakeFiles/addVideo.dir/addvideo.cpp.obj: \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qvariant.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qset.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qcontiguouscache.h \
- C:/Users/zwy/Desktop/VidManPlat/src/addVideoDevice/addvideo.h \
+ C:\Users\zwy\Desktop\VidManPlat\src\addVideoDevice\addvideo.h \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/QDialog \
  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qdialog.h \
  C:/Users/zwy/Desktop/VidManPlat/src/utils/Json.h \
