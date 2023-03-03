@@ -1215,7 +1215,11 @@ src/CMakeFiles/vidManPlatUi.dir/sevimanplat.cpp.obj: C:/Users/zwy/Desktop/VidMan
   C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/base_sink-inl.h \
   C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/basic_file_sink-inl.h \
   C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/stdout_color_sinks.h \
-  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/stdout_color_sinks-inl.h
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/stdout_color_sinks-inl.h \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/sstream \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/sstream.tcc \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iomanip \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iostream
 
 src/CMakeFiles/vidManPlatUi.dir/vidManPlatUi_autogen/EWIEGA46WW/qrc_resource.cpp.obj: src/vidManPlatUi_autogen/EWIEGA46WW/qrc_resource.cpp
 
@@ -2610,6 +2614,8 @@ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/exception_defines.h:
 
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iostream:
+
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ext/type_traits.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ext/numeric_traits.h:
@@ -3003,6 +3009,8 @@ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/locale_classes.h:
+
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/sstream.tcc:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qcheckbox.h:
 
@@ -3688,6 +3696,8 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qopengltimerquery.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/winapifamily.h:
 
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/sstream:
+
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/apiset.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qmenubar.h:
@@ -3829,6 +3839,8 @@ D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/processthreadsapi.h:
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/processtopologyapi.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/profileapi.h:
+
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iomanip:
 
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/securityappcontainer.h:
 

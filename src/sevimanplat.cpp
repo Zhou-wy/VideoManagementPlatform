@@ -34,12 +34,14 @@ void SeViManPlat::initLogger() {
     Logger &logger = LoggerManager::getLogger("root");
     // 设置logger级别为info
     logger.setLevel(spdlog::level::debug);
-    logger.setSaveDir("C:/Users/zwy/Desktop/VideoManagementPlatform-windows/log");
-    DEBUG_FMT(logger, "test %d", 12);
+    logger.setSaveDir("C:/Users/zwy/Desktop/VidManPlat/log");
+    DEBUG_FMT(logger, "test {}", 12);
     INFO_FMT(logger, "hello {}", "world");
-    WARN_FMT(logger, "test %s", "str");
-    ERROR_FMT(logger, "test %f", 3.14);
+    WARN_FMT(logger, "test {}", "str");
+    ERROR_FMT(logger, "test {}", 3.14);
     FATAL_FMT(logger, "end");
+    logger << "123" << 456;
+//    INFO(logger) << "test stream";
 
 }
 

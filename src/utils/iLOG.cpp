@@ -3,17 +3,10 @@
 //
 
 #include "iLOG.hpp"
-#include <sstream>
-#include <iomanip>
-#include <windows.h>
-#include <iostream>
-#include <chrono>
-
 
 Logger::Logger(const std::string &name, const std::string &pattern, spdlog::level::level_enum level) {
     spdlog::set_pattern(pattern);
     spdlog::set_level(level);
-
     m_logger = spdlog::stdout_color_mt(name);
     m_logger->set_level(level);
 }
@@ -102,11 +95,11 @@ std::string getTimeStamp() {
     return oss.str();
 }
 
-std::string getTodayStamp(){
+std::string getTodayStamp() {
     time_t now = time(0);
     tm *ltm = localtime(&now);
     std::ostringstream oss;
-    oss << std::setfill('0') << std::setw(4) << 1900 + ltm->tm_year  << "-"
+    oss << std::setfill('0') << std::setw(4) << 1900 + ltm->tm_year << "-"
         << std::setfill('0') << std::setw(2) << 1 + ltm->tm_mon << "-"
         << std::setfill('0') << std::setw(2) << ltm->tm_mday;
     return oss.str();

@@ -1,0 +1,81 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "IconHelper::@f0fdf5ef21887b867222"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "addVideo::@d6568711fa9a46b9ea6c"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "VideoPanel::@d5898b692044102cb1d1"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "utils::@f1b38b22aeb65474a6c5"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "PlayFFmpeg::@2ffd910cc6a6ab224bf9"
+		}
+	],
+	"id" : "vidManPlatUi_autogen::@145eef247bfb46b6828c",
+	"isGeneratorProvided" : true,
+	"name" : "vidManPlatUi_autogen",
+	"paths" : 
+	{
+		"build" : "src",
+		"source" : "src"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "0build-windows/src/CMakeFiles/vidManPlatUi_autogen",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "0build-windows/src/CMakeFiles/vidManPlatUi_autogen.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

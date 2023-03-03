@@ -9,8 +9,12 @@
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/basic_file_sink.h>
 #include <spdlog/sinks/stdout_color_sinks.h>
-
-//#define SPDLOG_ACTIVE_LEVEL SPDLOG_LEVEL_TRACE
+#include <sstream>
+#include <iomanip>
+#include <windows.h>
+#include <iostream>
+#include <chrono>
+//格式化输入
 #define LOGGER_FMT_LEVEL(logger, level, fmt, ...) \
     if((logger).getLevel() <= level)      SPDLOG_LOGGER_CALL(logger.getLogger(), level, fmt, ##__VA_ARGS__)
 
@@ -19,6 +23,14 @@
 #define WARN_FMT(logger, fmt, ...) LOGGER_FMT_LEVEL(logger, spdlog::level::level_enum::warn, fmt, ##__VA_ARGS__)
 #define ERROR_FMT(logger, fmt, ...) LOGGER_FMT_LEVEL(logger, spdlog::level::level_enum::err, fmt, ##__VA_ARGS__)
 #define FATAL_FMT(logger, fmt, ...) LOGGER_FMT_LEVEL(logger, spdlog::level::level_enum::critical, fmt, ##__VA_ARGS__)
+
+//流输入
+#define LOGGER_STREAM_LEVEL(logger, level) \
+if(logger.getLevel() <= spdlog::level::level_enum::debug) \
+    logger.getLogger() << __FILE__ << ":" << __LINE__ << " " << __FUNCTION__  \
+
+
+#define INFO(logger) LOGGER_STREAM_LEVEL(logger, spdlog::level::level_enum::info)
 
 /*
 %v	实际需要被日志记录的文本，如果文本中有{占位符}会被替换
@@ -69,6 +81,16 @@ public:
     spdlog::level::level_enum getLevel() const;
 
     std::shared_ptr<spdlog::logger> getLogger() const;
+
+    template<typename T>
+    Logger &operator<<(const T &data) {
+        if (m_logger) {
+            std::ostringstream oss;
+            oss << data;
+            m_logger->log(m_logger->level(), oss.str());
+        }
+        return *this;
+    }
 
 private:
     std::shared_ptr<spdlog::logger> m_logger;

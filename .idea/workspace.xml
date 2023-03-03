@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
 }</component>
@@ -19,189 +22,32 @@
   </component>
   <component name="CMakeSettings">
     <configurations>
-      <configuration PROFILE_NAME="Debug-MinGW_QT" ENABLED="true" GENERATION_DIR="0build-windows" CONFIG_NAME="Debug" TOOLCHAIN_NAME="MinGW_QT" GENERATION_OPTIONS="-G &quot;MinGW Makefiles&quot;" />
+      <configuration PROFILE_NAME="Debug-MinGW_QT" ENABLED="true" GENERATION_DIR="0build-windows" CONFIG_NAME="Debug" TOOLCHAIN_NAME="MinGW_QT" GENERATION_OPTIONS="-G &quot;MinGW Makefiles&quot;" BUILD_OPTIONS="-j 8" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41e4e3e3-a55c-47a0-b1ca-6776f5bfded8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/cache-v2-598a9f83ba1aa355b3c1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/codemodel-v2-bffd4952ab755da74f35.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/index-2023-02-28T02-13-11-0840.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/target-IconHelper-Debug-c92ca899f1ee51ec12a4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/target-PlayFFmpeg-Debug-c04b54cd8be2645c8bb6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/target-VideoManPlat-Debug-57d13d37b62a4dbfa1a0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/target-VideoManPlat_autogen-Debug-d71b9f606c865bab29fb.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/target-VideoPanel-Debug-19a976f2be1558a5e4a3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/target-addVideo-Debug-60d1243e6f202122d44e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/target-utils-Debug-c86968cfe4711e70c3b6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/target-vidManPlatUi-Debug-e53a6c375787625aba01.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/target-vidManPlatUi_autogen-Debug-2193449fc2e003a0ccd0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/3.24.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/3.24.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/3.24.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/3.24.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/3.24.2/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/3.24.2/CompilerIdC/a.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/3.24.2/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/3.24.2/CompilerIdCXX/a.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/codemodel-v2-73c035a534f567e4ba7b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/index-2023-03-02T09-35-47-0350.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/target-VideoManPlat-Debug-b428916bae1c93d65e65.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/target-VideoManPlat_autogen-Debug-f6c2568918fe630d0163.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/target-vidManPlatUi-Debug-6213ca5c905d80c5d545.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/target-vidManPlatUi_autogen-Debug-c48b5dcb3c52e11354d8.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/VideoManPlat_autogen/mocs_compilation.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/VideoManPlat_autogen/mocs_compilation.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/VideoManPlat_autogen/mocs_compilation.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/VideoManPlat_autogen/mocs_compilation.cpp.obj.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/includes_CXX.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/includes_CXX.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/linklibs.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/linklibs.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/main.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/main.cpp.obj.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/qrc_qss.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/qrc_qss.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/qrc_qss.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/qrc_qss.cpp.obj.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/qrc_resource.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/qrc_resource.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/qrc_resource.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/qrc_resource.cpp.obj.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat_autogen.dir/AutogenInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat_autogen.dir/AutogenInfo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat_autogen.dir/AutogenUsed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat_autogen.dir/AutogenUsed.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat_autogen.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat_autogen.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/clion-Debug-MinGW_QT-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/clion-Debug-MinGW_QT-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/0build-windows/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/VideoManPlat_autogen/mocs_compilation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/VideoManPlat_autogen/mocs_compilation.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/qrc_qss.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/qrc_qss.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/qrc_resource.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/qrc_resource.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/compiler_depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/includes_CXX.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/includes_CXX.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/sevimanplat.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/sevimanplat.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/sevimanplat.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/sevimanplat.cpp.obj.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/vidManPlatUi_autogen/EWIEGA46WW/qrc_resource.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/vidManPlatUi_autogen/EWIEGA46WW/qrc_resource.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/vidManPlatUi_autogen/EWIEGA46WW/qrc_resource.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/vidManPlatUi_autogen/EWIEGA46WW/qrc_resource.cpp.obj.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/vidManPlatUi_autogen/mocs_compilation.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/vidManPlatUi_autogen/mocs_compilation.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/vidManPlatUi_autogen/mocs_compilation.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/vidManPlatUi_autogen/mocs_compilation.cpp.obj.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi_autogen.dir/AutoRcc_resource_EWIEGA46WW_Info.json" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi_autogen.dir/AutoRcc_resource_EWIEGA46WW_Info.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi_autogen.dir/AutoRcc_resource_EWIEGA46WW_Used.txt" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi_autogen.dir/AutoRcc_resource_EWIEGA46WW_Used.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi_autogen.dir/AutogenInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi_autogen.dir/AutogenInfo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi_autogen.dir/AutogenUsed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi_autogen.dir/AutogenUsed.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi_autogen.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi_autogen.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi_autogen.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi_autogen.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/addVideo_autogen/mocs_compilation.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/addVideo_autogen/mocs_compilation.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/addVideo_autogen/mocs_compilation.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/addVideo_autogen/mocs_compilation.cpp.obj.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/addvideo.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/addvideo.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/addvideo.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/addvideo.cpp.obj.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/includes_CXX.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/includes_CXX.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/ipaddress.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/ipaddress.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/ipaddress.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/ipaddress.cpp.obj.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo_autogen.dir/AutogenInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo_autogen.dir/AutogenInfo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo_autogen.dir/AutogenUsed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo_autogen.dir/AutogenUsed.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo_autogen.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo_autogen.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/addVideo_autogen/mocs_compilation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/addVideo_autogen/mocs_compilation.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/IconHelper_autogen/mocs_compilation.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/IconHelper_autogen/mocs_compilation.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/IconHelper_autogen/mocs_compilation.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/IconHelper_autogen/mocs_compilation.cpp.obj.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/iconhelper.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/iconhelper.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/iconhelper.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/iconhelper.cpp.obj.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/includes_CXX.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/includes_CXX.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper_autogen.dir/AutogenInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper_autogen.dir/AutogenInfo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper_autogen.dir/AutogenUsed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper_autogen.dir/AutogenUsed.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper_autogen.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper_autogen.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/iconHelper/IconHelper_autogen/mocs_compilation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/iconHelper/IconHelper_autogen/mocs_compilation.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/iconHelper/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/iconHelper/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/PlayFFmpeg_autogen/mocs_compilation.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/PlayFFmpeg_autogen/mocs_compilation.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/PlayFFmpeg_autogen/mocs_compilation.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/PlayFFmpeg_autogen/mocs_compilation.cpp.obj.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/ffmpeg.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/ffmpeg.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/ffmpeg.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/ffmpeg.cpp.obj.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/includes_CXX.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/includes_CXX.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg_autogen.dir/AutogenInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg_autogen.dir/AutogenInfo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg_autogen.dir/AutogenUsed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg_autogen.dir/AutogenUsed.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg_autogen.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg_autogen.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/PlayFFmpeg_autogen/mocs_compilation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/PlayFFmpeg_autogen/mocs_compilation.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/qss.qrc.depends" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/qss.qrc.depends" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/resource.qrc.depends" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/resource.qrc.depends" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/Json.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/Json.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/Json.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/Json.cpp.obj.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/includes_CXX.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/includes_CXX.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/jqcpumonitor.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/jqcpumonitor.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/jqcpumonitor.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/jqcpumonitor.cpp.obj.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/utils_autogen/mocs_compilation.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/utils_autogen/mocs_compilation.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/utils_autogen/mocs_compilation.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/utils_autogen/mocs_compilation.cpp.obj.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils_autogen.dir/AutogenInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils_autogen.dir/AutogenInfo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils_autogen.dir/AutogenUsed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils_autogen.dir/AutogenUsed.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils_autogen.dir/ParseCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils_autogen.dir/ParseCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils_autogen.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils_autogen.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils_autogen.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils_autogen.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/utils_autogen/mocs_compilation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/utils_autogen/mocs_compilation.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/vidManPlatUi_autogen/EWIEGA46WW/qrc_resource.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/vidManPlatUi_autogen/EWIEGA46WW/qrc_resource.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/vidManPlatUi_autogen/mocs_compilation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/vidManPlatUi_autogen/mocs_compilation.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel.dir/VideoPanel_autogen/mocs_compilation.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel.dir/VideoPanel_autogen/mocs_compilation.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel.dir/VideoPanel_autogen/mocs_compilation.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel.dir/VideoPanel_autogen/mocs_compilation.cpp.obj.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel.dir/includes_CXX.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel.dir/includes_CXX.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel.dir/videobox.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel.dir/videobox.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel.dir/videobox.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel.dir/videobox.cpp.obj.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel.dir/videopanel.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel.dir/videopanel.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel.dir/videopanel.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel.dir/videopanel.cpp.obj.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel_autogen.dir/AutogenInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel_autogen.dir/AutogenInfo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel_autogen.dir/AutogenUsed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel_autogen.dir/AutogenUsed.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel_autogen.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/videoPanel/CMakeFiles/VideoPanel_autogen.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/videoPanel/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/videoPanel/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/src/videoPanel/VideoPanel_autogen/mocs_compilation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/videoPanel/VideoPanel_autogen/mocs_compilation.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/iLOG.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/iLOG.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/VideoManPlat.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/VideoManPlat.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake/3drparty.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake/3drparty.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/videoListConf.json" beforeDir="false" afterPath="$PROJECT_DIR$/conf/videoListConf.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/libIconHelper.a" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libIconHelper.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/libPlayFFmpeg.a" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libPlayFFmpeg.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/libVideoPanel.a" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libVideoPanel.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/libaddVideo.a" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libaddVideo.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/libutils.a" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libutils.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/libvidManPlatUi.a" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libvidManPlatUi.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/playFFmpeg/ffmpeghead.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/playFFmpeg/ffmpeghead.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sevimanplat.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/sevimanplat.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sevimanplat.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/sevimanplat.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sevimanplat.ui" beforeDir="false" afterPath="$PROJECT_DIR$/src/sevimanplat.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videoPanel/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoPanel/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/iLOG.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/iLOG.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/iLOG.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/iLOG.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,6 +82,10 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;CMakeSettings&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -298,11 +148,23 @@
       <workItem from="1677675122570" duration="207000" />
       <workItem from="1677675364450" duration="153000" />
       <workItem from="1677749716584" duration="131000" />
-      <workItem from="1677749951166" duration="1000" />
+      <workItem from="1677749951166" duration="9083000" />
+      <workItem from="1677804751040" duration="2000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

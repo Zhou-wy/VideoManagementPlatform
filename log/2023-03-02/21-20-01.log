@@ -1,0 +1,6 @@
+[2023-03-02 21:20:01.114] [root] [debug] [sevimanplat.cpp:38] test 12
+[2023-03-02 21:20:01.114] [root] [info] [sevimanplat.cpp:39] hello world
+[2023-03-02 21:20:01.114] [root] [warning] [sevimanplat.cpp:40] test str
+[2023-03-02 21:20:01.115] [root] [error] [sevimanplat.cpp:41] test 3.14
+[2023-03-02 21:20:01.115] [root] [critical] [sevimanplat.cpp:42] end
+[2023-03-02 21:20:01.115] [root] [debug] 123
