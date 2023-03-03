@@ -1,2 +1,0 @@
-D:\Qt5.12.5\Tools\mingw730_64\bin\ar.exe qc C:\Users\zwy\Desktop\VidManPlat\lib\libIconHelper.a CMakeFiles/IconHelper.dir/IconHelper_autogen/mocs_compilation.cpp.obj CMakeFiles/IconHelper.dir/iconhelper.cpp.obj
-D:\Qt5.12.5\Tools\mingw730_64\bin\ranlib.exe C:\Users\zwy\Desktop\VidManPlat\lib\libIconHelper.a

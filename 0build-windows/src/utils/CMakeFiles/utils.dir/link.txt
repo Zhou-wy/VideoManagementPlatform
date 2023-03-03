@@ -1,2 +1,0 @@
-D:\Qt5.12.5\Tools\mingw730_64\bin\ar.exe qc C:\Users\zwy\Desktop\VidManPlat\lib\libutils.a CMakeFiles/utils.dir/utils_autogen/mocs_compilation.cpp.obj CMakeFiles/utils.dir/Json.cpp.obj CMakeFiles/utils.dir/iLOG.cpp.obj CMakeFiles/utils.dir/jqcpumonitor.cpp.obj
-D:\Qt5.12.5\Tools\mingw730_64\bin\ranlib.exe C:\Users\zwy\Desktop\VidManPlat\lib\libutils.a
