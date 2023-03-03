@@ -162,8 +162,8 @@ public:
 
         label_2 = new QLabel(widget_3);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setMinimumSize(QSize(80, 40));
-        label_2->setMaximumSize(QSize(80, 40));
+        label_2->setMinimumSize(QSize(120, 40));
+        label_2->setMaximumSize(QSize(120, 40));
         label_2->setFont(font);
 
         horizontalLayout_2->addWidget(label_2);
@@ -179,8 +179,10 @@ public:
 
         horizontalLayout_2->addItem(horizontalSpacer_5);
 
+        horizontalLayout_2->setStretch(0, 1);
         horizontalLayout_2->setStretch(1, 1);
         horizontalLayout_2->setStretch(2, 3);
+        horizontalLayout_2->setStretch(3, 1);
 
         verticalLayout->addWidget(widget_3);
 
@@ -198,8 +200,8 @@ public:
 
         label_3 = new QLabel(widget_4);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setMinimumSize(QSize(80, 40));
-        label_3->setMaximumSize(QSize(80, 40));
+        label_3->setMinimumSize(QSize(120, 40));
+        label_3->setMaximumSize(QSize(120, 40));
         label_3->setFont(font);
 
         horizontalLayout_3->addWidget(label_3);
@@ -208,6 +210,8 @@ public:
         passWordEdit->setObjectName(QString::fromUtf8("passWordEdit"));
         passWordEdit->setMinimumSize(QSize(135, 25));
         passWordEdit->setFont(font);
+        passWordEdit->setContextMenuPolicy(Qt::DefaultContextMenu);
+        passWordEdit->setEchoMode(QLineEdit::Password);
 
         horizontalLayout_3->addWidget(passWordEdit);
 
@@ -215,8 +219,10 @@ public:
 
         horizontalLayout_3->addItem(horizontalSpacer_7);
 
+        horizontalLayout_3->setStretch(0, 1);
         horizontalLayout_3->setStretch(1, 1);
         horizontalLayout_3->setStretch(2, 3);
+        horizontalLayout_3->setStretch(3, 1);
 
         verticalLayout->addWidget(widget_4);
 

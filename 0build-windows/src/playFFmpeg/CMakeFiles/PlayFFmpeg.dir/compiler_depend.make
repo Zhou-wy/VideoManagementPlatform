@@ -2216,7 +2216,95 @@ src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/ffmpeg.cpp.obj: C:/Users/zwy/Desktop/Vi
   C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include/libavformat/version.h \
   C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include/libavfilter/avfilter.h \
   C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include/libavfilter/version.h \
-  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qdatetime.h
+  D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qdatetime.h \
+  C:/Users/zwy/Desktop/VidManPlat/src/utils/iLOG.hpp \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/spdlog.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/common.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/tweakme.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/null_mutex.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/fmt.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/core.h \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cstring \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/format.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/core.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/format-inl.h \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/climits \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cstdarg \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/locale \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/locale_facets_nonio.h \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/codecvt.h \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/locale_facets_nonio.tcc \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/locale_conv.h \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stringfwd.h \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/codecvt.h \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/unique_ptr.h \
+  D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/io.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/format.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/common-inl.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/registry.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/periodic_worker.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/periodic_worker-inl.h \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/unordered_map \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/hashtable.h \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/hashtable_policy.h \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/unordered_map.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/registry-inl.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/logger.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/log_msg.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/log_msg-inl.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/os.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/os-inl.h \
+  D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/sys/stat.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/windows_include.h \
+  D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/share.h \
+  D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/direct.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/backtracer.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/log_msg_buffer.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/log_msg_buffer-inl.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/circular_q.h \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cassert \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/backtracer-inl.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/logger-inl.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/sink.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/formatter.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/sink-inl.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/pattern_formatter.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/pattern_formatter-inl.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/fmt_helper.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/wincolor_sink.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/console_globals.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/wincolor_sink-inl.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/version.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/synchronous_factory.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/spdlog-inl.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/basic_file_sink.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/file_helper.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/file_helper-inl.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/base_sink.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/base_sink-inl.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/basic_file_sink-inl.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/stdout_color_sinks.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/stdout_color_sinks-inl.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/daily_file_sink.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/chrono.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/chrono.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/ostr.h \
+  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/ostream.h \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/fstream \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/fstream.tcc \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ext/stdio_filebuf.h \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ext/stdio_sync_filebuf.h \
+  D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/unistd.h \
+  D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/getopt.h \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/sstream \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/sstream.tcc \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iomanip \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iostream
 
 
 C:/Users/zwy/Desktop/VidManPlat/src/playFFmpeg/ffmpeg.h:
@@ -2259,6 +2347,8 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QtCoreDepends:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/thread:
 
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cstdarg:
+
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/new:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qdir.h:
@@ -2276,6 +2366,10 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qobject.h:
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qlayoutitem.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/vadefs.h:
+
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cstring:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/spdlog.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qcolor.h:
 
@@ -2441,6 +2535,8 @@ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/exception_ptr.h:
 
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h:
+
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qopenglextrafunctions.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qconfig.h:
@@ -2475,6 +2571,8 @@ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/exception_defines.h:
 
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iostream:
+
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ext/type_traits.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ext/numeric_traits.h:
@@ -2503,6 +2601,8 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/quuid.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/shaintrin.h:
 
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/logger-inl.h:
+
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/winreg.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/ammintrin.h:
@@ -2511,6 +2611,8 @@ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_uninitialized.h:
 
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/fmt_helper.h:
+
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/typeinfo:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/hash_bytes.h:
@@ -2518,6 +2620,8 @@ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/nested_exception.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ext/alloc_traits.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/common-inl.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qimageiohandler.h:
 
@@ -2545,6 +2649,8 @@ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/xsaveopti
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/uniform_int_dist.h:
 
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/unordered_map:
+
 C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include/libavcodec/avcodec.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/std_function.h:
@@ -2554,6 +2660,8 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qtypeinfo.h:
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/atomic_base.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qsurface.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/spdlog-inl.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qlogging.h:
 
@@ -2575,6 +2683,8 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QSize:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qbasicatomic.h:
 
+D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/direct.h:
+
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/pthread_signal.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qatomic_cxx11.h:
@@ -2588,6 +2698,8 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qlineedit.h:
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/stdint.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/wctype.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/null_mutex.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/atomic_lockfree_defines.h:
 
@@ -2687,6 +2799,8 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qmdisubwindow.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/_mingw_print_push.h:
 
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/file_helper-inl.h:
+
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qalgorithms.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/_mingw_stat64.h:
@@ -2704,6 +2818,8 @@ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/locale_facets.tcc:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/base_sink.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qcollator.h:
 
@@ -2753,6 +2869,8 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/QPaintDeviceWindow:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward/binders.h:
 
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ext/stdio_filebuf.h:
+
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/range_access.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:
@@ -2777,7 +2895,11 @@ D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/pthread.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h:
 
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/climits:
+
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/errno.h:
+
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/time_members.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tuple:
 
@@ -2829,6 +2951,8 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QRect:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ios:
 
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/os.h:
+
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/psdk_inc/_fd_types.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/ios_base.h:
@@ -2836,6 +2960,8 @@ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/locale_classes.h:
+
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/sstream.tcc:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qcheckbox.h:
 
@@ -2877,6 +3003,8 @@ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/
 
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/math.h:
 
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/fstream.tcc:
+
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qcommonstyle.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cwctype:
@@ -2886,6 +3014,8 @@ D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/msxml.h:
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/streambuf_iterator.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/stdout_color_sinks.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/ostream.tcc:
 
@@ -3017,6 +3147,10 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qsharedmemory.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qrgba64.h:
 
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/ostream.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/formatter.h:
+
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/clzerointrin.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/functional:
@@ -3045,6 +3179,8 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qabstracttransition.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qarraydataops.h:
 
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/basic_file_sink-inl.h:
+
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qarraydatapointer.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qopenglversionfunctions.h:
@@ -3056,6 +3192,8 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qbitarray.h:
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/dde.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qbytearraymatcher.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/core.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/ddeml.h:
 
@@ -3091,11 +3229,15 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qpropertyanimation.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qurl.h:
 
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/basic_file_sink.h:
+
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qcbormap.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/ioapiset.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qcborstream.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/common.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qfloat16.h:
 
@@ -3124,6 +3266,8 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qpoint.h:
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qdesktopservices.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qfiledevice.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/periodic_worker.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qdiriterator.h:
 
@@ -3171,13 +3315,19 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qimage.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qhistorystate.h:
 
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h:
+
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qidentityproxymodel.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/version.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qitemselectionmodel.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/ia32intrin.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/future:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/console_globals.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qtextedit.h:
 
@@ -3243,6 +3393,8 @@ D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/sal.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qpluginloader.h:
 
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/periodic_worker-inl.h:
+
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qvariantanimation.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qscrollerproperties.h:
@@ -3303,6 +3455,8 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qpalette.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qstringlistmodel.h:
 
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/sink.h:
+
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/wnnc.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qwindow.h:
@@ -3310,6 +3464,8 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qwindow.h:
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/sdkddkver.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qtemporarydir.h:
+
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/locale:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qtextboundaryfinder.h:
 
@@ -3351,6 +3507,8 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qtcoreversion.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qtguiglobal.h:
 
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/codecvt.h:
+
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QEvent:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qtgui-config.h:
@@ -3374,6 +3532,8 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qgenericpluginfactory.h:
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qregion.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qkeysequence.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/windows_include.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qtouchdevice.h:
 
@@ -3404,6 +3564,8 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qfontdatabase.h:
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qboxlayout.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qtextcursor.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/ostr.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qtextdocument.h:
 
@@ -3459,6 +3621,8 @@ D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/winapifamily.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/avx512vbmivlintrin.h:
 
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/sstream:
+
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/apiset.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qmenubar.h:
@@ -3481,6 +3645,8 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qradiobutton.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/avx512erintrin.h:
 
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/base_sink-inl.h:
+
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/avx512vlintrin.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/avx512dqintrin.h:
@@ -3490,6 +3656,8 @@ C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include/libavutil/channel_layou
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/avx512vlbwintrin.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/avx512ifmavlintrin.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/tweakme.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/avx512vbmiintrin.h:
 
@@ -3529,6 +3697,8 @@ D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/rpcnsi.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/sgxintrin.h:
 
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/circular_q.h:
+
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/adxintrin.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/clflushoptintrin.h:
@@ -3547,6 +3717,8 @@ D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/pshpack8.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/ktmtypes.h:
 
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/fstream:
+
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/winbase.h:
 
 C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include/libavutil/cpu.h:
@@ -3558,6 +3730,8 @@ C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include/libavcodec/version.h:
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/minwinbase.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/bemapiset.h:
+
+C:/Users/zwy/Desktop/VidManPlat/src/utils/iLOG.hpp:
 
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/debugapi.h:
 
@@ -3588,6 +3762,8 @@ D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/processthreadsapi.h:
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/processtopologyapi.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/profileapi.h:
+
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iomanip:
 
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/securityappcontainer.h:
 
@@ -3653,6 +3829,8 @@ D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/wtypesbase.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/rpcdcep.h:
 
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/daily_file_sink.h:
+
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qpainter.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/rpcasync.h:
@@ -3711,6 +3889,8 @@ D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/oaidl.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/propidl.h:
 
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/backtracer.h:
+
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/commdlg.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/stralign.h:
@@ -3758,6 +3938,10 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qrasterwindow.h:
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qscreen.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QList:
+
+D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/unistd.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/fmt.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QSizeF:
 
@@ -3863,6 +4047,8 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qwizard.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qgraphicslayout.h:
 
+D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/sys/stat.h:
+
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qgraphicseffect.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qgraphicsitemanimation.h:
@@ -3884,6 +4070,8 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qgroupbox.h:
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qheaderview.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qinputdialog.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/logger.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qitemdelegate.h:
 
@@ -3940,6 +4128,8 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qstylepainter.h:
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qsystemtrayicon.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qtoolbar.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/chrono.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/qtoolbutton.h:
 
@@ -3998,3 +4188,65 @@ C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include/libswresample/version.h
 C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include/libavformat/avio.h:
 
 C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include/libavfilter/version.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/format.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/format-inl.h:
+
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/locale_facets_nonio.h:
+
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/locale_facets_nonio.tcc:
+
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/locale_conv.h:
+
+D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/io.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/registry.h:
+
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/hashtable.h:
+
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/hashtable_policy.h:
+
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/unordered_map.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/registry-inl.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/log_msg.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/log_msg-inl.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/os-inl.h:
+
+D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/share.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/log_msg_buffer.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/log_msg_buffer-inl.h:
+
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cassert:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/backtracer-inl.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/sink-inl.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/pattern_formatter.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/pattern_formatter-inl.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/wincolor_sink.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/wincolor_sink-inl.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/synchronous_factory.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/details/file_helper.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/sinks/stdout_color_sinks-inl.h:
+
+C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/chrono.h:
+
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/c++io.h:
+
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ext/stdio_sync_filebuf.h:
+
+D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/getopt.h:

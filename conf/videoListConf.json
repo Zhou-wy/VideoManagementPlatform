@@ -1,5 +1,5 @@
 {
-    "VideoCount": "2",
+    "VideoCount": "3",
     "video1": {
         "ip": "192.168.0.213",
         "password": "admin123",
@@ -8,6 +8,13 @@
         "username": "admin"
     },
     "video2": {
+        "ip": "192.168.0.213",
+        "password": "admin123",
+        "port": "554",
+        "type": "RTSP",
+        "username": "admin"
+    },
+    "video3": {
         "ip": "192.168.0.213",
         "password": "admin123",
         "port": "554",

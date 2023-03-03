@@ -1,5 +1,0 @@
-[file] DEBUG    test_logger - This is a debug message.
-[file] INFO     test_logger - This is an info message.
-[file] WARN     test_logger - This is a warning message with an integer: 123.
-[file] ERROR    test_logger - This is an error message with a float: {0:.3f} and a string: {1}.
-[file] FATAL    test_logger - This is a fatal message with a pointer: 0x1234.

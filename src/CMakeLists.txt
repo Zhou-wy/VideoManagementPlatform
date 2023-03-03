@@ -9,7 +9,7 @@ add_subdirectory(iconHelper)
 add_subdirectory(videoPanel)
 add_subdirectory(playFFmpeg)
 add_subdirectory(addVideoDevice)
-set(CMAKE_EXE_LINKER_FLAGS "-static")
+set(CMAKE_EXE_LINKER_FLAGS "-SHARED")
 
 set(EXTRA_LIBS ${EXTRA_LIBS} utils IconHelper VideoPanel PlayFFmpeg addVideo)
 

@@ -7,7 +7,7 @@
 
 #include <QWidget>
 #include <QButtonGroup>
-
+#include <memory>
 
 #include "iconHelper/iconhelper.h"
 #include "utils/cpumonitor.h"

@@ -41,17 +41,18 @@ std::shared_ptr<spdlog::logger> Logger::getLogger() const {
     return m_logger;
 }
 
+// TODO: 要改
 void Logger::setSaveDir(const std::string &path) {
     std::string saveDir = path + "/" + getTodayStamp();
     createDirectory(saveDir);
-    std::string fileName = saveDir + "/" + getTimeStamp();
-    m_fileAppender = std::make_shared<spdlog::sinks::basic_file_sink_mt>(fileName + ".log", true);
+    std::string fileName = saveDir + "/" + m_logger->name() + "_" + getTimeStamp();
+    m_fileAppender = std::make_shared<spdlog::sinks::daily_file_sink_mt>(fileName + ".log", 0, 0);
     m_fileAppender->set_level(m_logger->level());
     m_logger->sinks().emplace_back(m_fileAppender);
 }
 
 
-std::unordered_map<std::string, std::shared_ptr<Logger>> LoggerManager::m_loggers;
+std::unordered_map<std::string, std::shared_ptr<Logger>> LoggerManager::m_loggers; //日志管理器
 
 Logger &LoggerManager::getLogger(const std::string &name) {
     auto it = m_loggers.find(name);

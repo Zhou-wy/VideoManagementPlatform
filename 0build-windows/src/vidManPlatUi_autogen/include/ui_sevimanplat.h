@@ -58,6 +58,7 @@ public:
     QWidget *widget_3;
     QHBoxLayout *horizontalLayout_3;
     QPushButton *addVideoDevice;
+    QPushButton *delVideoDevice;
     QTreeWidget *camDeviceList;
     QTreeWidget *camContorlList;
     QWidget *page_2;
@@ -69,7 +70,7 @@ public:
     {
         if (SeViManPlat->objectName().isEmpty())
             SeViManPlat->setObjectName(QString::fromUtf8("SeViManPlat"));
-        SeViManPlat->resize(1267, 843);
+        SeViManPlat->resize(1382, 864);
         SeViManPlat->setMinimumSize(QSize(1248, 702));
         SeViManPlat->setMaximumSize(QSize(3480, 2160));
         QFont font;
@@ -196,8 +197,8 @@ public:
         verticalLayout_2->setContentsMargins(2, 2, 2, 2);
         suepLab = new QLabel(widget_lcd);
         suepLab->setObjectName(QString::fromUtf8("suepLab"));
-        suepLab->setMinimumSize(QSize(80, 40));
-        suepLab->setMaximumSize(QSize(100, 40));
+        suepLab->setMinimumSize(QSize(100, 50));
+        suepLab->setMaximumSize(QSize(100, 50));
         suepLab->setFont(font);
         suepLab->setFocusPolicy(Qt::NoFocus);
         suepLab->setContextMenuPolicy(Qt::NoContextMenu);
@@ -229,7 +230,7 @@ public:
 
         cpuLabel = new QLabel(widget_lcd);
         cpuLabel->setObjectName(QString::fromUtf8("cpuLabel"));
-        cpuLabel->setMinimumSize(QSize(20, 20));
+        cpuLabel->setMinimumSize(QSize(30, 30));
         cpuLabel->setMaximumSize(QSize(16777215, 50));
         QFont font4;
         font4.setFamily(QString::fromUtf8("Yuanti SC"));
@@ -278,12 +279,12 @@ public:
         widget_3 = new QWidget(widget_2);
         widget_3->setObjectName(QString::fromUtf8("widget_3"));
         horizontalLayout_3 = new QHBoxLayout(widget_3);
-        horizontalLayout_3->setSpacing(0);
+        horizontalLayout_3->setSpacing(3);
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
-        horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
+        horizontalLayout_3->setContentsMargins(-1, 3, 3, 3);
         addVideoDevice = new QPushButton(widget_3);
         addVideoDevice->setObjectName(QString::fromUtf8("addVideoDevice"));
-        addVideoDevice->setMinimumSize(QSize(260, 0));
+        addVideoDevice->setMinimumSize(QSize(0, 0));
         addVideoDevice->setMaximumSize(QSize(250, 16777215));
         QFont font5;
         font5.setFamily(QString::fromUtf8("Songti SC"));
@@ -292,6 +293,17 @@ public:
 
         horizontalLayout_3->addWidget(addVideoDevice);
 
+        delVideoDevice = new QPushButton(widget_3);
+        delVideoDevice->setObjectName(QString::fromUtf8("delVideoDevice"));
+        QFont font6;
+        font6.setFamily(QString::fromUtf8("\345\256\213\344\275\223"));
+        font6.setPointSize(14);
+        delVideoDevice->setFont(font6);
+
+        horizontalLayout_3->addWidget(delVideoDevice);
+
+        horizontalLayout_3->setStretch(0, 1);
+        horizontalLayout_3->setStretch(1, 1);
 
         verticalLayout_5->addWidget(widget_3);
 
@@ -303,31 +315,31 @@ public:
         __qtreewidgetitem->setFont(0, font);
         __qtreewidgetitem->setIcon(0, icon);
         camDeviceList->setHeaderItem(__qtreewidgetitem);
-        QFont font6;
-        font6.setFamily(QString::fromUtf8("Songti SC"));
-        font6.setPointSize(16);
         QFont font7;
         font7.setFamily(QString::fromUtf8("Songti SC"));
-        font7.setPointSize(13);
-        font7.setBold(false);
-        font7.setWeight(50);
+        font7.setPointSize(16);
         QFont font8;
         font8.setFamily(QString::fromUtf8("Songti SC"));
-        font8.setPointSize(14);
+        font8.setPointSize(13);
         font8.setBold(false);
         font8.setWeight(50);
+        QFont font9;
+        font9.setFamily(QString::fromUtf8("Songti SC"));
+        font9.setPointSize(14);
+        font9.setBold(false);
+        font9.setWeight(50);
         QTreeWidgetItem *__qtreewidgetitem1 = new QTreeWidgetItem(camDeviceList);
-        __qtreewidgetitem1->setFont(0, font6);
+        __qtreewidgetitem1->setFont(0, font7);
         QTreeWidgetItem *__qtreewidgetitem2 = new QTreeWidgetItem(__qtreewidgetitem1);
         __qtreewidgetitem2->setFont(0, font5);
         QTreeWidgetItem *__qtreewidgetitem3 = new QTreeWidgetItem(__qtreewidgetitem2);
-        __qtreewidgetitem3->setFont(0, font7);
+        __qtreewidgetitem3->setFont(0, font8);
         QTreeWidgetItem *__qtreewidgetitem4 = new QTreeWidgetItem(__qtreewidgetitem2);
-        __qtreewidgetitem4->setFont(0, font7);
+        __qtreewidgetitem4->setFont(0, font8);
         QTreeWidgetItem *__qtreewidgetitem5 = new QTreeWidgetItem(camDeviceList);
-        __qtreewidgetitem5->setFont(0, font6);
+        __qtreewidgetitem5->setFont(0, font7);
         QTreeWidgetItem *__qtreewidgetitem6 = new QTreeWidgetItem(__qtreewidgetitem5);
-        __qtreewidgetitem6->setFont(0, font8);
+        __qtreewidgetitem6->setFont(0, font9);
         camDeviceList->setObjectName(QString::fromUtf8("camDeviceList"));
         camDeviceList->setMinimumSize(QSize(0, 0));
         camDeviceList->setSizeIncrement(QSize(0, 0));
@@ -406,6 +418,7 @@ public:
         suepLab->setText(QString());
         cpuLabel->setText(QApplication::translate("SeViManPlat", "cpu", nullptr));
         addVideoDevice->setText(QApplication::translate("SeViManPlat", "\346\226\260\345\242\236\346\221\204\345\203\217\345\244\264", nullptr));
+        delVideoDevice->setText(QApplication::translate("SeViManPlat", "\345\210\240\351\231\244\346\221\204\345\203\217\345\244\264", nullptr));
         QTreeWidgetItem *___qtreewidgetitem = camDeviceList->headerItem();
         ___qtreewidgetitem->setText(0, QApplication::translate("SeViManPlat", "\350\256\276\345\244\207\344\277\241\346\201\257", nullptr));
 

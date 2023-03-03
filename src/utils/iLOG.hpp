@@ -5,15 +5,18 @@
 #ifndef VIDEOMANPLAT_ILOG_HPP
 #define VIDEOMANPLAT_ILOG_HPP
 
-#include <memory>
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/basic_file_sink.h>
 #include <spdlog/sinks/stdout_color_sinks.h>
+#include <spdlog/sinks/daily_file_sink.h>
+#include <spdlog/fmt/ostr.h>
 #include <sstream>
 #include <iomanip>
 #include <windows.h>
 #include <iostream>
 #include <chrono>
+#include <memory>
+
 //格式化输入
 #define LOGGER_FMT_LEVEL(logger, level, fmt, ...) \
     if((logger).getLevel() <= level)      SPDLOG_LOGGER_CALL(logger.getLogger(), level, fmt, ##__VA_ARGS__)
@@ -25,12 +28,20 @@
 #define FATAL_FMT(logger, fmt, ...) LOGGER_FMT_LEVEL(logger, spdlog::level::level_enum::critical, fmt, ##__VA_ARGS__)
 
 //流输入
-#define LOGGER_STREAM_LEVEL(logger, level) \
-if(logger.getLevel() <= spdlog::level::level_enum::debug) \
-    logger.getLogger() << __FILE__ << ":" << __LINE__ << " " << __FUNCTION__  \
+#define SPDLOG_LOGGER_STREAM(log, lvl)                                                                   \
+    log.getLogger() && log.getLogger()->should_log(lvl) &&                                                                       \
+        LogStream(log.getLogger(), lvl, spdlog::source_loc{__FILE__, __LINE__, SPDLOG_FUNCTION}) == \
+            Logger()
 
 
-#define INFO(logger) LOGGER_STREAM_LEVEL(logger, spdlog::level::level_enum::info)
+#define iDEBUG(logger) SPDLOG_LOGGER_STREAM(logger, spdlog::level::level_enum::debug)
+#define iINFO(logger) SPDLOG_LOGGER_STREAM(logger, spdlog::level::level_enum::info)
+#define iWARN(logger) SPDLOG_LOGGER_STREAM(logger, spdlog::level::level_enum::warn)
+#define iERROR(logger) SPDLOG_LOGGER_STREAM(logger, spdlog::level::level_enum::err)
+#define iFATAL(logger) SPDLOG_LOGGER_STREAM(logger, spdlog::level::level_enum::critical)
+
+// 默认日志器
+#define ROOT_LOG LoggerManager::getLogger("root")
 
 /*
 %v	实际需要被日志记录的文本，如果文本中有{占位符}会被替换
@@ -70,6 +81,8 @@ public:
     Logger(const std::string &name, const std::string &pattern = "%^[%Y-%m-%d %T] %n: [%s:%#] %v%$",
            spdlog::level::level_enum level = spdlog::level::trace);
 
+    Logger() {};
+
     void log(spdlog::level::level_enum level, const char *format, ...);
 
     void setLevel(spdlog::level::level_enum level);
@@ -82,20 +95,35 @@ public:
 
     std::shared_ptr<spdlog::logger> getLogger() const;
 
+    std::string str() const { return m_ss.str(); }
+
     template<typename T>
-    Logger &operator<<(const T &data) {
-        if (m_logger) {
-            std::ostringstream oss;
-            oss << data;
-            m_logger->log(m_logger->level(), oss.str());
-        }
+    Logger &operator<<(const T &t) {
+        m_ss << t;
         return *this;
     }
 
 private:
     std::shared_ptr<spdlog::logger> m_logger;
-    std::shared_ptr<spdlog::sinks::basic_file_sink_mt> m_fileAppender;
+    std::shared_ptr<spdlog::sinks::daily_file_sink_mt> m_fileAppender;
+    std::ostringstream m_ss;
 };
+
+class LogStream {
+    std::shared_ptr<spdlog::logger> m_log;
+    spdlog::level::level_enum m_lvl;
+    spdlog::source_loc m_loc;
+public:
+    LogStream(std::shared_ptr<spdlog::logger> log, spdlog::level::level_enum lvl, spdlog::source_loc loc) : m_log{log},
+                                                                                                            m_lvl{lvl},
+                                                                                                            m_loc{loc} {}
+
+    bool operator==(const Logger &line) {
+        m_log->log(m_loc, m_lvl, "{}", line.str());
+        return true;
+    }
+};
+
 
 class LoggerManager {
 public:

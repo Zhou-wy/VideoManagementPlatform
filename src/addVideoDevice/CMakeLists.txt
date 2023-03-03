@@ -16,7 +16,7 @@ source_group("Source" FILES ${CURRENT_SOURCES})
 include(${CMAKE_SOURCE_DIR}/cmake/3drparty.cmake)
 
 #add_subdirectory(${CMAKE_SOURCE_DIR}/src/utils ${CMAKE_SOURCE_DIR}/0build-linux/src/utils)
-set(CMAKE_EXE_LINKER_FLAGS "-static")
+set(CMAKE_EXE_LINKER_FLAGS "-SHARED")
 # create static library
 add_library(${PROJECT_NAME} STATIC ${CURRENT_HEADERS} ${CURRENT_SOURCES} addVideo.ui)
 target_link_libraries(${PROJECT_NAME}

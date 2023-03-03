@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1267</width>
-    <height>843</height>
+    <width>1382</width>
+    <height>864</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -357,14 +357,14 @@ color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 
           <widget class="QLabel" name="suepLab">
            <property name="minimumSize">
             <size>
-             <width>80</width>
-             <height>40</height>
+             <width>100</width>
+             <height>50</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
              <width>100</width>
-             <height>40</height>
+             <height>50</height>
             </size>
            </property>
            <property name="font">
@@ -435,8 +435,8 @@ font: 75 48pt &quot;Times New Roman&quot;;</string>
           <widget class="QLabel" name="cpuLabel">
            <property name="minimumSize">
             <size>
-             <width>20</width>
-             <height>20</height>
+             <width>30</width>
+             <height>30</height>
             </size>
            </property>
            <property name="maximumSize">
@@ -554,27 +554,24 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
           </property>
           <item>
            <widget class="QWidget" name="widget_3" native="true">
-            <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,1">
              <property name="spacing">
-              <number>0</number>
-             </property>
-             <property name="leftMargin">
-              <number>0</number>
+              <number>3</number>
              </property>
              <property name="topMargin">
-              <number>0</number>
+              <number>3</number>
              </property>
              <property name="rightMargin">
-              <number>0</number>
+              <number>3</number>
              </property>
              <property name="bottomMargin">
-              <number>0</number>
+              <number>3</number>
              </property>
              <item>
               <widget class="QPushButton" name="addVideoDevice">
                <property name="minimumSize">
                 <size>
-                 <width>260</width>
+                 <width>0</width>
                  <height>0</height>
                 </size>
                </property>
@@ -592,6 +589,19 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
                </property>
                <property name="text">
                 <string>新增摄像头</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="delVideoDevice">
+               <property name="font">
+                <font>
+                 <family>宋体</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>删除摄像头</string>
                </property>
               </widget>
              </item>

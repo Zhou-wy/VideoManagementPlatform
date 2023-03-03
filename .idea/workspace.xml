@@ -28,26 +28,69 @@
   <component name="ChangeListManager">
     <list default="true" id="41e4e3e3-a55c-47a0-b1ca-6776f5bfded8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/codemodel-v2-73c035a534f567e4ba7b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/index-2023-03-02T09-35-47-0350.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/target-VideoManPlat-Debug-b428916bae1c93d65e65.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/target-VideoManPlat_autogen-Debug-f6c2568918fe630d0163.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/target-vidManPlatUi-Debug-6213ca5c905d80c5d545.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/target-vidManPlatUi_autogen-Debug-c48b5dcb3c52e11354d8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/codemodel-v2-ffe71c81225bbca5decd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/index-2023-03-02T13-26-30-0370.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/target-VideoManPlat-Debug-63516d4badc9f6f26fb7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/target-VideoManPlat_autogen-Debug-9020bfb0556cf1ee3c19.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/target-vidManPlatUi-Debug-ee8f24e5c6a6b16f5edc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/.cmake/api/v1/reply/target-vidManPlatUi_autogen-Debug-eaa7beb329bc6c652891.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/compiler_depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/main.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/main.cpp.obj.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/CMakeFiles/VideoManPlat.dir/objects.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/0build-windows/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/compiler_depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/compiler_depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/sevimanplat.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/sevimanplat.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/sevimanplat.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/sevimanplat.cpp.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/vidManPlatUi_autogen/mocs_compilation.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/vidManPlatUi_autogen/mocs_compilation.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/vidManPlatUi_autogen/mocs_compilation.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/CMakeFiles/vidManPlatUi.dir/vidManPlatUi_autogen/mocs_compilation.cpp.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/addvideo.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/addvideo.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/addvideo.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/addvideo.cpp.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/compiler_depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/CMakeFiles/addVideo.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/addVideo_autogen/include/ui_addVideo.h" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/addVideoDevice/addVideo_autogen/include/ui_addVideo.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/compiler_depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/iconhelper.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/iconhelper.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/iconhelper.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/iconHelper/CMakeFiles/IconHelper.dir/iconhelper.cpp.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/compiler_depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/ffmpeg.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/ffmpeg.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/ffmpeg.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/playFFmpeg/CMakeFiles/PlayFFmpeg.dir/ffmpeg.cpp.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/compiler_depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/compiler_depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/iLOG.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/iLOG.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/iLOG.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/utils/CMakeFiles/utils.dir/iLOG.cpp.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0build-windows/src/vidManPlatUi_autogen/include/ui_sevimanplat.h" beforeDir="false" afterPath="$PROJECT_DIR$/0build-windows/src/vidManPlatUi_autogen/include/ui_sevimanplat.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/VideoManPlat.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/VideoManPlat.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/file" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/videoListConf.json" beforeDir="false" afterPath="$PROJECT_DIR$/conf/videoListConf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/开发笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/开发笔记.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/libIconHelper.a" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libIconHelper.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/libPlayFFmpeg.a" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libPlayFFmpeg.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/libaddVideo.a" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libaddVideo.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/libutils.a" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libutils.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/libvidManPlatUi.a" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libvidManPlatUi.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/stP1kAlM" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/stiG2Kb7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/addVideoDevice/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/addVideoDevice/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/addVideoDevice/addVideo.ui" beforeDir="false" afterPath="$PROJECT_DIR$/src/addVideoDevice/addVideo.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/addVideoDevice/addvideo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/addVideoDevice/addvideo.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iconHelper/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/iconHelper/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iconHelper/iconhelper.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/iconHelper/iconhelper.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/playFFmpeg/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/playFFmpeg/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/playFFmpeg/ffmpeg.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/playFFmpeg/ffmpeg.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sevimanplat.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/sevimanplat.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sevimanplat.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/sevimanplat.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sevimanplat.ui" beforeDir="false" afterPath="$PROJECT_DIR$/src/sevimanplat.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/iLOG.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/iLOG.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/iLOG.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/iLOG.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/videoPanel/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/videoPanel/CMakeLists.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +135,11 @@
   }
 }</component>
   <component name="RunManager" selected="CMake Application.VideoManPlat">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="IconHelper" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VideoManPlat" TARGET_NAME="IconHelper" CONFIG_NAME="Debug-MinGW_QT">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -149,7 +197,10 @@
       <workItem from="1677675364450" duration="153000" />
       <workItem from="1677749716584" duration="131000" />
       <workItem from="1677749951166" duration="9083000" />
-      <workItem from="1677804751040" duration="2000" />
+      <workItem from="1677804751040" duration="8031000" />
+      <workItem from="1677788368582" duration="639000" />
+      <workItem from="1677790237317" duration="313000" />
+      <workItem from="1677790750185" duration="6771000" />
     </task>
     <servers />
   </component>

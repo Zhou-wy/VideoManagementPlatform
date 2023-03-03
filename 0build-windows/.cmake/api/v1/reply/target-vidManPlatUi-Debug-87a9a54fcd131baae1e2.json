@@ -189,15 +189,7 @@
 	[
 		{
 			"backtrace" : 2,
-			"id" : "IconHelper::@f0fdf5ef21887b867222"
-		},
-		{
-			"backtrace" : 2,
 			"id" : "addVideo::@d6568711fa9a46b9ea6c"
-		},
-		{
-			"backtrace" : 2,
-			"id" : "VideoPanel::@d5898b692044102cb1d1"
 		},
 		{
 			"backtrace" : 2,
@@ -205,11 +197,19 @@
 		},
 		{
 			"backtrace" : 2,
-			"id" : "PlayFFmpeg::@2ffd910cc6a6ab224bf9"
+			"id" : "VideoPanel::@d5898b692044102cb1d1"
 		},
 		{
 			"backtrace" : 0,
 			"id" : "vidManPlatUi_autogen::@145eef247bfb46b6828c"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "PlayFFmpeg::@2ffd910cc6a6ab224bf9"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "IconHelper::@f0fdf5ef21887b867222"
 		}
 	],
 	"id" : "vidManPlatUi::@145eef247bfb46b6828c",

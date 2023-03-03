@@ -30,19 +30,10 @@ SeViManPlat::~SeViManPlat() {
 }
 
 void SeViManPlat::initLogger() {
-    // 获取名为"myLogger"的logger
-    Logger &logger = LoggerManager::getLogger("root");
     // 设置logger级别为info
-    logger.setLevel(spdlog::level::debug);
-    logger.setSaveDir("C:/Users/zwy/Desktop/VidManPlat/log");
-    DEBUG_FMT(logger, "test {}", 12);
-    INFO_FMT(logger, "hello {}", "world");
-    WARN_FMT(logger, "test {}", "str");
-    ERROR_FMT(logger, "test {}", 3.14);
-    FATAL_FMT(logger, "end");
-    logger << "123" << 456;
-//    INFO(logger) << "test stream";
-
+    ROOT_LOG.setLevel(spdlog::level::info);
+    ROOT_LOG.setSaveDir("C:/Users/zwy/Desktop/VidManPlat/log");
+    iINFO(ROOT_LOG) << "LOG INIT";
 }
 
 void SeViManPlat::initTimer() {
@@ -147,7 +138,7 @@ void SeViManPlat::loadStyle(const QString &qssFile) {
 void SeViManPlat::initVideoPlay() {
     Json ReadVideoConfJson(m_video_conf_json, true);
     if (ReadVideoConfJson.getString("VideoCount") == "") {
-//        INFOE("videoListConf 文件为空");
+        iERROR(ROOT_LOG) << "The videoListConf file is empty";
     } else {
         int videoCount = ReadVideoConfJson.getString("VideoCount").toInt();
         QString url = "";
@@ -201,7 +192,7 @@ void SeViManPlat::initVideoPlay() {
 
                 // TODO: 后期补充切换主码流和辅码流逻辑，现用主码流代替
                 url = true ? main_code_stream : Auxiliary_code_stream;
-//                INFO(main_code_stream.toStdString().c_str());
+                iDEBUG(ROOT_LOG) << video_name.toStdString() << " : " << main_code_stream.toStdString();
             } else if (video_type == "RTMP") {
                 url = ReadVideoConfJson.getString(video_name + ".url");
                 if (url == "") {
@@ -210,7 +201,8 @@ void SeViManPlat::initVideoPlay() {
                                           QMessageBox::Close);
                     continue;
                 } else {
-//                    INFO("%s : %s", video_name.toStdString().c_str(), url.toStdString().c_str());
+                    iDEBUG(ROOT_LOG)
+                    << video_name.toStdString() << " : " << video_type.toStdString() << " : " << url.toStdString();
                     videoConf_i->urls.append(url);
                 }
 
@@ -222,15 +214,17 @@ void SeViManPlat::initVideoPlay() {
                                           QMessageBox::Close);
                     continue;
                 } else {
-//                    INFO("%s : %s", video_name.toStdString().c_str(), url.toStdString().c_str());
+                    iDEBUG(ROOT_LOG)
+                    << video_name.toStdString() << " : " << video_type.toStdString() << " : " << url.toStdString();
                     videoConf_i->urls.append(url);
                 }
 
             } else if (video_type == "Local-Camera") {
-                qDebug("%s : %s", video_name.toStdString().c_str(), video_type.toStdString().c_str());
+                iDEBUG(ROOT_LOG) << video_name.toStdString() << video_type.toStdString();
             } else
-                qDebug("This video%d type is %s, which does not belong to the preset video type!", i,
-                       video_type.toStdString().c_str());
+                iERROR(ROOT_LOG) << "This video" << i << " type is " << video_type.toStdString()
+                                 << ", which does not belong to the preset video type!"
+                                 << video_type.toStdString();
             if (!m_videoConf.contains(videoConf_i)) // 判断videoConf 是否在，如果存在就不要新增了
                 m_videoConf.append(videoConf_i);
 
@@ -240,7 +234,6 @@ void SeViManPlat::initVideoPlay() {
             this->videoPlay.at(i)->setUrl(url);
             this->videoPlay.at(i)->open();
 
-//            delete videoConf_i;
         }
     }
     ReadVideoConfJson.save(m_video_conf_json);
@@ -264,12 +257,13 @@ void SeViManPlat::addVideoDialog() {
 void SeViManPlat::addVideoPlay() {
     Json ReadVideoConfJson(m_video_conf_json, true);
     if (ReadVideoConfJson.getString("VideoCount") == "") {
-//        INFOE("videoListConf 文件为空");
+        iERROR(ROOT_LOG) << "The videoListConf file is empty";
     } else {
         int videoCount = ReadVideoConfJson.getString("VideoCount").toInt();
         QString url = "";
         if (videoCount - this->m_videoConf.length() == 1) {
-//            INFO("len(this->m_videoConf.length()) : %d, videoCount : %d ", this->m_videoConf.length(), videoCount);
+            iDEBUG(ROOT_LOG)
+            << "len(this->m_videoConf.length()) : " << this->m_videoConf.length() << ", videoCount : " << videoCount;
             QString video_type = ReadVideoConfJson.getString("video" + QString::number(videoCount) + ".type");
             QString video_name = "video" + QString::number(videoCount);
             VideoConf *videoConf_i = new VideoConf;
@@ -318,7 +312,7 @@ void SeViManPlat::addVideoPlay() {
                 webCamItem->addChild(webCamAuxiliary_code_stream);
 
                 url = main_code_stream;
-//                INFO("%s : %s", video_name.toStdString().c_str(), url.toStdString().c_str());
+                iDEBUG(ROOT_LOG) << video_name.toStdString() << " : " << url.toStdString();
             } else if (video_type == "RTMP") {
                 url = ReadVideoConfJson.getString(video_name + ".url");
                 if (url == "") {
@@ -326,7 +320,8 @@ void SeViManPlat::addVideoPlay() {
                                                   "打开视频" + video_name + "有误，请检查摄像头信息").toStdString().c_str()),
                                           QMessageBox::Close);
                 } else {
-//                    INFO("%s : %s", video_name.toStdString().c_str(), url.toStdString().c_str());
+                    iDEBUG(ROOT_LOG)
+                    << video_name.toStdString() << " : " << video_type.toStdString() << " : " << url.toStdString();
                     videoConf_i->urls.append(url);
                 }
 
@@ -337,14 +332,17 @@ void SeViManPlat::addVideoPlay() {
                                                   "打开视频" + video_name + "有误，请检查摄像头信息").toStdString().c_str()),
                                           QMessageBox::Close);
                 } else {
-//                    INFO("%s : %s", video_name.toStdString().c_str(), url.toStdString().c_str());
+                    iDEBUG(ROOT_LOG)
+                    << video_name.toStdString() << " : " << video_type.toStdString() << " : " << url.toStdString();
                     videoConf_i->urls.append(url);
                 }
             } else if (video_type == "Local-Camera") {
-                qDebug("%s : %s", video_name.toStdString().c_str(), video_type.toStdString().c_str());
+                iDEBUG(ROOT_LOG)
+                << video_name.toStdString() << " : " << video_type.toStdString() << " : " << url.toStdString();
             } else
-                qDebug("This video%d type is %s, which does not belong to the preset video type!", videoCount,
-                       video_type.toStdString().c_str());
+                iERROR(ROOT_LOG) << "This video" << videoCount << " type is " << video_type.toStdString()
+                                 << ", which does not belong to the preset video type!"
+                                 << video_type.toStdString();
 
             this->m_videoConf.append(videoConf_i);
 
