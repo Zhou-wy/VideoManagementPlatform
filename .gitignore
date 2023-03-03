@@ -1,4 +1,5 @@
 0build-mac/
-0build-linux/
+0build-winodws/
 out/
 build/
+log
