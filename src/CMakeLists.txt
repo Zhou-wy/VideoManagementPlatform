@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.17)
 project(vidManPlatUi)
 
-# find QT5
+# find
 include(${CMAKE_SOURCE_DIR}/cmake/3drparty.cmake)
 
 add_subdirectory(utils)
@@ -18,5 +18,6 @@ add_library(${PROJECT_NAME} sevimanplat.cpp sevimanplat.h sevimanplat.ui resourc
 
 target_link_libraries(${PROJECT_NAME}
         ${Qt5_Libs}
+        spdlog
         ${EXTRA_LIBS}
         )

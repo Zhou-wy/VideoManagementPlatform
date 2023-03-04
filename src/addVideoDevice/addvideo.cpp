@@ -8,6 +8,7 @@
 #include <QMessageBox>
 #include <QFile>            // 文件读写
 #include <QDebug>
+#include <QString>
 
 #include "addvideo.h"
 #include "ui_addVideo.h"
@@ -15,8 +16,8 @@
 #include "../utils/iLog.hpp"
 
 
-addVideo::addVideo(QString &video_conf_json, QWidget *parent) :
-        QDialog(parent), ui(new Ui::addVideo), m_video_conf_json(video_conf_json) {
+addVideo::addVideo(QWidget *parent) :
+        QDialog(parent), ui(new Ui::addVideo) {
     ui->setupUi(this);
     ui->videoTypeBox->setCurrentIndex(0);
     ui->stackedWidget->setCurrentIndex(0);
@@ -27,77 +28,51 @@ addVideo::addVideo(QString &video_conf_json, QWidget *parent) :
 }
 
 addVideo::~addVideo() {
-    delete videoConf;
     delete ui;
 }
 
 /*
  * 保存摄像头配置
  * */
-void addVideo::saveVideoListConf() {
-    videoConf = new VideoInfo;
-    videoConf->m_ip = QString(ui->ipEdit->text());
-    videoConf->m_port = QString(ui->portEdit->text());
-    videoConf->m_userName = QString(ui->usrNameEdit->text());
-    videoConf->m_passWord = QString(ui->passWordEdit->text());
-    videoConf->m_type = QString(ui->videoTypeBox->currentText());
+bool addVideo::saveVideoListConf(QList<std::shared_ptr<VideoConf>> &videoList) {
+    std::shared_ptr<VideoConf> newVideoConf;
+    QString m_ip = QString(ui->ipEdit->text());
+    QString m_port = QString(ui->portEdit->text());
+    QString m_userName = QString(ui->usrNameEdit->text());
+    QString m_passWord = QString(ui->passWordEdit->text());
+    QString m_type = QString(ui->videoTypeBox->currentText());
 
-
-    Json VideoConfJson(m_video_conf_json, true);
-    if (VideoConfJson.getString("VideoCount") == "") {
-        VideoCount = 0;
-    } else {
-        VideoCount = VideoConfJson.getString("VideoCount").toInt();
-        VideoCount += 1;
-    }
-    if (videoConf->m_type == "RTSP") {
-        if (videoConf->m_ip == "" || videoConf->m_type == "" || videoConf->m_passWord == "" ||
-            videoConf->m_userName == "" || videoConf->m_port == "") {
-            iWARN(ROOT_LOG) << QString("rtsp video" + QString::number(VideoCount) +
-                                       " fails to be enabled. Check the device").toStdString().c_str();
-        } else {
-            VideoConfJson.set("video" + QString::number(VideoCount) + ".ip", videoConf->m_ip);
-            VideoConfJson.set("video" + QString::number(VideoCount) + ".port", videoConf->m_port);
-            VideoConfJson.set("video" + QString::number(VideoCount) + ".username", videoConf->m_userName);
-            VideoConfJson.set("video" + QString::number(VideoCount) + ".password", videoConf->m_passWord);
-            VideoConfJson.set("video" + QString::number(VideoCount) + ".type", videoConf->m_type);
-        }
-    } else if (videoConf->m_type == "RTMP") {
+    QString video_name = "video" + QString::number(videoList.length() + 1);
+    if (m_type.toLower() == "rtsp") {
+        //主码流
+        QString main_code_stream = "rtsp://" + m_userName + ":" + m_passWord + "@" + m_ip + ":" + m_port +"/cam/realmonitor?channel=1&subtype=0";
+        //辅码流
+        QString Auxiliary_code_stream = "rtsp://" + m_userName + ":" + m_passWord + "@" + m_ip + ":" + m_port +"/cam/realmonitor?channel=1&subtype=1";
+        newVideoConf = std::make_shared<VideoConf>(
+                VideoConf{video_name, {main_code_stream, Auxiliary_code_stream}});
+    } else if (m_type.toLower() == "rtmp") {
         QString url = ui->rtmp_url->text();
-        if (url == "")
-            iWARN(ROOT_LOG) << QString("rtmp video" + QString::number(VideoCount) +
-                                       " fails to be enabled. Check the device").toStdString();
-        else {
-            VideoConfJson.set("video" + QString::number(VideoCount) + ".type", videoConf->m_type);
-            VideoConfJson.set("video" + QString::number(VideoCount) + ".url", url);
+        if (url == "") {
+            iERROR(ROOT_LOG) << QString("rtmp video" + QString::number(videoList.length() + 1) +
+                                        " fails to be enabled.").toStdString();
+            return false;
+        } else {
+            newVideoConf = std::make_shared<VideoConf>(VideoConf{video_name, {url}});
         }
-    } else if (videoConf->m_type == "HTTP-FLV") {
+
+    } else if (m_type.toLower() == "http-flv") {
         QString url = ui->http_flv_url->text();
-        if (url == "")
-            iWARN(ROOT_LOG) << QString("fttp flv video" + QString::number(VideoCount) +
-                                       " fails to be enabled. Check the device").toStdString();
-        else {
-            VideoConfJson.set("video" + QString::number(VideoCount) + ".type", videoConf->m_type);
-            VideoConfJson.set("video" + QString::number(VideoCount) + ".url", url);
+        if (url == "") {
+            iERROR(ROOT_LOG) << QString("http flv video" + QString::number(videoList.length() + 1) +
+                                        " fails to be enabled.").toStdString();
+            return false;
+        }else{
+            newVideoConf = std::make_shared<VideoConf>(VideoConf{video_name, {url}});
         }
-
-    } else if (videoConf->m_type == "Local-Camera") {
-        QString dev = QString(ui->localCamDevice->currentText());
-        if (dev == "")
-            iWARN(ROOT_LOG) << QString("local camera video" + QString::number(VideoCount) +
-                                       " fails to be enabled. Check the device").toStdString();
-        else {
-            VideoConfJson.set("video" + QString::number(VideoCount) + ".type", videoConf->m_type);
-            VideoConfJson.set("video" + QString::number(VideoCount) + ".url", dev);
-        }
-
-    } else {
-        iERROR(ROOT_LOG) << "save video config error";
-    }
-    VideoConfJson.set("VideoCount", QString::number(VideoCount));
-    VideoConfJson.save(m_video_conf_json);
-    iERROR(ROOT_LOG) << "save video%d config info successfully" << VideoCount;
-    this->close();
+    } else if (m_type.toLower() == "local-camera") {
+        iWARN(ROOT_LOG) << "local camera is fail";
+    } else { iERROR(ROOT_LOG) << "save video config error"; }
+    videoList.append(newVideoConf);
 }
 
 void addVideo::saveVideoConf() {
@@ -105,11 +80,9 @@ void addVideo::saveVideoConf() {
         QMessageBox::Yes) {
         QDialog::accept();//不会将事件传递给组件的父组件
         iINFO(ROOT_LOG) << "save";
-        saveVideoListConf();
-
     } else {
         QDialog::reject();
-       iINFO(ROOT_LOG) << "cancel";
+        iINFO(ROOT_LOG) << "cancel";
     }
 }
 

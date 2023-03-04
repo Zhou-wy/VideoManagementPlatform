@@ -1,24 +1,31 @@
 {
-    "VideoCount": "3",
+    "VideoCount": "4",
     "video1": {
         "ip": "192.168.0.213",
         "password": "admin123",
         "port": "554",
-        "type": "RTSP",
+        "type": "rtsp",
         "username": "admin"
     },
     "video2": {
         "ip": "192.168.0.213",
         "password": "admin123",
         "port": "554",
-        "type": "RTSP",
+        "type": "rtsp",
         "username": "admin"
     },
     "video3": {
         "ip": "192.168.0.213",
         "password": "admin123",
         "port": "554",
-        "type": "RTSP",
+        "type": "rtsp",
+        "username": "admin"
+    },
+    "video4": {
+        "ip": "192.168.0.213",
+        "password": "admin123",
+        "port": "554",
+        "type": "rtsp",
         "username": "admin"
     }
 }

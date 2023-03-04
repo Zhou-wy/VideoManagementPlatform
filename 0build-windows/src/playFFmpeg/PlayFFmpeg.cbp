@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="PlayFFmpeg"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\iconHelper\;CMake Files\src\playFFmpeg\;CMake Files\src\utils\;CMake Files\src\videoPanel\;CMake Files\src\addVideoDevice\;CMake Files\cmake\;CMake Files\Qt5.12.5\;CMake Files\Qt5.12.5\5.12.5\;CMake Files\Qt5.12.5\5.12.5\mingw73_64\;CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\;CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\;CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5\;CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Core\;CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Gui\;CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Widgets\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/playFFmpeg"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/Qt5.12.5/Tools/mingw730_64/bin/mingw32-make.exe -f &quot;C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/playFFmpeg/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/Qt5.12.5/Tools/mingw730_64/bin/mingw32-make.exe -f &quot;C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/playFFmpeg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Qt5.12.5/Tools/mingw730_64/bin/mingw32-make.exe -f &quot;C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/playFFmpeg/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Qt5.12.5/Tools/mingw730_64/bin/mingw32-make.exe -f &quot;C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/playFFmpeg/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PlayFFmpeg">
+				<Option output="C:/Users/zwy/Desktop/VidManPlat/lib/libPlayFFmpeg.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/playFFmpeg"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add directory="C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/playFFmpeg/PlayFFmpeg_autogen/include"/>
+					<Add directory="C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include"/>
+					<Add directory="C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include"/>
+					<Add directory="C:/Users/zwy/Desktop/VidManPlat/src/3rdparty/ffmpeg4/include"/>
+					<Add directory="C:/Users/zwy/Desktop/VidManPlat/src/3rdparty/spdlog/include"/>
+					<Add directory="C:/Users/zwy/Desktop/VidManPlat/src/playFFmpeg/3rdparty/ffmpeg4/include"/>
+					<Add directory="C:/Users/zwy/Desktop/VidManPlat/src/playFFmpeg/3rdparty/spdlog/include"/>
+					<Add directory="D:/Qt5.12.5/5.12.5/mingw73_64/include"/>
+					<Add directory="D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore"/>
+					<Add directory="D:/Qt5.12.5/5.12.5/mingw73_64/./mkspecs/win32-g++"/>
+					<Add directory="D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui"/>
+					<Add directory="D:/Qt5.12.5/5.12.5/mingw73_64/include/QtANGLE"/>
+					<Add directory="D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets"/>
+					<Add directory="C:\Users\zwy\scoop\apps\gcc\current\include"/>
+					<Add directory="D:/Qt5.12.5/Tools/mingw730_64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++"/>
+					<Add directory="D:/Qt5.12.5/Tools/mingw730_64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="D:/Qt5.12.5/Tools/mingw730_64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward"/>
+					<Add directory="D:/Qt5.12.5/Tools/mingw730_64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include"/>
+					<Add directory="D:/Qt5.12.5/Tools/mingw730_64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed"/>
+					<Add directory="D:/Qt5.12.5/Tools/mingw730_64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/Qt5.12.5/Tools/mingw730_64/bin/mingw32-make.exe -f &quot;C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/playFFmpeg/Makefile&quot;  VERBOSE=1 PlayFFmpeg"/>
+					<CompileFile command="D:/Qt5.12.5/Tools/mingw730_64/bin/mingw32-make.exe -f &quot;C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/playFFmpeg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Qt5.12.5/Tools/mingw730_64/bin/mingw32-make.exe -f &quot;C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/playFFmpeg/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Qt5.12.5/Tools/mingw730_64/bin/mingw32-make.exe -f &quot;C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/playFFmpeg/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PlayFFmpeg/fast">
+				<Option output="C:/Users/zwy/Desktop/VidManPlat/lib/libPlayFFmpeg.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/playFFmpeg"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add directory="C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/playFFmpeg/PlayFFmpeg_autogen/include"/>
+					<Add directory="C:/Users/zwy/Desktop/VidManPlat/3rdparty/ffmpeg4/include"/>
+					<Add directory="C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include"/>
+					<Add directory="C:/Users/zwy/Desktop/VidManPlat/src/3rdparty/ffmpeg4/include"/>
+					<Add directory="C:/Users/zwy/Desktop/VidManPlat/src/3rdparty/spdlog/include"/>
+					<Add directory="C:/Users/zwy/Desktop/VidManPlat/src/playFFmpeg/3rdparty/ffmpeg4/include"/>
+					<Add directory="C:/Users/zwy/Desktop/VidManPlat/src/playFFmpeg/3rdparty/spdlog/include"/>
+					<Add directory="D:/Qt5.12.5/5.12.5/mingw73_64/include"/>
+					<Add directory="D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore"/>
+					<Add directory="D:/Qt5.12.5/5.12.5/mingw73_64/./mkspecs/win32-g++"/>
+					<Add directory="D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui"/>
+					<Add directory="D:/Qt5.12.5/5.12.5/mingw73_64/include/QtANGLE"/>
+					<Add directory="D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets"/>
+					<Add directory="C:\Users\zwy\scoop\apps\gcc\current\include"/>
+					<Add directory="D:/Qt5.12.5/Tools/mingw730_64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++"/>
+					<Add directory="D:/Qt5.12.5/Tools/mingw730_64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="D:/Qt5.12.5/Tools/mingw730_64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward"/>
+					<Add directory="D:/Qt5.12.5/Tools/mingw730_64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include"/>
+					<Add directory="D:/Qt5.12.5/Tools/mingw730_64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed"/>
+					<Add directory="D:/Qt5.12.5/Tools/mingw730_64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/Qt5.12.5/Tools/mingw730_64/bin/mingw32-make.exe -f &quot;C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/playFFmpeg/Makefile&quot;  VERBOSE=1 PlayFFmpeg/fast"/>
+					<CompileFile command="D:/Qt5.12.5/Tools/mingw730_64/bin/mingw32-make.exe -f &quot;C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/playFFmpeg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Qt5.12.5/Tools/mingw730_64/bin/mingw32-make.exe -f &quot;C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/playFFmpeg/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Qt5.12.5/Tools/mingw730_64/bin/mingw32-make.exe -f &quot;C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/playFFmpeg/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PlayFFmpeg_autogen">
+				<Option working_dir="C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/playFFmpeg"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/Qt5.12.5/Tools/mingw730_64/bin/mingw32-make.exe -f &quot;C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/playFFmpeg/Makefile&quot;  VERBOSE=1 PlayFFmpeg_autogen"/>
+					<CompileFile command="D:/Qt5.12.5/Tools/mingw730_64/bin/mingw32-make.exe -f &quot;C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/playFFmpeg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Qt5.12.5/Tools/mingw730_64/bin/mingw32-make.exe -f &quot;C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/playFFmpeg/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Qt5.12.5/Tools/mingw730_64/bin/mingw32-make.exe -f &quot;C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/playFFmpeg/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/playFFmpeg/PlayFFmpeg_autogen/mocs_compilation.cpp">
+			<Option target="PlayFFmpeg"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/src/playFFmpeg/ffmpeg.cpp">
+			<Option target="PlayFFmpeg"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/src/playFFmpeg/ffmpeg.h">
+			<Option target="PlayFFmpeg"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/src/playFFmpeg/ffmpeghead.h">
+			<Option target="PlayFFmpeg"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/src/qss.qrc">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/src/resource.qrc">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/src/iconHelper/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\iconHelper\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/src/playFFmpeg/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\playFFmpeg\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/src/utils/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\utils\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/src/videoPanel/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\videoPanel\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/src/addVideoDevice/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\addVideoDevice\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/cmake/3drparty.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5/Qt5Config.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Core/Qt5CoreMacros.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QVirtualKeyboardPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QWebGLIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="C:/Users/zwy/Desktop/VidManPlat/Qt5.12.5/5.12.5/mingw73_64/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin.cmake">
+			<Option virtualFolder="CMake Files\Qt5.12.5\5.12.5\mingw73_64\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

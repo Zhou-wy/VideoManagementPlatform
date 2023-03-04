@@ -34,7 +34,7 @@ endif()
 
 
 # 导入第三方库
-include(cmake/3drparty.cmake)
+include(${CMAKE_SOURCE_DIR}/cmake/3drparty.cmake)
 
 # 导入QT中的资源文件
 set(QRC_SOURCE_FILES src/resource.qrc src/qss.qrc)

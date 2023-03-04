@@ -8,6 +8,8 @@
 #include <QWidget>
 #include <QButtonGroup>
 #include <memory>
+#include <utility>
+#include <QString>
 
 #include "iconHelper/iconhelper.h"
 #include "utils/cpumonitor.h"
@@ -15,20 +17,11 @@
 #include "playFFmpeg/ffmpeg.h"
 #include "addVideoDevice/addvideo.h"
 #include "utils/Json.h"
+#include "dataType.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class SeViManPlat; }
 QT_END_NAMESPACE
-
-typedef struct _videoConf {
-    QString video_name;
-    QList<QString> urls;
-    bool operator==(const _videoConf &other) const{
-        return (video_name == other.video_name) && (urls == other.urls);
-    }
-} VideoConf;
-
-
 
 class SeViManPlat : public QWidget {
 Q_OBJECT
@@ -54,6 +47,10 @@ public:
 
     void initLogger();
 
+    void Json2VideoConf();
+
+    void VideoConf2Json();
+
 public slots:
 
     void onTimerOut();
@@ -62,7 +59,11 @@ public slots:
 
     void addVideoPlay();
 
-    void onTreeViewClicked(const QModelIndex &index);
+    void onTreeViewClickedStream(const QModelIndex &index);
+
+    void delVideoPlay(); // 删除摄像头槽函数
+
+    void onTreeViewClickedDelVideo(const QModelIndex &index);
 
 private:
     void destroyAll();
@@ -80,7 +81,9 @@ private:
     addVideo *addVideoTool; // 添加摄像头
     QString m_video_conf_json;
     QString m_log_save_dir;
-    QList<VideoConf *> m_videoConf;
+    QList<std::shared_ptr<VideoConf>> m_videoConf;
+
+    Json *VideoConfJson; // 摄像头配置文件
 };
 
 

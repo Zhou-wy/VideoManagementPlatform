@@ -9,6 +9,7 @@ source_group("Source" FILES ${CURRENT_SOURCES})
 
 # find QT5
 include(${CMAKE_SOURCE_DIR}/cmake/3drparty.cmake)
+
 set(CMAKE_EXE_LINKER_FLAGS "-SHARED")
 # create static library
 add_library(${PROJECT_NAME} STATIC ${CURRENT_HEADERS} ${CURRENT_SOURCES})
