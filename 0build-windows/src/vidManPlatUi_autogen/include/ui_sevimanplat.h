@@ -70,7 +70,7 @@ public:
     {
         if (SeViManPlat->objectName().isEmpty())
             SeViManPlat->setObjectName(QString::fromUtf8("SeViManPlat"));
-        SeViManPlat->resize(1382, 864);
+        SeViManPlat->resize(1449, 866);
         SeViManPlat->setMinimumSize(QSize(1248, 702));
         SeViManPlat->setMaximumSize(QSize(3480, 2160));
         QFont font;
@@ -308,38 +308,20 @@ public:
         verticalLayout_5->addWidget(widget_3);
 
         camDeviceList = new QTreeWidget(widget_2);
-        QIcon icon;
-        icon.addFile(QString::fromUtf8(":/qss/icon/dev.png"), QSize(), QIcon::Normal, QIcon::Off);
+        QFont font7;
+        font7.setFamily(QString::fromUtf8("Arial"));
+        font7.setPointSize(18);
         QTreeWidgetItem *__qtreewidgetitem = new QTreeWidgetItem();
         __qtreewidgetitem->setTextAlignment(0, Qt::AlignCenter);
-        __qtreewidgetitem->setFont(0, font);
-        __qtreewidgetitem->setIcon(0, icon);
+        __qtreewidgetitem->setFont(0, font7);
         camDeviceList->setHeaderItem(__qtreewidgetitem);
-        QFont font7;
-        font7.setFamily(QString::fromUtf8("Songti SC"));
-        font7.setPointSize(16);
         QFont font8;
-        font8.setFamily(QString::fromUtf8("Songti SC"));
-        font8.setPointSize(13);
-        font8.setBold(false);
-        font8.setWeight(50);
-        QFont font9;
-        font9.setFamily(QString::fromUtf8("Songti SC"));
-        font9.setPointSize(14);
-        font9.setBold(false);
-        font9.setWeight(50);
+        font8.setFamily(QString::fromUtf8("Arial"));
+        font8.setPointSize(16);
         QTreeWidgetItem *__qtreewidgetitem1 = new QTreeWidgetItem(camDeviceList);
-        __qtreewidgetitem1->setFont(0, font7);
-        QTreeWidgetItem *__qtreewidgetitem2 = new QTreeWidgetItem(__qtreewidgetitem1);
-        __qtreewidgetitem2->setFont(0, font5);
-        QTreeWidgetItem *__qtreewidgetitem3 = new QTreeWidgetItem(__qtreewidgetitem2);
-        __qtreewidgetitem3->setFont(0, font8);
-        QTreeWidgetItem *__qtreewidgetitem4 = new QTreeWidgetItem(__qtreewidgetitem2);
-        __qtreewidgetitem4->setFont(0, font8);
-        QTreeWidgetItem *__qtreewidgetitem5 = new QTreeWidgetItem(camDeviceList);
-        __qtreewidgetitem5->setFont(0, font7);
-        QTreeWidgetItem *__qtreewidgetitem6 = new QTreeWidgetItem(__qtreewidgetitem5);
-        __qtreewidgetitem6->setFont(0, font9);
+        __qtreewidgetitem1->setFont(0, font8);
+        QTreeWidgetItem *__qtreewidgetitem2 = new QTreeWidgetItem(camDeviceList);
+        __qtreewidgetitem2->setFont(0, font8);
         camDeviceList->setObjectName(QString::fromUtf8("camDeviceList"));
         camDeviceList->setMinimumSize(QSize(0, 0));
         camDeviceList->setSizeIncrement(QSize(0, 0));
@@ -356,11 +338,11 @@ public:
         verticalLayout_5->addWidget(camDeviceList, 0, Qt::AlignHCenter);
 
         camContorlList = new QTreeWidget(widget_2);
-        QTreeWidgetItem *__qtreewidgetitem7 = new QTreeWidgetItem();
-        __qtreewidgetitem7->setText(0, QString::fromUtf8("\350\256\276\345\244\207\347\256\241\347\220\206"));
-        __qtreewidgetitem7->setTextAlignment(0, Qt::AlignCenter);
-        __qtreewidgetitem7->setFont(0, font);
-        camContorlList->setHeaderItem(__qtreewidgetitem7);
+        QTreeWidgetItem *__qtreewidgetitem3 = new QTreeWidgetItem();
+        __qtreewidgetitem3->setText(0, QString::fromUtf8("\350\256\276\345\244\207\347\256\241\347\220\206"));
+        __qtreewidgetitem3->setTextAlignment(0, Qt::AlignCenter);
+        __qtreewidgetitem3->setFont(0, font);
+        camContorlList->setHeaderItem(__qtreewidgetitem3);
         camContorlList->setObjectName(QString::fromUtf8("camContorlList"));
         camContorlList->setFont(font);
         camContorlList->setAutoExpandDelay(1);
@@ -426,16 +408,8 @@ public:
         camDeviceList->setSortingEnabled(false);
         QTreeWidgetItem *___qtreewidgetitem1 = camDeviceList->topLevelItem(0);
         ___qtreewidgetitem1->setText(0, QApplication::translate("SeViManPlat", "\347\275\221\347\273\234\346\221\204\345\203\217\345\244\264", nullptr));
-        QTreeWidgetItem *___qtreewidgetitem2 = ___qtreewidgetitem1->child(0);
-        ___qtreewidgetitem2->setText(0, QApplication::translate("SeViManPlat", "\347\244\272\344\276\213\346\221\204\345\203\217\345\244\264", nullptr));
-        QTreeWidgetItem *___qtreewidgetitem3 = ___qtreewidgetitem2->child(0);
-        ___qtreewidgetitem3->setText(0, QApplication::translate("SeViManPlat", "\347\244\272\344\276\213\344\270\273\347\240\201\346\265\201", nullptr));
-        QTreeWidgetItem *___qtreewidgetitem4 = ___qtreewidgetitem2->child(1);
-        ___qtreewidgetitem4->setText(0, QApplication::translate("SeViManPlat", "\347\244\272\344\276\213\350\276\205\347\240\201\346\265\201", nullptr));
-        QTreeWidgetItem *___qtreewidgetitem5 = camDeviceList->topLevelItem(1);
-        ___qtreewidgetitem5->setText(0, QApplication::translate("SeViManPlat", "\346\234\254\345\234\260\346\221\204\345\203\217\345\244\264", nullptr));
-        QTreeWidgetItem *___qtreewidgetitem6 = ___qtreewidgetitem5->child(0);
-        ___qtreewidgetitem6->setText(0, QApplication::translate("SeViManPlat", "\347\244\272\344\276\213\346\221\204\345\203\217\345\244\264", nullptr));
+        QTreeWidgetItem *___qtreewidgetitem2 = camDeviceList->topLevelItem(1);
+        ___qtreewidgetitem2->setText(0, QApplication::translate("SeViManPlat", "\346\234\254\345\234\260\346\221\204\345\203\217\345\244\264", nullptr));
         camDeviceList->setSortingEnabled(__sortingEnabled);
 
     } // retranslateUi

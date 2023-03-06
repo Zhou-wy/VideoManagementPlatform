@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1382</width>
-    <height>864</height>
+    <width>1449</width>
+    <height>866</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -661,16 +661,12 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
              </property>
              <property name="font">
               <font>
-               <family>Songti SC</family>
+               <family>Arial</family>
                <pointsize>18</pointsize>
               </font>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
-             </property>
-             <property name="icon">
-              <iconset>
-               <normaloff>:/qss/icon/dev.png</normaloff>:/qss/icon/dev.png</iconset>
              </property>
             </column>
             <item>
@@ -679,47 +675,10 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
              </property>
              <property name="font">
               <font>
-               <family>Songti SC</family>
+               <family>Arial</family>
                <pointsize>16</pointsize>
               </font>
              </property>
-             <item>
-              <property name="text">
-               <string>示例摄像头</string>
-              </property>
-              <property name="font">
-               <font>
-                <family>Songti SC</family>
-                <pointsize>14</pointsize>
-               </font>
-              </property>
-              <item>
-               <property name="text">
-                <string>示例主码流</string>
-               </property>
-               <property name="font">
-                <font>
-                 <family>Songti SC</family>
-                 <pointsize>13</pointsize>
-                 <weight>50</weight>
-                 <bold>false</bold>
-                </font>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>示例辅码流</string>
-               </property>
-               <property name="font">
-                <font>
-                 <family>Songti SC</family>
-                 <pointsize>13</pointsize>
-                 <weight>50</weight>
-                 <bold>false</bold>
-                </font>
-               </property>
-              </item>
-             </item>
             </item>
             <item>
              <property name="text">
@@ -727,23 +686,10 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
              </property>
              <property name="font">
               <font>
-               <family>Songti SC</family>
+               <family>Arial</family>
                <pointsize>16</pointsize>
               </font>
              </property>
-             <item>
-              <property name="text">
-               <string>示例摄像头</string>
-              </property>
-              <property name="font">
-               <font>
-                <family>Songti SC</family>
-                <pointsize>14</pointsize>
-                <weight>50</weight>
-                <bold>false</bold>
-               </font>
-              </property>
-             </item>
             </item>
            </widget>
           </item>

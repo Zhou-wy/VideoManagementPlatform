@@ -45,13 +45,15 @@ bool addVideo::saveVideoListConf(QList<std::shared_ptr<VideoConf>> &videoList) {
     QString video_name = "video" + QString::number(videoList.length() + 1);
     if (m_type.toLower() == "rtsp") {
         //主码流
-        QString main_code_stream = "rtsp://" + m_userName + ":" + m_passWord + "@" + m_ip + ":" + m_port +"/cam/realmonitor?channel=1&subtype=0";
+        QString main_code_stream = "rtsp://" + m_userName + ":" + m_passWord + "@" + m_ip + ":" + m_port +
+                                   "/cam/realmonitor?channel=1&subtype=0";
         //辅码流
-        QString Auxiliary_code_stream = "rtsp://" + m_userName + ":" + m_passWord + "@" + m_ip + ":" + m_port +"/cam/realmonitor?channel=1&subtype=1";
+        QString Auxiliary_code_stream = "rtsp://" + m_userName + ":" + m_passWord + "@" + m_ip + ":" + m_port +
+                                        "/cam/realmonitor?channel=1&subtype=1";
         newVideoConf = std::make_shared<VideoConf>(
                 VideoConf{video_name, {main_code_stream, Auxiliary_code_stream}});
     } else if (m_type.toLower() == "rtmp") {
-        QString url = ui->rtmp_url->text();
+        QString url = "rtmp://" + ui->rtmp_url->text();
         if (url == "") {
             iERROR(ROOT_LOG) << QString("rtmp video" + QString::number(videoList.length() + 1) +
                                         " fails to be enabled.").toStdString();
@@ -61,12 +63,12 @@ bool addVideo::saveVideoListConf(QList<std::shared_ptr<VideoConf>> &videoList) {
         }
 
     } else if (m_type.toLower() == "http-flv") {
-        QString url = ui->http_flv_url->text();
+        QString url = "http://" + ui->http_flv_url->text();
         if (url == "") {
             iERROR(ROOT_LOG) << QString("http flv video" + QString::number(videoList.length() + 1) +
                                         " fails to be enabled.").toStdString();
             return false;
-        }else{
+        } else {
             newVideoConf = std::make_shared<VideoConf>(VideoConf{video_name, {url}});
         }
     } else if (m_type.toLower() == "local-camera") {

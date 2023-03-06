@@ -521,9 +521,10 @@ QTreeView::branch:open:has-children {
     border-image: url(:/qss/lightblue/web_cam_checked.png);
 
 }
+
 QTreeWidget{
     font-family: Arial;
-    font-size: 20px;
+    font-size: 14px;
     font-style: normal;
 }
 

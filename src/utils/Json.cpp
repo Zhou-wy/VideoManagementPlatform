@@ -211,13 +211,11 @@ void Json::remove(const QString &path) {
 void Json::save(const QString &path, bool pretty) const {
     QFile file(path);
 
-    if (!file.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text)) {
-        return;
+    if (file.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text)) {
+        QTextStream out(&file);
+        out << toString(pretty);
+        out.flush();
     }
-
-    QTextStream out(&file);
-    out << toString(pretty);
-    out.flush();
     file.close();
 }
 
