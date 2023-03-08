@@ -6,5 +6,5 @@ CXX_DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
 
 CXX_INCLUDES = @CMakeFiles/IconHelper.dir/includes_CXX.rsp
 
-CXX_FLAGS = -g -fdiagnostics-color=always -std=gnu++11
+CXX_FLAGS = -g -fdiagnostics-color=always -std=gnu++14
 

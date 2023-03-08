@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "C:/Users/zwy/Desktop/VidManPlat/lib/libIconHelper.a"
+			"path" : "C:/Users/zwy/Desktop/VidManPlat/lib/libvidManPlatUi.a"
 		}
 	],
 	"backtrace" : 1,
@@ -18,10 +18,9 @@
 		],
 		"files" : 
 		[
-			"src/iconHelper/CMakeLists.txt",
+			"src/CMakeLists.txt",
 			"cmake/3drparty.cmake",
-			"CMakeLists.txt",
-			"src/CMakeLists.txt"
+			"CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -31,13 +30,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 14,
+				"line" : 17,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 15,
+				"line" : 19,
 				"parent" : 0
 			},
 			{
@@ -66,51 +65,26 @@
 				"parent" : 5
 			},
 			{
-				"file" : 3
-			},
-			{
 				"command" : 3,
-				"file" : 3,
+				"file" : 0,
 				"line" : 5,
-				"parent" : 8
+				"parent" : 0
 			},
 			{
 				"file" : 1,
+				"parent" : 8
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 29,
 				"parent" : 9
 			},
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 29,
-				"parent" : 10
-			},
-			{
-				"command" : 2,
-				"file" : 1,
 				"line" : 30,
-				"parent" : 10
-			},
-			{
-				"command" : 3,
-				"file" : 0,
-				"line" : 11,
-				"parent" : 0
-			},
-			{
-				"file" : 1,
-				"parent" : 13
-			},
-			{
-				"command" : 2,
-				"file" : 1,
-				"line" : 29,
-				"parent" : 14
-			},
-			{
-				"command" : 2,
-				"file" : 1,
-				"line" : 30,
-				"parent" : 14
+				"parent" : 9
 			}
 		]
 	},
@@ -123,7 +97,7 @@
 					"fragment" : "-g -fdiagnostics-color=always"
 				},
 				{
-					"fragment" : "-std=gnu++11"
+					"fragment" : "-std=gnu++14"
 				}
 			],
 			"defines" : 
@@ -145,7 +119,7 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/iconHelper/IconHelper_autogen/include"
+					"path" : "C:/Users/zwy/Desktop/VidManPlat/0build-windows/src/vidManPlatUi_autogen/include"
 				},
 				{
 					"backtrace" : 6,
@@ -156,20 +130,12 @@
 					"path" : "C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include"
 				},
 				{
-					"backtrace" : 11,
+					"backtrace" : 10,
 					"path" : "C:/Users/zwy/Desktop/VidManPlat/src/3rdparty/ffmpeg4/include"
 				},
 				{
-					"backtrace" : 12,
+					"backtrace" : 11,
 					"path" : "C:/Users/zwy/Desktop/VidManPlat/src/3rdparty/spdlog/include"
-				},
-				{
-					"backtrace" : 15,
-					"path" : "C:/Users/zwy/Desktop/VidManPlat/src/iconHelper/3rdparty/ffmpeg4/include"
-				},
-				{
-					"backtrace" : 16,
-					"path" : "C:/Users/zwy/Desktop/VidManPlat/src/iconHelper/3rdparty/spdlog/include"
 				},
 				{
 					"backtrace" : 2,
@@ -209,29 +175,50 @@
 				[
 					2
 				],
-				"standard" : "11"
+				"standard" : "14"
 			},
 			"sourceIndexes" : 
 			[
 				0,
-				2
+				1,
+				6
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
+			"backtrace" : 2,
+			"id" : "addVideo::@d6568711fa9a46b9ea6c"
+		},
+		{
 			"backtrace" : 0,
-			"id" : "IconHelper_autogen::@f0fdf5ef21887b867222"
+			"id" : "vidManPlatUi_autogen::@145eef247bfb46b6828c"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "VideoPanel::@d5898b692044102cb1d1"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "utils::@f1b38b22aeb65474a6c5"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "IconHelper::@f0fdf5ef21887b867222"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "PlayFFmpeg::@2ffd910cc6a6ab224bf9"
 		}
 	],
-	"id" : "IconHelper::@f0fdf5ef21887b867222",
-	"name" : "IconHelper",
-	"nameOnDisk" : "libIconHelper.a",
+	"id" : "vidManPlatUi::@145eef247bfb46b6828c",
+	"name" : "vidManPlatUi",
+	"nameOnDisk" : "libvidManPlatUi.a",
 	"paths" : 
 	{
-		"build" : "src/iconHelper",
-		"source" : "src/iconHelper"
+		"build" : "src",
+		"source" : "src"
 	},
 	"sourceGroups" : 
 	[
@@ -239,21 +226,32 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1,
+				6
 			]
 		},
 		{
-			"name" : "Include",
+			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				1
+				2,
+				5
 			]
 		},
 		{
-			"name" : "Source",
+			"name" : "",
 			"sourceIndexes" : 
 			[
-				2
+				3,
+				4
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				7
 			]
 		}
 	],
@@ -263,19 +261,48 @@
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "0build-windows/src/iconHelper/IconHelper_autogen/mocs_compilation.cpp",
+			"path" : "0build-windows/src/vidManPlatUi_autogen/mocs_compilation.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "src/iconHelper/iconhelper.h",
+			"compileGroupIndex" : 0,
+			"path" : "src/sevimanplat.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/sevimanplat.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/iconHelper/iconhelper.cpp",
+			"path" : "src/sevimanplat.ui",
 			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/resource.qrc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "0build-windows/src/vidManPlatUi_autogen/include/ui_sevimanplat.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "0build-windows/src/vidManPlatUi_autogen/EWIEGA46WW/qrc_resource.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "0build-windows/src/vidManPlatUi_autogen/EWIEGA46WW/qrc_resource.cpp.rule",
+			"sourceGroupIndex" : 3
 		}
 	],
 	"type" : "STATIC_LIBRARY"

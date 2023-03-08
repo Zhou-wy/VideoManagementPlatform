@@ -1155,6 +1155,9 @@ src/CMakeFiles/vidManPlatUi.dir/sevimanplat.cpp.obj: C:/Users/zwy/Desktop/VidMan
   C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/fmt.h \
   C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/core.h \
   D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cstring \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/experimental/string_view \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/experimental/bits/lfts_config.h \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/experimental/bits/string_view.tcc \
   C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/format.h \
   C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/core.h \
   C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/format-inl.h \
@@ -1234,6 +1237,7 @@ src/CMakeFiles/vidManPlatUi.dir/sevimanplat.cpp.obj: C:/Users/zwy/Desktop/VidMan
   D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/sstream \
   D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/sstream.tcc \
   D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iomanip \
+  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/quoted_string.h \
   D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iostream
 
 src/CMakeFiles/vidManPlatUi.dir/vidManPlatUi_autogen/EWIEGA46WW/qrc_resource.cpp.obj: src/vidManPlatUi_autogen/EWIEGA46WW/qrc_resource.cpp
@@ -2608,6 +2612,8 @@ D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/winnls.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_construct.h:
 
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/experimental/bits/lfts_config.h:
+
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iterator:
@@ -3634,6 +3640,8 @@ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/avx512bwi
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtGui/qtextformat.h:
 
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/quoted_string.h:
+
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/qtranslator.h:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtCore/QJsonObject:
@@ -3849,6 +3857,8 @@ D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/errhandlingapi.h:
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/fibersapi.h:
 
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/fileapi.h:
+
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/experimental/bits/string_view.tcc:
 
 D:/Qt5.12.5/Tools/mingw730_64/x86_64-w64-mingw32/include/handleapi.h:
 
@@ -4323,6 +4333,8 @@ D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/QStackedWidget:
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/QTreeWidget:
 
 D:/Qt5.12.5/5.12.5/mingw73_64/include/QtWidgets/QVBoxLayout:
+
+D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/experimental/string_view:
 
 C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/format-inl.h:
 

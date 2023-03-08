@@ -63,8 +63,6 @@ public slots:
 
     void delVideoPlay(); // 删除摄像头槽函数
 
-    void onTreeViewClickedDelVideo(const QModelIndex &index);
-
 private:
     void destroyAll();
 
@@ -84,6 +82,7 @@ private:
     QList<std::shared_ptr<VideoConf>> m_videoConf;
 
     Json *VideoConfJson; // 摄像头配置文件
+    QList<QString> videoNameList; // 摄像头名字列表
 };
 
 

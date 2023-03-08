@@ -116,7 +116,7 @@
 					"fragment" : "-g -fdiagnostics-color=always"
 				},
 				{
-					"fragment" : "-std=gnu++11"
+					"fragment" : "-std=gnu++14"
 				}
 			],
 			"defines" : 
@@ -186,7 +186,7 @@
 				[
 					6
 				],
-				"standard" : "11"
+				"standard" : "14"
 			},
 			"sourceIndexes" : 
 			[
@@ -201,18 +201,6 @@
 	[
 		{
 			"backtrace" : 6,
-			"id" : "IconHelper::@f0fdf5ef21887b867222"
-		},
-		{
-			"backtrace" : 6,
-			"id" : "VideoPanel::@d5898b692044102cb1d1"
-		},
-		{
-			"backtrace" : 6,
-			"id" : "PlayFFmpeg::@2ffd910cc6a6ab224bf9"
-		},
-		{
-			"backtrace" : 6,
 			"id" : "vidManPlatUi::@145eef247bfb46b6828c"
 		},
 		{
@@ -225,7 +213,19 @@
 		},
 		{
 			"backtrace" : 6,
+			"id" : "VideoPanel::@d5898b692044102cb1d1"
+		},
+		{
+			"backtrace" : 6,
 			"id" : "utils::@f1b38b22aeb65474a6c5"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "IconHelper::@f0fdf5ef21887b867222"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "PlayFFmpeg::@2ffd910cc6a6ab224bf9"
 		}
 	],
 	"id" : "VideoManPlat::@6890427a1f51a3e7e1df",

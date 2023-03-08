@@ -81,6 +81,7 @@ void addVideo::saveVideoConf() {
     if (QMessageBox::question(this, tr("Quit"), tr("请确认新增摄像头信息无误"), QMessageBox::Yes, QMessageBox::No) ==
         QMessageBox::Yes) {
         QDialog::accept();//不会将事件传递给组件的父组件
+        emit confirmSignal();
         iINFO(ROOT_LOG) << "save";
     } else {
         QDialog::reject();

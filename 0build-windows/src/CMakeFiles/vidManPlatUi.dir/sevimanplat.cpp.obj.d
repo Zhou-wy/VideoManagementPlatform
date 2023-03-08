@@ -1153,6 +1153,9 @@ src/CMakeFiles/vidManPlatUi.dir/sevimanplat.cpp.obj: \
  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/fmt.h \
  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/core.h \
  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cstring \
+ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/experimental/string_view \
+ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/experimental/bits/lfts_config.h \
+ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/experimental/bits/string_view.tcc \
  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/format.h \
  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/core.h \
  C:/Users/zwy/Desktop/VidManPlat/3rdparty/spdlog/include/spdlog/fmt/bundled/format-inl.h \
@@ -1232,4 +1235,5 @@ src/CMakeFiles/vidManPlatUi.dir/sevimanplat.cpp.obj: \
  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/sstream \
  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/sstream.tcc \
  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iomanip \
+ D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/quoted_string.h \
  D:/Qt5.12.5/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iostream

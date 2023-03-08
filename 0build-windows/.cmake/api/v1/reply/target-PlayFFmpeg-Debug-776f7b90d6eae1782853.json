@@ -123,7 +123,7 @@
 					"fragment" : "-g -fdiagnostics-color=always"
 				},
 				{
-					"fragment" : "-std=gnu++11"
+					"fragment" : "-std=gnu++14"
 				}
 			],
 			"defines" : 
@@ -209,7 +209,7 @@
 				[
 					2
 				],
-				"standard" : "11"
+				"standard" : "14"
 			},
 			"sourceIndexes" : 
 			[

@@ -11,6 +11,11 @@
 #include "ui_sevimanplat.h"
 #include "utils/iLOG.hpp"
 
+//void Print_video_conf(QList<std::shared_ptr<VideoConf>> &m_videoConf) {
+//    for (const auto& conf : m_videoConf) {
+//        iINFO(ROOT_LOG) << "Video Name: " << conf->video_name.toStdString();
+//    }
+//}
 
 SeViManPlat::SeViManPlat(const QString &video_conf_json, const QString &log_save_dir, QWidget *parent) :
         QWidget(parent), ui(new Ui::SeViManPlat), m_video_conf_json(video_conf_json), m_log_save_dir(log_save_dir) {
@@ -151,19 +156,22 @@ void SeViManPlat::loadStyle(const QString &qssFile) {
  * */
 void SeViManPlat::Json2VideoConf() {
     VideoConfJson = new Json(m_video_conf_json, true);
+    videoNameList = VideoConfJson->getStringList("VideoNameList");
+//    for (auto const &name: videoNameList) {
+//        iINFO(ROOT_LOG) << "videoNameList :" << name.toStdString();
+//    }
     if (VideoConfJson->getString("VideoCount") == "") {
         iERROR(ROOT_LOG) << "The videoListConf file is empty";
     } else {
         int videoCount = VideoConfJson->getString("VideoCount").toInt();
         iINFO(ROOT_LOG) << "video init, VideoConfJson VideoCount :" << videoCount;
         QString url = "";
-        // 设置右侧设备树
-        QTreeWidgetItem *webCamRoot = ui->camDeviceList->topLevelItem(0);
+//        // 设置右侧设备树
+//        QTreeWidgetItem *webCamRoot = ui->camDeviceList->topLevelItem(0);
         for (int i = 0; i < videoCount; ++i) { // 遍历所有的摄像头配置
-            QString video_type = VideoConfJson->getString("video" + QString::number(i + 1) + ".type");
-            iINFO(ROOT_LOG) << "video_type: " << video_type.toStdString();
-            QString video_name = "video" + QString::number(i + 1);
-            iINFO(ROOT_LOG) << "video_name: " << video_name.toStdString();
+            QString video_name = videoNameList[i];
+            QString video_type = VideoConfJson->getString(video_name + ".type");
+            iINFO(ROOT_LOG) << "video_type: " << video_type.toStdString() << "video_name: " << video_name.toStdString();
             std::shared_ptr<VideoConf> videoConf_i = nullptr;
 
             if (video_type.toLower() == "rtsp") {
@@ -223,15 +231,21 @@ void SeViManPlat::Json2VideoConf() {
  * @brief: m_videoConf格式化Json写入配置文件，程序退出时写入
  */
 void SeViManPlat::VideoConf2Json() {
+
+//    if (QFile::remove(this->m_video_conf_json)) {
+//        iWARN(ROOT_LOG) << "delete video conf file successful";
+//    }
     //将m_videoConf按video_name由小到大排序
     std::sort(this->m_videoConf.begin(), this->m_videoConf.end(),
               [](const std::shared_ptr<VideoConf> &video1, const std::shared_ptr<VideoConf> &video2) {
                   return video1->video_name < video2->video_name;
               });
+
     // 摄像头个数
     VideoConfJson->set("VideoCount", QString::number(this->m_videoConf.length()));
     //遍历m_videoConf，将配置写入JSON
     for (const auto &conf: this->m_videoConf) {
+        iERROR(ROOT_LOG) << conf->video_name.toStdString();
         if (conf->urls.length() == 2) { // RTSP
             /*"rtsp://admin:admin123@192.168.0.213:554/cam/realmonitor?channel=1&subtype=0";*/
             // 提取_type
@@ -278,7 +292,7 @@ void SeViManPlat::VideoConf2Json() {
             iERROR(ROOT_LOG) << "";
         }
     }
-    VideoConfJson->save(m_video_conf_json);
+    VideoConfJson->save(this->m_video_conf_json);
 }
 
 /*!
@@ -298,7 +312,7 @@ void SeViManPlat::initVideoPlay() {
             auto *webCamItem = new QTreeWidgetItem();
             webCamItem->setText(0, "摄像头-" + conf->video_name);
             webCamRoot->addChild(webCamItem);
-
+            iINFO(ROOT_LOG) << "videoNameList :" << conf->video_name.toStdString();
             if (video_type.toLower() == "rtsp") {
                 /*
                 格式说明：
@@ -380,6 +394,7 @@ void SeViManPlat::destroyAll() {
     delete videoWidget;
     delete videoWidgetLayout;
     delete VideoConfJson;
+
     qDeleteAll(videoPlay);
     qDeleteAll(videoPlayLayout);
 }
@@ -390,7 +405,7 @@ void SeViManPlat::destroyAll() {
 void SeViManPlat::addVideoDialog() {
     this->addVideoTool = new addVideo(this);
     this->addVideoTool->show();
-    connect(this->addVideoTool, SIGNAL(finished(int)), this, SLOT(addVideoPlay()));
+    connect(this->addVideoTool, SIGNAL(confirmSignal()), this, SLOT(addVideoPlay()));
 }
 
 /*!
@@ -499,65 +514,60 @@ void SeViManPlat::delVideoPlay() {
         // 获取所选索引的列表
         QModelIndexList selected_indexes = selection_model->selectedIndexes();
 
-        for (const QModelIndex& index : selected_indexes) {
+        for (const QModelIndex &index: selected_indexes) {
             QVariant data = model->data(index);
             // 获取父索引和数据
             QModelIndex parent_index = index.parent();
             QVariant parent_data = model->data(parent_index);
-            iINFO(ROOT_LOG) << "findVideoName: " << data.toString().toStdString();
-            QString findVideoName = data.toString().split("-").at(1);
-            m_videoConf.erase(
-                    std::remove_if(m_videoConf.begin(), m_videoConf.end(), [&](const std::shared_ptr<VideoConf> &conf) {
-                        return conf->video_name == findVideoName;
-                    }), m_videoConf.end());
-        int i = findVideoName.split("video").last().toInt();
-        //删除播放页面 : TODO:20230307
-//        this->videoPlay.erase()
-//
-//        this->videoPlay.append(new FFmpegWidget(videoWidget->getVideoWidgetList().at(i - 1)));
-//        this->videoPlayLayout.append(new QVBoxLayout(videoWidget->getVideoWidgetList().at(i - 1)));
-//        this->videoPlayLayout.at(i - 1)->addWidget(this->videoPlay.at(i - 1));
-//        this->videoPlay.at(videoCount - 1)->setUrl(url);
-//        this->videoPlay.at(videoCount - 1)->open();
-//        iINFO(ROOT_LOG)
-//        << "add video info -> " << "name: " << video_i->video_name.toStdString() << " url:" << url.toStdString();
 
+            //删除this->m_videoConf的内容
+            QString findVideoName = data.toString().split("-").at(1);
+//            m_videoConf.erase(
+//                    std::remove_if(m_videoConf.begin(), m_videoConf.end(), [&](const std::shared_ptr<VideoConf> &conf) {
+//                        return conf->video_name == findVideoName;
+//                    }), m_videoConf.end());
+            for (auto video_i = m_videoConf.begin(); video_i != m_videoConf.end(); ++video_i) {
+                if ((*video_i)->video_name == findVideoName) {
+                    //删除json中的内容
+                    if ((*video_i)->urls.length() == 2) { // rtsp
+                        VideoConfJson->remove((*video_i)->video_name + ".ip");
+                        VideoConfJson->remove((*video_i)->video_name + ".port");
+                        VideoConfJson->remove((*video_i)->video_name + ".username");
+                        VideoConfJson->remove((*video_i)->video_name + ".password");
+                        VideoConfJson->remove((*video_i)->video_name + ".type");
+                        VideoConfJson->remove((*video_i)->video_name);
+                    } else if ((*video_i)->urls.length() == 1) {
+                        VideoConfJson->remove((*video_i)->video_name + ".url");
+                        VideoConfJson->remove((*video_i)->video_name + ".type");
+                        VideoConfJson->remove((*video_i)->video_name);
+                    } else {
+                        iWARN(ROOT_LOG) << "delete camera";
+                    }
+                    video_i = m_videoConf.erase(video_i);
+                    --video_i; // 因为 erase() 会返回下一个元素的迭代器，所以需要将迭代器退回到上一个元素
+                }
+            }
+
+            int i = findVideoName.split("video").last().toInt();
+
+            if (i > 0 && i <= this->videoPlay.size()) {
+                this->videoPlay.at(i - 1)->close();
+                delete this->videoPlay.at(i - 1); // 释放指针所指向的内存
+                this->videoPlay.removeAt(i - 1);   // 删除指针元素
+                delete this->videoPlayLayout.at(i - 1); // 释放指针所指向的内存
+                this->videoPlayLayout.removeAt(i - 1);// 删除指针元素
+            }
+            iINFO(ROOT_LOG) << "delete video info -> " << "name: " << findVideoName.toStdString();
         }
         // 删除所选索引对应的项
         for (const QModelIndex &index: selected_indexes) {
             model->removeRow(index.row(), index.parent());
         }
+
+
     } else {
         iINFO(ROOT_LOG) << "cancel delete video";
     }
-
-}
-
-void SeViManPlat::onTreeViewClickedDelVideo(const QModelIndex &index) {
-    // 获取点击的节点的行号、数据和父节点索引
-    int row = index.row();
-    QVariant data = index.data(Qt::DisplayRole);
-    QModelIndex parentIndex = index.parent(); //父节点
-    QModelIndex GrandpaIndex = parentIndex.parent(); //父节点的父节点->祖父节点
-
-    if (parentIndex.isValid() && !GrandpaIndex.isValid()) { //有父节点，没有祖父节点
-        iWARN(ROOT_LOG) << "Clicked on root node: " << data.toString().toStdString() << " at row: " << row;
-        QString findVideoName = data.toString().split("-").at(1);
-        iINFO(ROOT_LOG) << "delete video name : " << findVideoName.toStdString();
-        // 1、删除 m_videoConf中findVideoName的元素
-        m_videoConf.erase(
-                std::remove_if(m_videoConf.begin(), m_videoConf.end(), [&](const std::shared_ptr<VideoConf> &conf) {
-                    return conf->video_name == findVideoName;
-                }), m_videoConf.end());
-        // 2、删除QTreeView中的节点
-        iINFO(ROOT_LOG) << "delete video index : " << findVideoName.toStdString();
-        QAbstractItemModel *model = const_cast<QAbstractItemModel *>(index.model());
-        model->removeRows(index.row(), 1, index.parent());
-        return;
-    } else {
-        iWARN(ROOT_LOG) << "Clicked on non-camera node: " << data.toString().toStdString() << " at row: " << row;
-    }
-
 }
 
 

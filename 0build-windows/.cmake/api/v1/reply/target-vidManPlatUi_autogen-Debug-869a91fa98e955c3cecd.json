@@ -5,7 +5,7 @@
 		"commands" : [],
 		"files" : 
 		[
-			"CMakeLists.txt"
+			"src/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -18,7 +18,7 @@
 	[
 		{
 			"backtrace" : 0,
-			"id" : "IconHelper::@f0fdf5ef21887b867222"
+			"id" : "addVideo::@d6568711fa9a46b9ea6c"
 		},
 		{
 			"backtrace" : 0,
@@ -26,28 +26,24 @@
 		},
 		{
 			"backtrace" : 0,
-			"id" : "PlayFFmpeg::@2ffd910cc6a6ab224bf9"
-		},
-		{
-			"backtrace" : 0,
-			"id" : "vidManPlatUi::@145eef247bfb46b6828c"
-		},
-		{
-			"backtrace" : 0,
-			"id" : "addVideo::@d6568711fa9a46b9ea6c"
-		},
-		{
-			"backtrace" : 0,
 			"id" : "utils::@f1b38b22aeb65474a6c5"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "IconHelper::@f0fdf5ef21887b867222"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "PlayFFmpeg::@2ffd910cc6a6ab224bf9"
 		}
 	],
-	"id" : "VideoManPlat_autogen::@6890427a1f51a3e7e1df",
+	"id" : "vidManPlatUi_autogen::@145eef247bfb46b6828c",
 	"isGeneratorProvided" : true,
-	"name" : "VideoManPlat_autogen",
+	"name" : "vidManPlatUi_autogen",
 	"paths" : 
 	{
-		"build" : ".",
-		"source" : "."
+		"build" : "src",
+		"source" : "src"
 	},
 	"sourceGroups" : 
 	[
@@ -71,13 +67,13 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "0build-windows/CMakeFiles/VideoManPlat_autogen",
+			"path" : "0build-windows/src/CMakeFiles/vidManPlatUi_autogen",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "0build-windows/CMakeFiles/VideoManPlat_autogen.rule",
+			"path" : "0build-windows/src/CMakeFiles/vidManPlatUi_autogen.rule",
 			"sourceGroupIndex" : 1
 		}
 	],
