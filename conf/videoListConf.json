@@ -1,11 +1,5 @@
 {
-    "VideoCount": "4",
-    "VideoNameList": [
-        "video1",
-        "video2",
-        "video3",
-        "video5"
-    ],
+    "VideoCount": "5",
     "video1": {
         "ip": "192.168.0.213",
         "password": "admin123",
@@ -14,10 +8,17 @@
         "username": "admin"
     },
     "video2": {
-        "type": "rtmp",
-        "url": "rtmp://192.168.0.10:1935/live"
+        "ip": "192.168.0.212",
+        "password": "admin123",
+        "port": "554",
+        "type": "rtsp",
+        "username": "admin"
     },
     "video3": {
+        "type": "rtmp",
+        "url": "rtmp://192.168.0.10:1935/live/"
+    },
+    "video4": {
         "ip": "192.168.0.213",
         "password": "admin123",
         "port": "554",
@@ -26,6 +27,13 @@
     },
     "video5": {
         "type": "rtmp",
-        "url": "rtmp://192.168.0.10:1935/live"
-    }
+        "url": "rtmp://192.168.0.10:1935/live/"
+    },
+    "videoList": [
+        "video1",
+        "video2",
+        "video3",
+        "video4",
+        "video5"
+    ]
 }

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1449</width>
-    <height>866</height>
+    <width>1357</width>
+    <height>847</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -641,7 +641,7 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
              <number>1</number>
             </property>
             <attribute name="headerVisible">
-             <bool>true</bool>
+             <bool>false</bool>
             </attribute>
             <attribute name="headerCascadingSectionResizes">
              <bool>false</bool>
@@ -705,7 +705,7 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
              <number>1</number>
             </property>
             <attribute name="headerVisible">
-             <bool>true</bool>
+             <bool>false</bool>
             </attribute>
             <attribute name="headerCascadingSectionResizes">
              <bool>false</bool>
@@ -740,10 +740,88 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="page_2"/>
-     <widget class="QWidget" name="page_3"/>
-     <widget class="QWidget" name="page_4"/>
-     <widget class="QWidget" name="page_5"/>
+     <widget class="QWidget" name="page_2">
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>520</x>
+         <y>260</y>
+         <width>391</width>
+         <height>181</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>28</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>视频回放</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_3">
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>470</x>
+         <y>240</y>
+         <width>251</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>28</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>日志查询</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_4">
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>580</x>
+         <y>280</y>
+         <width>171</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>28</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>数据分析</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_5">
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>250</y>
+         <width>251</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>28</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>系统设置</string>
+       </property>
+      </widget>
+     </widget>
     </widget>
    </item>
   </layout>

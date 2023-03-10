@@ -101,10 +101,32 @@ void SeViManPlat::initBtn(QButtonGroup *btnGroup, bool textBesideIcon) {
             foreach(QAbstractButton *btn, btns) {
             QToolButton *b = (QToolButton *) btn;
             //关联按钮单击事件
-//            connect(b, SIGNAL(clicked(bool)), this, SLOT(btnClicked()));
+            connect(b, SIGNAL(clicked(bool)), this, SLOT(btnClicked()));
             b->setCheckable(true);
             b->setToolButtonStyle(textBesideIcon ? Qt::ToolButtonTextBesideIcon : Qt::ToolButtonTextUnderIcon);
         }
+}
+
+void SeViManPlat::btnClicked() {
+    QToolButton *b = (QToolButton *)sender();
+    QString name = b->text();
+
+    QList<QToolButton *> tbtns = ui->widget->findChildren<QToolButton *>();
+            foreach (QToolButton *btn, tbtns) {
+            btn->setChecked(btn == b);
+        }
+
+    if (name == "视频监控") {
+        ui->stackedWidget->setCurrentIndex(0);
+    } else if (name == "视频回放") {
+        ui->stackedWidget->setCurrentIndex(1);
+    } else if (name == "日志查询") {
+        ui->stackedWidget->setCurrentIndex(2);
+    } else if (name == "数据分析") {
+        ui->stackedWidget->setCurrentIndex(3);
+    } else if (name == "系统设置") {
+        ui->stackedWidget->setCurrentIndex(4);
+    }
 }
 
 void SeViManPlat::onTimerOut() {
@@ -156,22 +178,18 @@ void SeViManPlat::loadStyle(const QString &qssFile) {
  * */
 void SeViManPlat::Json2VideoConf() {
     VideoConfJson = new Json(m_video_conf_json, true);
-    videoNameList = VideoConfJson->getStringList("VideoNameList");
-//    for (auto const &name: videoNameList) {
-//        iINFO(ROOT_LOG) << "videoNameList :" << name.toStdString();
-//    }
+    videoNameList = VideoConfJson->getStringList("videoList");
     if (VideoConfJson->getString("VideoCount") == "") {
         iERROR(ROOT_LOG) << "The videoListConf file is empty";
     } else {
         int videoCount = VideoConfJson->getString("VideoCount").toInt();
-        iINFO(ROOT_LOG) << "video init, VideoConfJson VideoCount :" << videoCount;
+        iDEBUG(ROOT_LOG) << "video init, VideoConfJson VideoCount :" << videoCount;
         QString url = "";
 //        // 设置右侧设备树
 //        QTreeWidgetItem *webCamRoot = ui->camDeviceList->topLevelItem(0);
         for (int i = 0; i < videoCount; ++i) { // 遍历所有的摄像头配置
             QString video_name = videoNameList[i];
             QString video_type = VideoConfJson->getString(video_name + ".type");
-            iINFO(ROOT_LOG) << "video_type: " << video_type.toStdString() << "video_name: " << video_name.toStdString();
             std::shared_ptr<VideoConf> videoConf_i = nullptr;
 
             if (video_type.toLower() == "rtsp") {
@@ -225,6 +243,7 @@ void SeViManPlat::Json2VideoConf() {
                 this->m_videoConf.append(videoConf_i);
         }
     }
+    delete VideoConfJson;
 }
 
 /*!
@@ -232,20 +251,21 @@ void SeViManPlat::Json2VideoConf() {
  */
 void SeViManPlat::VideoConf2Json() {
 
-//    if (QFile::remove(this->m_video_conf_json)) {
-//        iWARN(ROOT_LOG) << "delete video conf file successful";
-//    }
+    if (QFile::remove(this->m_video_conf_json)) {
+        iWARN(ROOT_LOG) << "delete video conf file successful";
+    }
+    VideoConfJson = new Json(m_video_conf_json, true);
+    QList<QString> _videoNameList;
     //将m_videoConf按video_name由小到大排序
     std::sort(this->m_videoConf.begin(), this->m_videoConf.end(),
               [](const std::shared_ptr<VideoConf> &video1, const std::shared_ptr<VideoConf> &video2) {
                   return video1->video_name < video2->video_name;
               });
-
     // 摄像头个数
     VideoConfJson->set("VideoCount", QString::number(this->m_videoConf.length()));
     //遍历m_videoConf，将配置写入JSON
     for (const auto &conf: this->m_videoConf) {
-        iERROR(ROOT_LOG) << conf->video_name.toStdString();
+        _videoNameList.append(conf->video_name);
         if (conf->urls.length() == 2) { // RTSP
             /*"rtsp://admin:admin123@192.168.0.213:554/cam/realmonitor?channel=1&subtype=0";*/
             // 提取_type
@@ -292,99 +312,102 @@ void SeViManPlat::VideoConf2Json() {
             iERROR(ROOT_LOG) << "";
         }
     }
+    VideoConfJson->set("videoList", _videoNameList);
     VideoConfJson->save(this->m_video_conf_json);
+    delete VideoConfJson;
 }
 
 /*!
  * @brief: 初始化视频播放
  */
 void SeViManPlat::initVideoPlay() {
-    if (VideoConfJson->getString("VideoCount") == "") {
-        iERROR(ROOT_LOG) << "The videoListConf file is empty";
-    } else {
-        QString url = "";
-        int i = 0;
-        for (const auto &conf: this->m_videoConf) { // 遍历所有的摄像头配置
-            QString video_type = conf->urls[0].split("://").at(0);
-            // 设置右侧设备树
-            QTreeWidgetItem *webCamRoot = ui->camDeviceList->topLevelItem(0);
-            // 创建子节点
-            auto *webCamItem = new QTreeWidgetItem();
-            webCamItem->setText(0, "摄像头-" + conf->video_name);
-            webCamRoot->addChild(webCamItem);
-            iINFO(ROOT_LOG) << "videoNameList :" << conf->video_name.toStdString();
-            if (video_type.toLower() == "rtsp") {
-                /*
-                格式说明：
-                1、username: 设备登录用户名。例如admin。
-                2、password: 设备登录密码。例如admin123。
-                3、ip: 设备IP地址。例如192.168.0.213
-                4、port: 端口号默认为554，若为默认可不填写。
-                5、channel: 通道号，起始为1。例如通道2，则为channel=2。
-                6、subtype: 码流类型，主码流为0（即subtype=0），辅码流为1（即subtype=1）。
-                 例如：
-                     const string videoStreamAddress = "rtsp://admin:admin123@192.168.0.213:554/cam/realmonitor?channel=1&subtype=0";
-                */
-                // 创建主码流和辅码流
-                auto *webCamMain_code_stream = new QTreeWidgetItem();
-                webCamMain_code_stream->setText(0, "RSTP-主码流");
-                webCamItem->addChild(webCamMain_code_stream);
-                auto *webCamAuxiliary_code_stream = new QTreeWidgetItem();
-                webCamAuxiliary_code_stream->setText(0, "RSTP-辅码流");
-                webCamItem->addChild(webCamAuxiliary_code_stream);
+//    if (VideoConfJson->getString("VideoCount") == "") {
+//        iERROR(ROOT_LOG) << "The videoListConf file is empty";
+//    } else {
+    QString url = "";
+    for (int i = 0; i < 64; i++) {
+        this->videoPlay.append(new FFmpegWidget(nullptr));
+        this->videoPlayLayout.append(new QVBoxLayout(nullptr));
+    }
+    for (const auto &conf: this->m_videoConf) { // 遍历所有的摄像头配置
+        QString video_type = conf->urls[0].split("://").at(0);
+        // 设置右侧设备树
+        QTreeWidgetItem *webCamRoot = ui->camDeviceList->topLevelItem(0);
+        // 创建子节点
+        auto *webCamItem = new QTreeWidgetItem();
+        webCamItem->setText(0, "摄像头-" + conf->video_name);
+        int video_pos = conf->video_name.split("video").last().toInt() - 1;
+        webCamRoot->addChild(webCamItem);
+        if (video_type.toLower() == "rtsp") {
+            /*
+            格式说明：
+            1、username: 设备登录用户名。例如admin。
+            2、password: 设备登录密码。例如admin123。
+            3、ip: 设备IP地址。例如192.168.0.213
+            4、port: 端口号默认为554，若为默认可不填写。
+            5、channel: 通道号，起始为1。例如通道2，则为channel=2。
+            6、subtype: 码流类型，主码流为0（即subtype=0），辅码流为1（即subtype=1）。
+             例如：
+                 const string videoStreamAddress = "rtsp://admin:admin123@192.168.0.213:554/cam/realmonitor?channel=1&subtype=0";
+            */
+            // 创建主码流和辅码流
+            auto *webCamMain_code_stream = new QTreeWidgetItem();
+            webCamMain_code_stream->setText(0, "RSTP-主码流");
+            webCamItem->addChild(webCamMain_code_stream);
+            auto *webCamAuxiliary_code_stream = new QTreeWidgetItem();
+            webCamAuxiliary_code_stream->setText(0, "RSTP-辅码流");
+            webCamItem->addChild(webCamAuxiliary_code_stream);
 
-                // TODO: 后期补充切换主码流和辅码流逻辑，现用主码流代替
-                url = conf->urls[0];
-                iDEBUG(ROOT_LOG) << conf->video_name.toStdString() << " : " << url.toStdString();
-            } else if (video_type.toLower() == "rtmp") {
-                url = conf->urls[0];
-                if (url == "") {
-                    QMessageBox::critical(this, tr("ERROR"), tr(QString(
-                                                  "打开视频" + conf->video_name + "有误，请检查摄像头信息").toStdString().c_str()),
-                                          QMessageBox::Close);
-                    continue;
-                } else {
-                    iDEBUG(ROOT_LOG)
-                    << conf->video_name.toStdString() << " : " << video_type.toStdString() << " : "
-                    << url.toStdString();
+            // TODO: 后期补充切换主码流和辅码流逻辑，现用主码流代替
+            url = conf->urls[0];
+            iDEBUG(ROOT_LOG) << conf->video_name.toStdString() << " : " << url.toStdString();
+        } else if (video_type.toLower() == "rtmp") {
+            url = conf->urls[0];
+            if (url == "") {
+                QMessageBox::critical(this, tr("ERROR"), tr(QString(
+                                              "打开视频" + conf->video_name + "有误，请检查摄像头信息").toStdString().c_str()),
+                                      QMessageBox::Close);
+                continue;
+            } else {
+                iDEBUG(ROOT_LOG)
+                << conf->video_name.toStdString() << " : " << video_type.toStdString() << " : "
+                << url.toStdString();
 
-                    // 创建码流
-                    auto *web_stream = new QTreeWidgetItem();
-                    web_stream->setText(0, "RTMP-视频流");
-                    webCamItem->addChild(web_stream);
-                }
+                // 创建码流
+                auto *web_stream = new QTreeWidgetItem();
+                web_stream->setText(0, "RTMP-视频流");
+                webCamItem->addChild(web_stream);
+            }
 
-            } else if (video_type.toLower() == "http-flv") {
-                url = conf->urls[0];
-                if (url == "") {
-                    QMessageBox::critical(this, tr("ERROR"), tr(QString(
-                                                  "打开视频" + conf->video_name + "有误，请检查摄像头信息").toStdString().c_str()),
-                                          QMessageBox::Close);
-                    continue;
-                } else {
-                    iDEBUG(ROOT_LOG)
-                    << conf->video_name.toStdString() << " : " << video_type.toStdString() << " : "
-                    << url.toStdString();
-                    // 创建码流
-                    auto *web_stream = new QTreeWidgetItem();
-                    web_stream->setText(0, "HTTP-FLV-视频流");
-                    webCamItem->addChild(web_stream);
-                }
+        } else if (video_type.toLower() == "http-flv") {
+            url = conf->urls[0];
+            if (url == "") {
+                QMessageBox::critical(this, tr("ERROR"), tr(QString(
+                                              "打开视频" + conf->video_name + "有误，请检查摄像头信息").toStdString().c_str()),
+                                      QMessageBox::Close);
+                continue;
+            } else {
+                iDEBUG(ROOT_LOG)
+                << conf->video_name.toStdString() << " : " << video_type.toStdString() << " : "
+                << url.toStdString();
+                // 创建码流
+                auto *web_stream = new QTreeWidgetItem();
+                web_stream->setText(0, "HTTP-FLV-视频流");
+                webCamItem->addChild(web_stream);
+            }
 
-            } else if (video_type.toLower() == "local-camera") {
-                iDEBUG(ROOT_LOG) << conf->video_name.toStdString() << video_type.toStdString();
-            } else
-                iERROR(ROOT_LOG) << "This " << conf->video_name.toStdString() << " type is " << video_type.toStdString()
-                                 << ", which does not belong to the preset video type!"
-                                 << video_type.toStdString();
+        } else if (video_type.toLower() == "local-camera") {
+            iDEBUG(ROOT_LOG) << conf->video_name.toStdString() << video_type.toStdString();
+        } else
+            iERROR(ROOT_LOG) << "This " << conf->video_name.toStdString() << " type is " << video_type.toStdString()
+                             << ", which does not belong to the preset video type!"
+                             << video_type.toStdString();
 
-            this->videoPlay.append(new FFmpegWidget(videoWidget->getVideoWidgetList().at(i)));
-            this->videoPlayLayout.append(new QVBoxLayout(videoWidget->getVideoWidgetList().at(i)));
-            this->videoPlayLayout.at(i)->addWidget(this->videoPlay.at(i));
-            this->videoPlay.at(i)->setUrl(url);
-            this->videoPlay.at(i)->open();
-            i++;
-        }
+        this->videoPlay.replace(video_pos, new FFmpegWidget(videoWidget->getVideoWidgetList().at(video_pos)));
+        this->videoPlayLayout.replace(video_pos, new QVBoxLayout(videoWidget->getVideoWidgetList().at(video_pos)));
+        this->videoPlayLayout.at(video_pos)->addWidget(this->videoPlay.at(video_pos));
+        this->videoPlay.at(video_pos)->setUrl(url);
+        this->videoPlay.at(video_pos)->open();
     }
 }
 
@@ -393,7 +416,6 @@ void SeViManPlat::destroyAll() {
     delete cpuMonTimer;
     delete videoWidget;
     delete videoWidgetLayout;
-    delete VideoConfJson;
 
     qDeleteAll(videoPlay);
     qDeleteAll(videoPlayLayout);
@@ -412,11 +434,12 @@ void SeViManPlat::addVideoDialog() {
  * @brief: 新增摄像头播放
  */
 void SeViManPlat::addVideoPlay() {
-    this->addVideoTool->saveVideoListConf(this->m_videoConf);
-
-    int videoCount = this->m_videoConf.length();
-    iINFO(ROOT_LOG) << "video Count : " << videoCount;
-    std::shared_ptr<VideoConf> video_i = this->m_videoConf.last();
+    int insert_pos = this->addVideoTool->saveVideoListConf(this->m_videoConf);
+    iINFO(ROOT_LOG) << "this->m_videoConf add len : " << this->m_videoConf.length();
+//    int videoCount = this->m_videoConf.length();
+    iINFO(ROOT_LOG) << "insert_pos : " << insert_pos << "  this->m_videoConf len : " << this->m_videoConf.length();
+    std::shared_ptr<VideoConf> video_i = this->m_videoConf.at(insert_pos);
+    iINFO(ROOT_LOG) << "add video name  : " << video_i->video_name.toStdString();
     QString url = "";
     // 设置右侧设备树
     QTreeWidgetItem *webCamRoot = ui->camDeviceList->topLevelItem(0);
@@ -429,10 +452,10 @@ void SeViManPlat::addVideoPlay() {
         url = video_i->urls.at(0);
 
         auto *webCamMain_code_stream = new QTreeWidgetItem();
-        webCamMain_code_stream->setText(0, "主码流");
+        webCamMain_code_stream->setText(0, "RTSP-主码流");
         webCamItem->addChild(webCamMain_code_stream);
         auto *webCamAuxiliary_code_stream = new QTreeWidgetItem();
-        webCamAuxiliary_code_stream->setText(0, "辅码流");
+        webCamAuxiliary_code_stream->setText(0, "RTSP-辅码流");
         webCamItem->addChild(webCamAuxiliary_code_stream);
 
     } else if (video_i->urls.length() == 1) {
@@ -451,15 +474,15 @@ void SeViManPlat::addVideoPlay() {
             iWARN(ROOT_LOG) << "New local camera";
         }
     } else {
-        iERROR(ROOT_LOG) << "Creating a video" << videoCount << "failed to play";
+        iERROR(ROOT_LOG) << "Creating a video" << insert_pos << "failed to play";
     }
-    this->videoPlay.append(new FFmpegWidget(videoWidget->getVideoWidgetList().at(videoCount - 1)));
-    this->videoPlayLayout.append(new QVBoxLayout(videoWidget->getVideoWidgetList().at(videoCount - 1)));
-    this->videoPlayLayout.at(videoCount - 1)->addWidget(this->videoPlay.at(videoCount - 1));
-    this->videoPlay.at(videoCount - 1)->setUrl(url);
-    this->videoPlay.at(videoCount - 1)->open();
     iINFO(ROOT_LOG)
     << "add video info -> " << "name: " << video_i->video_name.toStdString() << " url:" << url.toStdString();
+    this->videoPlay.replace(insert_pos, new FFmpegWidget(videoWidget->getVideoWidgetList().at(insert_pos)));
+    this->videoPlayLayout.replace(insert_pos, new QVBoxLayout(videoWidget->getVideoWidgetList().at(insert_pos)));
+    this->videoPlayLayout.at(insert_pos)->addWidget(this->videoPlay.at(insert_pos));
+    this->videoPlay.at(insert_pos)->setUrl(url);
+    this->videoPlay.at(insert_pos)->open();
 }
 
 void SeViManPlat::onTreeViewClickedStream(const QModelIndex &index) {
@@ -522,31 +545,12 @@ void SeViManPlat::delVideoPlay() {
 
             //删除this->m_videoConf的内容
             QString findVideoName = data.toString().split("-").at(1);
-//            m_videoConf.erase(
-//                    std::remove_if(m_videoConf.begin(), m_videoConf.end(), [&](const std::shared_ptr<VideoConf> &conf) {
-//                        return conf->video_name == findVideoName;
-//                    }), m_videoConf.end());
-            for (auto video_i = m_videoConf.begin(); video_i != m_videoConf.end(); ++video_i) {
-                if ((*video_i)->video_name == findVideoName) {
-                    //删除json中的内容
-                    if ((*video_i)->urls.length() == 2) { // rtsp
-                        VideoConfJson->remove((*video_i)->video_name + ".ip");
-                        VideoConfJson->remove((*video_i)->video_name + ".port");
-                        VideoConfJson->remove((*video_i)->video_name + ".username");
-                        VideoConfJson->remove((*video_i)->video_name + ".password");
-                        VideoConfJson->remove((*video_i)->video_name + ".type");
-                        VideoConfJson->remove((*video_i)->video_name);
-                    } else if ((*video_i)->urls.length() == 1) {
-                        VideoConfJson->remove((*video_i)->video_name + ".url");
-                        VideoConfJson->remove((*video_i)->video_name + ".type");
-                        VideoConfJson->remove((*video_i)->video_name);
-                    } else {
-                        iWARN(ROOT_LOG) << "delete camera";
-                    }
-                    video_i = m_videoConf.erase(video_i);
-                    --video_i; // 因为 erase() 会返回下一个元素的迭代器，所以需要将迭代器退回到上一个元素
-                }
-            }
+            this->m_videoConf.erase(
+                    std::remove_if(m_videoConf.begin(), m_videoConf.end(), [&](const std::shared_ptr<VideoConf> &conf) {
+                        return conf->video_name == findVideoName;
+                    }), m_videoConf.end());
+
+            iINFO(ROOT_LOG) << "delete video info -> " << "name: " << findVideoName.toStdString();
 
             int i = findVideoName.split("video").last().toInt();
 
@@ -557,7 +561,6 @@ void SeViManPlat::delVideoPlay() {
                 delete this->videoPlayLayout.at(i - 1); // 释放指针所指向的内存
                 this->videoPlayLayout.removeAt(i - 1);// 删除指针元素
             }
-            iINFO(ROOT_LOG) << "delete video info -> " << "name: " << findVideoName.toStdString();
         }
         // 删除所选索引对应的项
         for (const QModelIndex &index: selected_indexes) {

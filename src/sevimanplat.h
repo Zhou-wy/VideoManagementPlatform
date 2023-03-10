@@ -53,6 +53,8 @@ public:
 
 public slots:
 
+    void btnClicked(); //切换主页面
+
     void onTimerOut();
 
     void addVideoDialog(); // 添加摄像头槽函数
@@ -82,7 +84,7 @@ private:
     QList<std::shared_ptr<VideoConf>> m_videoConf;
 
     Json *VideoConfJson; // 摄像头配置文件
-    QList<QString> videoNameList; // 摄像头名字列表
+    QStringList videoNameList; // 摄像头名字列表
 };
 
 

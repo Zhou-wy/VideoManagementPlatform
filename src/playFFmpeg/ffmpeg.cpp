@@ -144,7 +144,7 @@ bool FFmpegThread::init() {
                 "video info -> Index: %1  Decoder: %2  Format: %3   Resolution: %4*%5")
                 .arg(videoStreamIndex).arg(videoDecoder->name).arg(avFormatContext->iformat->name)
                 .arg(videoWidth).arg(videoHeight);
-        iINFO(ROOT_LOG) << videoInfo.toStdString();
+        iDEBUG(ROOT_LOG) << videoInfo.toStdString();
     }
     //----------视频流部分开始----------
 
@@ -286,7 +286,6 @@ void FFmpegThread::run() {
     free();
     stopped = false;
     isPlay = false;
-    iINFO(ROOT_LOG) << "stop ffmpeg thread";
 }
 
 void FFmpegThread::setUrl(const QString &url) {
@@ -395,7 +394,6 @@ void FFmpegWidget::setUrl(const QString &url) {
 }
 
 void FFmpegWidget::open() {
-    iINFO(ROOT_LOG) << "open video" << objectName().toStdString();
     clear();
 
     thread->play();

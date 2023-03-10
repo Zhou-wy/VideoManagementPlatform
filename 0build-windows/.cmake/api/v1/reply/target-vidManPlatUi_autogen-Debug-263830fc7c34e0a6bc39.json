@@ -18,15 +18,11 @@
 	[
 		{
 			"backtrace" : 0,
+			"id" : "PlayFFmpeg::@2ffd910cc6a6ab224bf9"
+		},
+		{
+			"backtrace" : 0,
 			"id" : "addVideo::@d6568711fa9a46b9ea6c"
-		},
-		{
-			"backtrace" : 0,
-			"id" : "VideoPanel::@d5898b692044102cb1d1"
-		},
-		{
-			"backtrace" : 0,
-			"id" : "utils::@f1b38b22aeb65474a6c5"
 		},
 		{
 			"backtrace" : 0,
@@ -34,7 +30,11 @@
 		},
 		{
 			"backtrace" : 0,
-			"id" : "PlayFFmpeg::@2ffd910cc6a6ab224bf9"
+			"id" : "utils::@f1b38b22aeb65474a6c5"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "VideoPanel::@d5898b692044102cb1d1"
 		}
 	],
 	"id" : "vidManPlatUi_autogen::@145eef247bfb46b6828c",

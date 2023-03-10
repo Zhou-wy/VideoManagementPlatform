@@ -267,14 +267,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "VideoManPlat::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-VideoManPlat-Debug-11c7ccf5d15c508bd66d.json",
+					"jsonFile" : "target-VideoManPlat-Debug-fe359e462f73fac3930d.json",
 					"name" : "VideoManPlat",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "VideoManPlat_autogen::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-VideoManPlat_autogen-Debug-3f778c0cb5258f966422.json",
+					"jsonFile" : "target-VideoManPlat_autogen-Debug-28c858816b933412ff56.json",
 					"name" : "VideoManPlat_autogen",
 					"projectIndex" : 0
 				},
@@ -323,14 +323,14 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "vidManPlatUi::@145eef247bfb46b6828c",
-					"jsonFile" : "target-vidManPlatUi-Debug-df6d93cdc56cdd2610d6.json",
+					"jsonFile" : "target-vidManPlatUi-Debug-7ffd61c1cdbf63e07573.json",
 					"name" : "vidManPlatUi",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "vidManPlatUi_autogen::@145eef247bfb46b6828c",
-					"jsonFile" : "target-vidManPlatUi_autogen-Debug-869a91fa98e955c3cecd.json",
+					"jsonFile" : "target-vidManPlatUi_autogen-Debug-263830fc7c34e0a6bc39.json",
 					"name" : "vidManPlatUi_autogen",
 					"projectIndex" : 1
 				}

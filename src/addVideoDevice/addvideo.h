@@ -29,7 +29,7 @@ protected:
 
 public:
 
-    bool saveVideoListConf(QList<std::shared_ptr<VideoConf>>& videoList);
+    int saveVideoListConf(QList<std::shared_ptr<VideoConf>>& videoList);
     // 定义一个名为 confirmSignal 的信号
     Q_SIGNAL void confirmSignal();
 public slots:

@@ -62,15 +62,19 @@ public:
     QTreeWidget *camDeviceList;
     QTreeWidget *camContorlList;
     QWidget *page_2;
+    QLabel *label_3;
     QWidget *page_3;
+    QLabel *label_4;
     QWidget *page_4;
+    QLabel *label_5;
     QWidget *page_5;
+    QLabel *label_6;
 
     void setupUi(QWidget *SeViManPlat)
     {
         if (SeViManPlat->objectName().isEmpty())
             SeViManPlat->setObjectName(QString::fromUtf8("SeViManPlat"));
-        SeViManPlat->resize(1449, 866);
+        SeViManPlat->resize(1357, 847);
         SeViManPlat->setMinimumSize(QSize(1248, 702));
         SeViManPlat->setMaximumSize(QSize(3480, 2160));
         QFont font;
@@ -329,7 +333,7 @@ public:
         camDeviceList->setFont(font);
         camDeviceList->setLayoutDirection(Qt::LeftToRight);
         camDeviceList->setAutoExpandDelay(1);
-        camDeviceList->header()->setVisible(true);
+        camDeviceList->header()->setVisible(false);
         camDeviceList->header()->setCascadingSectionResizes(false);
         camDeviceList->header()->setMinimumSectionSize(37);
         camDeviceList->header()->setDefaultSectionSize(100);
@@ -346,7 +350,7 @@ public:
         camContorlList->setObjectName(QString::fromUtf8("camContorlList"));
         camContorlList->setFont(font);
         camContorlList->setAutoExpandDelay(1);
-        camContorlList->header()->setVisible(true);
+        camContorlList->header()->setVisible(false);
         camContorlList->header()->setCascadingSectionResizes(false);
         camContorlList->header()->setMinimumSectionSize(1);
         camContorlList->header()->setDefaultSectionSize(100);
@@ -364,15 +368,36 @@ public:
         stackedWidget->addWidget(page_1);
         page_2 = new QWidget();
         page_2->setObjectName(QString::fromUtf8("page_2"));
+        label_3 = new QLabel(page_2);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setGeometry(QRect(520, 260, 391, 181));
+        QFont font9;
+        font9.setFamily(QString::fromUtf8("Arial"));
+        font9.setPointSize(28);
+        label_3->setFont(font9);
         stackedWidget->addWidget(page_2);
         page_3 = new QWidget();
         page_3->setObjectName(QString::fromUtf8("page_3"));
+        label_4 = new QLabel(page_3);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setGeometry(QRect(470, 240, 251, 121));
+        label_4->setFont(font9);
         stackedWidget->addWidget(page_3);
         page_4 = new QWidget();
         page_4->setObjectName(QString::fromUtf8("page_4"));
+        label_5 = new QLabel(page_4);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setGeometry(QRect(580, 280, 171, 91));
+        QFont font10;
+        font10.setPointSize(28);
+        label_5->setFont(font10);
         stackedWidget->addWidget(page_4);
         page_5 = new QWidget();
         page_5->setObjectName(QString::fromUtf8("page_5"));
+        label_6 = new QLabel(page_5);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+        label_6->setGeometry(QRect(510, 250, 251, 101));
+        label_6->setFont(font10);
         stackedWidget->addWidget(page_5);
 
         verticalLayout_4->addWidget(stackedWidget);
@@ -412,6 +437,10 @@ public:
         ___qtreewidgetitem2->setText(0, QApplication::translate("SeViManPlat", "\346\234\254\345\234\260\346\221\204\345\203\217\345\244\264", nullptr));
         camDeviceList->setSortingEnabled(__sortingEnabled);
 
+        label_3->setText(QApplication::translate("SeViManPlat", "\350\247\206\351\242\221\345\233\236\346\224\276", nullptr));
+        label_4->setText(QApplication::translate("SeViManPlat", "\346\227\245\345\277\227\346\237\245\350\257\242", nullptr));
+        label_5->setText(QApplication::translate("SeViManPlat", "\346\225\260\346\215\256\345\210\206\346\236\220", nullptr));
+        label_6->setText(QApplication::translate("SeViManPlat", "\347\263\273\347\273\237\350\256\276\347\275\256", nullptr));
     } // retranslateUi
 
 };
