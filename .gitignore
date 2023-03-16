@@ -1,2 +1,5 @@
-0build-winodws/
+0build-MinGW-QT/
+0build-Visual-Studio/
+.vs 
+.idea
 log
