@@ -9,7 +9,39 @@
       "installRoot": "${projectDir}\\out\\install\\${name}",
       "cmakeCommandArgs": "",
       "buildCommandArgs": "",
-      "ctestCommandArgs": ""
+      "ctestCommandArgs": "",
+      "variables": [
+        {
+          "name": "Qt5Core_DIR",
+          "value": "D:/Qt5.12.5/5.12.5/msvc2017_64/lib/cmake/Qt5Core",
+          "type": "PATH"
+        },
+        {
+          "name": "Qt5Gui_DIR",
+          "value": "D:/Qt5.12.5/5.12.5/msvc2017_64/lib/cmake/Qt5Gui",
+          "type": "PATH"
+        },
+        {
+          "name": "Qt5WebEngineCore_DIR",
+          "value": "D:/Qt5.12.5/5.12.5/msvc2017_64/lib/cmake/Qt5WebEngineCore",
+          "type": "PATH"
+        },
+        {
+          "name": "Qt5WebEngine_DIR",
+          "value": "D:/Qt5.12.5/5.12.5/msvc2017_64/lib/cmake/Qt5WebEngine",
+          "type": "PATH"
+        },
+        {
+          "name": "Qt5Widgets_DIR",
+          "value": "D:/Qt5.12.5/5.12.5/msvc2017_64/lib/cmake/Qt5Widgets",
+          "type": "PATH"
+        },
+        {
+          "name": "Qt5_DIR",
+          "value": "D:/Qt5.12.5/5.12.5/msvc2017_64/lib/cmake/Qt5",
+          "type": "PATH"
+        }
+      ]
     }
   ]
 }

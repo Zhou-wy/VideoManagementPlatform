@@ -120,7 +120,7 @@ void SeViManPlat::btnClicked() {
         ui->stackedWidget->setCurrentIndex(0);
     } else if (name == "视频回放") {
         ui->stackedWidget->setCurrentIndex(1);
-    } else if (name == "日志查询") {
+    } else if (name == "设备管理") {
         ui->stackedWidget->setCurrentIndex(2);
     } else if (name == "数据分析") {
         ui->stackedWidget->setCurrentIndex(3);
@@ -416,9 +416,6 @@ void SeViManPlat::destroyAll() {
     delete cpuMonTimer;
     delete videoWidget;
     delete videoWidgetLayout;
-
-    qDeleteAll(videoPlay);
-    qDeleteAll(videoPlayLayout);
 }
 
 /*!

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1426</width>
-    <height>899</height>
+    <height>897</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -708,117 +708,438 @@
       </layout>
      </widget>
      <widget class="QWidget" name="page_3">
-      <widget class="XListWidgetVS" name="xlistWidgetVS">
-       <property name="geometry">
-        <rect>
-         <x>580</x>
-         <y>100</y>
-         <width>501</width>
-         <height>451</height>
-        </rect>
+      <layout class="QHBoxLayout" name="horizontalLayout_13" stretch="1,3,1">
+       <property name="spacing">
+        <number>2</number>
        </property>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-       <item/>
-      </widget>
+       <property name="leftMargin">
+        <number>3</number>
+       </property>
+       <property name="topMargin">
+        <number>3</number>
+       </property>
+       <property name="rightMargin">
+        <number>3</number>
+       </property>
+       <property name="bottomMargin">
+        <number>3</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="widget_15" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_10" stretch="1,8,8,1,8">
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <property name="leftMargin">
+           <number>3</number>
+          </property>
+          <property name="topMargin">
+           <number>3</number>
+          </property>
+          <property name="rightMargin">
+           <number>3</number>
+          </property>
+          <property name="bottomMargin">
+           <number>3</number>
+          </property>
+          <item>
+           <widget class="NavLabel" name="navLabel">
+            <property name="text">
+             <string>关键位置照片</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="AdsWidget" name="adsWidget"/>
+          </item>
+          <item>
+           <widget class="AdsWidget" name="adsWidget_2"/>
+          </item>
+          <item>
+           <widget class="NavLabel" name="navLabel_2">
+            <property name="text">
+             <string>巡检历史</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="CustomRing" name="customRing">
+            <property name="title">
+             <string>巡检历史统计</string>
+            </property>
+            <property name="outPieInfos">
+             <string>仪表识别,60|红外监测,30|蒸汽监测,10</string>
+            </property>
+            <property name="inPieInfos">
+             <string>管道巡检,40|油液泄露,30|其他,30</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_13" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_4" stretch="10,1">
+          <property name="spacing">
+           <number>3</number>
+          </property>
+          <property name="leftMargin">
+           <number>3</number>
+          </property>
+          <property name="topMargin">
+           <number>3</number>
+          </property>
+          <property name="rightMargin">
+           <number>3</number>
+          </property>
+          <property name="bottomMargin">
+           <number>3</number>
+          </property>
+          <item>
+           <widget class="QWebEngineView" name="mapWebEngine">
+            <property name="url">
+             <url>
+              <string>about:blank</string>
+             </url>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget_14" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <item>
+              <widget class="NavLabel" name="navLabel_3">
+               <property name="font">
+                <font>
+                 <family>宋体</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>巡检进度：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="XSlider" name="xslider"/>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_16" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_12">
+          <item>
+           <widget class="QWidget" name="widget_17" native="true">
+            <layout class="QVBoxLayout" name="verticalLayout_11" stretch="1,5,1,2,2,2,2">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <property name="leftMargin">
+              <number>3</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>3</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
+             </property>
+             <item>
+              <widget class="NavLabel" name="navLabel_4">
+               <property name="font">
+                <font>
+                 <family>Arial</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>机器人状态</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="GaugePanel" name="gaugePanel">
+               <property name="font">
+                <font>
+                 <family>Times New Roman</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="unit">
+                <string>%</string>
+               </property>
+               <property name="text">
+                <string>剩余电量</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_18" native="true">
+               <layout class="QHBoxLayout" name="horizontalLayout_8">
+                <item>
+                 <spacer name="horizontalSpacer_7">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>16</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>紧急停止</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_6">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_2">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>16</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>返航充电</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_8">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_19" native="true">
+               <layout class="QHBoxLayout" name="horizontalLayout_9">
+                <item>
+                 <widget class="QLabel" name="label_4">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>16</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>行驶里程：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_9">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>72</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_7">
+                  <property name="font">
+                   <font>
+                    <family>Times New Roman</family>
+                    <pointsize>16</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>0 KM</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_20" native="true">
+               <layout class="QHBoxLayout" name="horizontalLayout_10">
+                <item>
+                 <widget class="QLabel" name="label_14">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>16</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>机器人开关：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_10">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>94</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="SwitchButton" name="switchButton">
+                  <property name="minimumSize">
+                   <size>
+                    <width>70</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>100</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_21" native="true">
+               <layout class="QHBoxLayout" name="horizontalLayout_11">
+                <item>
+                 <widget class="QLabel" name="label_15">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>16</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>电机电流：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_11">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>94</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_16">
+                  <property name="font">
+                   <font>
+                    <family>Times New Roman</family>
+                    <pointsize>16</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>1.56 A</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_22" native="true">
+               <layout class="QHBoxLayout" name="horizontalLayout_12">
+                <item>
+                 <widget class="QLabel" name="label_17">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>16</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>机器人状态：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_12">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>94</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_18">
+                  <property name="font">
+                   <font>
+                    <family>Times New Roman</family>
+                    <pointsize>16</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>正在巡检</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
      </widget>
      <widget class="QWidget" name="page_4"/>
      <widget class="QWidget" name="page_5">
@@ -1266,9 +1587,39 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
  </widget>
  <customwidgets>
   <customwidget>
-   <class>XListWidgetVS</class>
-   <extends>QListWidget</extends>
-   <header>xlistwidgetvs.h</header>
+   <class>GaugePanel</class>
+   <extends>QWidget</extends>
+   <header>gaugepanel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>SwitchButton</class>
+   <extends>QWidget</extends>
+   <header>switchbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CustomRing</class>
+   <extends>QWidget</extends>
+   <header>customring.h</header>
+  </customwidget>
+  <customwidget>
+   <class>NavLabel</class>
+   <extends>QLabel</extends>
+   <header>navlabel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>AdsWidget</class>
+   <extends>QWidget</extends>
+   <header>adswidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>XSlider</class>
+   <extends>QSlider</extends>
+   <header>xslider.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QWebEngineView</class>
+   <extends>QWidget</extends>
+   <header location="global">QtWebEngineWidgets/QWebEngineView</header>
   </customwidget>
  </customwidgets>
  <resources>

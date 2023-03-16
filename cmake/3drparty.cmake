@@ -21,10 +21,15 @@ find_package(Qt5 COMPONENTS
         Core
         Gui
         Widgets
+        WebEngine
+        WebEngineWidgets
         REQUIRED)
 set(Qt5_Libs Qt5::Core
         Qt5::Gui
-        Qt5::Widgets)
+        Qt5::Widgets
+        Qt5::WebEngine
+        Qt5::WebEngineWidgets
+        )
 
 include_directories(${FFMPEG_DIR}/include) # FFMPEG头文件搜索路径
 include_directories(${SPDLOG_DIR}/include) # gLog头文件搜索路径
