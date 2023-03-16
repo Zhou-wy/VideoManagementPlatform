@@ -1,5 +1,5 @@
 {
-    "VideoCount": "5",
+    "VideoCount": "4",
     "video1": {
         "ip": "192.168.0.213",
         "password": "admin123",
@@ -18,13 +18,6 @@
         "type": "rtmp",
         "url": "rtmp://192.168.0.10:1935/live/"
     },
-    "video4": {
-        "ip": "192.168.0.213",
-        "password": "admin123",
-        "port": "554",
-        "type": "rtsp",
-        "username": "admin"
-    },
     "video5": {
         "type": "rtmp",
         "url": "rtmp://192.168.0.10:1935/live/"
@@ -33,7 +26,6 @@
         "video1",
         "video2",
         "video3",
-        "video4",
         "video5"
     ]
 }

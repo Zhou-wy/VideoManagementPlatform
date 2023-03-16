@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1426</width>
-    <height>897</height>
+    <width>1463</width>
+    <height>902</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -328,7 +328,7 @@
            <height>750</height>
           </size>
          </property>
-         <layout class="QVBoxLayout" name="verticalLayout_9" stretch="5,1">
+         <layout class="QVBoxLayout" name="verticalLayout_9" stretch="7,1">
           <property name="spacing">
            <number>0</number>
           </property>
@@ -346,7 +346,7 @@
           </property>
           <item>
            <widget class="QWidget" name="widget_5" native="true">
-            <layout class="QGridLayout" name="gridLayout">
+            <layout class="QGridLayout" name="gridLayout" rowstretch="0" columnstretch="0">
              <property name="leftMargin">
               <number>5</number>
              </property>
@@ -357,11 +357,14 @@
               <number>5</number>
              </property>
              <property name="bottomMargin">
-              <number>5</number>
+              <number>3</number>
              </property>
              <property name="spacing">
-              <number>5</number>
+              <number>3</number>
              </property>
+             <item row="0" column="0">
+              <widget class="VideoWidget" name="p2_videoCallBckPlay"/>
+             </item>
             </layout>
            </widget>
           </item>
@@ -369,20 +372,23 @@
            <widget class="QWidget" name="widget_8" native="true">
             <layout class="QVBoxLayout" name="verticalLayout_7">
              <property name="spacing">
-              <number>9</number>
+              <number>0</number>
              </property>
              <property name="leftMargin">
-              <number>9</number>
+              <number>0</number>
              </property>
              <property name="topMargin">
-              <number>9</number>
+              <number>0</number>
              </property>
              <property name="rightMargin">
-              <number>9</number>
+              <number>0</number>
              </property>
              <property name="bottomMargin">
-              <number>9</number>
+              <number>0</number>
              </property>
+             <item>
+              <widget class="TimeLine" name="p2_videoTimeLine"/>
+             </item>
             </layout>
            </widget>
           </item>
@@ -391,10 +397,25 @@
        </item>
        <item>
         <widget class="QWidget" name="widget_7" native="true">
-         <layout class="QVBoxLayout" name="verticalLayout_6">
+         <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1,4,2,10">
           <item>
            <widget class="QWidget" name="widget_4" native="true">
             <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <property name="leftMargin">
+              <number>3</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>3</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
+             </property>
              <item>
               <spacer name="horizontalSpacer_2">
                <property name="orientation">
@@ -443,6 +464,24 @@
           <item>
            <widget class="QWidget" name="widget_6" native="true">
             <layout class="QFormLayout" name="formLayout">
+             <property name="horizontalSpacing">
+              <number>5</number>
+             </property>
+             <property name="verticalSpacing">
+              <number>3</number>
+             </property>
+             <property name="leftMargin">
+              <number>5</number>
+             </property>
+             <property name="topMargin">
+              <number>5</number>
+             </property>
+             <property name="rightMargin">
+              <number>5</number>
+             </property>
+             <property name="bottomMargin">
+              <number>5</number>
+             </property>
              <item row="0" column="0">
               <widget class="QLabel" name="label_8">
                <property name="font">
@@ -457,7 +496,7 @@
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QComboBox" name="comboBox">
+              <widget class="QComboBox" name="p2_VideoListCombox">
                <property name="font">
                 <font>
                  <family>宋体</family>
@@ -479,16 +518,6 @@
                </property>
               </widget>
              </item>
-             <item row="1" column="1">
-              <widget class="QComboBox" name="comboBox_2">
-               <property name="font">
-                <font>
-                 <family>宋体</family>
-                 <pointsize>16</pointsize>
-                </font>
-               </property>
-              </widget>
-             </item>
              <item row="2" column="0">
               <widget class="QLabel" name="label_10">
                <property name="font">
@@ -499,16 +528,6 @@
                </property>
                <property name="text">
                 <string>用户密码：</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="1">
-              <widget class="QComboBox" name="comboBox_3">
-               <property name="font">
-                <font>
-                 <family>宋体</family>
-                 <pointsize>16</pointsize>
-                </font>
                </property>
               </widget>
              </item>
@@ -526,7 +545,7 @@
               </widget>
              </item>
              <item row="3" column="1">
-              <widget class="QComboBox" name="comboBox_4">
+              <widget class="QComboBox" name="p2_StreamCode">
                <property name="font">
                 <font>
                  <family>宋体</family>
@@ -548,16 +567,6 @@
                </property>
               </widget>
              </item>
-             <item row="4" column="1">
-              <widget class="QComboBox" name="comboBox_5">
-               <property name="font">
-                <font>
-                 <family>宋体</family>
-                 <pointsize>16</pointsize>
-                </font>
-               </property>
-              </widget>
-             </item>
              <item row="5" column="0">
               <widget class="QLabel" name="label_13">
                <property name="font">
@@ -571,15 +580,17 @@
                </property>
               </widget>
              </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="p2_UserName"/>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLineEdit" name="p2_Password"/>
+             </item>
+             <item row="4" column="1">
+              <widget class="QLineEdit" name="p2_StartTime"/>
+             </item>
              <item row="5" column="1">
-              <widget class="QComboBox" name="comboBox_6">
-               <property name="font">
-                <font>
-                 <family>宋体</family>
-                 <pointsize>16</pointsize>
-                </font>
-               </property>
-              </widget>
+              <widget class="QLineEdit" name="p2_EndTime"/>
              </item>
             </layout>
            </widget>
@@ -588,43 +599,43 @@
            <widget class="QWidget" name="widget_9" native="true">
             <layout class="QGridLayout" name="gridLayout_2" columnstretch="1,1" columnminimumwidth="1,1">
              <property name="leftMargin">
-              <number>5</number>
+              <number>3</number>
              </property>
              <property name="topMargin">
-              <number>5</number>
+              <number>3</number>
              </property>
              <property name="rightMargin">
-              <number>5</number>
+              <number>3</number>
              </property>
              <property name="bottomMargin">
-              <number>5</number>
+              <number>3</number>
              </property>
              <property name="spacing">
-              <number>5</number>
+              <number>3</number>
              </property>
              <item row="0" column="0">
-              <widget class="QPushButton" name="pbtFind">
+              <widget class="QPushButton" name="p2_pbtFind">
                <property name="text">
                 <string>查询</string>
                </property>
               </widget>
              </item>
              <item row="2" column="0">
-              <widget class="QPushButton" name="pbtDelete">
+              <widget class="QPushButton" name="p2_pbtDelete">
                <property name="text">
                 <string>删除</string>
                </property>
               </widget>
              </item>
              <item row="2" column="1">
-              <widget class="QPushButton" name="pbtClear">
+              <widget class="QPushButton" name="p2_pbtClear">
                <property name="text">
                 <string>清空</string>
                </property>
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QPushButton" name="pbtDownload">
+              <widget class="QPushButton" name="p2_pbtDownload">
                <property name="text">
                 <string>下载</string>
                </property>
@@ -697,7 +708,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QTreeView" name="treeView"/>
+              <widget class="QTreeView" name="p2_VideoListTreeView"/>
              </item>
             </layout>
            </widget>
@@ -744,6 +755,12 @@
           </property>
           <item>
            <widget class="NavLabel" name="navLabel">
+            <property name="minimumSize">
+             <size>
+              <width>270</width>
+              <height>30</height>
+             </size>
+            </property>
             <property name="text">
              <string>关键位置照片</string>
             </property>
@@ -757,6 +774,12 @@
           </item>
           <item>
            <widget class="NavLabel" name="navLabel_2">
+            <property name="minimumSize">
+             <size>
+              <width>270</width>
+              <height>30</height>
+             </size>
+            </property>
             <property name="text">
              <string>巡检历史</string>
             </property>
@@ -764,8 +787,20 @@
           </item>
           <item>
            <widget class="CustomRing" name="customRing">
+            <property name="titleHeight">
+             <number>20</number>
+            </property>
+            <property name="titleFontSize">
+             <number>14</number>
+            </property>
             <property name="title">
              <string>巡检历史统计</string>
+            </property>
+            <property name="legendHeight">
+             <number>30</number>
+            </property>
+            <property name="legendFontSize">
+             <number>10</number>
             </property>
             <property name="outPieInfos">
              <string>仪表识别,60|红外监测,30|蒸汽监测,10</string>
@@ -853,6 +888,18 @@
              </property>
              <item>
               <widget class="NavLabel" name="navLabel_4">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>30</height>
+                </size>
+               </property>
                <property name="font">
                 <font>
                  <family>Arial</family>
@@ -1602,6 +1649,11 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
    <header>customring.h</header>
   </customwidget>
   <customwidget>
+   <class>TimeLine</class>
+   <extends>QWidget</extends>
+   <header>timeline.h</header>
+  </customwidget>
+  <customwidget>
    <class>NavLabel</class>
    <extends>QLabel</extends>
    <header>navlabel.h</header>
@@ -1610,6 +1662,11 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
    <class>AdsWidget</class>
    <extends>QWidget</extends>
    <header>adswidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>VideoWidget</class>
+   <extends>QWidget</extends>
+   <header>videowidget.h</header>
   </customwidget>
   <customwidget>
    <class>XSlider</class>
