@@ -42,7 +42,7 @@ qt5_add_resources(QRC_FILES ${QRC_SOURCE_FILES})
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/src)
 set(EXTRA_LIBS ${EXTRA_LIBS} utils IconHelper VideoPanel PlayFFmpeg addVideo)
-set(3rdParty_LIBS ${3rdParty_LIBS})
+set(3rdParty_LIBS ${3rdParty_LIBS} qucd)
 
 add_executable(${PROJECT_NAME} main.cpp ${QRC_FILES} )
 

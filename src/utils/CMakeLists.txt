@@ -15,6 +15,5 @@ set(CMAKE_EXE_LINKER_FLAGS "-SHARED")
 add_library(${PROJECT_NAME} STATIC ${CURRENT_HEADERS} ${CURRENT_SOURCES})
 target_link_libraries(${PROJECT_NAME}
         ${Qt5_Libs}
-        pthread
         spdlog)
 set(LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/lib)
