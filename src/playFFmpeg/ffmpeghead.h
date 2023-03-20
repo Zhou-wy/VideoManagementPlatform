@@ -1,9 +1,5 @@
-//
-// Created by zhouwy on 2023/2/20.
-//
-
-#ifndef VIDEOMANPLAT_FFMPEGHEAD_H
-#define VIDEOMANPLAT_FFMPEGHEAD_H
+#ifndef FFMPEGHEAD_H
+#define FFMPEGHEAD_H
 
 //必须加以下内容,否则编译不能通过,为了兼容C和C99标准
 #ifndef INT64_C
@@ -36,7 +32,8 @@ extern "C" {
 //#endif
 }
 
-#include <QDateTime>
+#include "qdatetime.h"
+#pragma execution_character_set("utf-8")
 
 #define TIMEMS          qPrintable(QTime::currentTime().toString("HH:mm:ss zzz"))
 #define TIME            qPrintable(QTime::currentTime().toString("HH:mm:ss"))
@@ -46,4 +43,4 @@ extern "C" {
 #define STRDATETIME     qPrintable(QDateTime::currentDateTime().toString("yyyy-MM-dd-HH-mm-ss"))
 #define STRDATETIMEMS   qPrintable(QDateTime::currentDateTime().toString("yyyy-MM-dd-HH-mm-ss-zzz"))
 
-#endif //VIDEOMANPLAT_FFMPEGHEAD_H
+#endif // FFMPEGHEAD_H

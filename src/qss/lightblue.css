@@ -522,6 +522,12 @@ QTreeView::branch:open:has-children {
 
 }
 
+QTreeWidget{
+    font-family: Arial;
+    font-size: 14px;
+    font-style: normal;
+}
+
 QTreeView, QListView, QTableView, QSplitter::handle, QTreeView::branch {
     background: #EAF7FF;
 }

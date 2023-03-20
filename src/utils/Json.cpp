@@ -16,20 +16,20 @@
 struct JsonPrivate {
     JsonPrivate(const QString &jsonOrJsonFilePath, bool fromFile);
 
-    void remove(QJsonObject &parent, const QString &path); // åˆ é™¤ path å¯¹åº”çš„å±æ€§
-    void setValue(QJsonObject &parent, const QString &path, const QJsonValue &newValue); // è®¾ç½® path çš„å€¼
-    QJsonValue getValue(const QString &path, const QJsonObject &fromNode) const; // è·å– path çš„å€¼
+    void remove(QJsonObject &parent, const QString &path); // É¾³ı path ¶ÔÓ¦µÄÊôĞÔ
+    void setValue(QJsonObject &parent, const QString &path, const QJsonValue &newValue); // ÉèÖÃ path µÄÖµ
+    QJsonValue getValue(const QString &path, const QJsonObject &fromNode) const; // »ñÈ¡ path µÄÖµ
 
-    QJsonObject root;    // Json çš„æ ¹èŠ‚ç‚¹
-    QJsonDocument doc;   // Json çš„æ–‡æ¡£å¯¹è±¡
-    bool valid = true;   // Json æ˜¯å¦æœ‰æ•ˆ
-    QString errorString; // Json æ— æ•ˆæ—¶çš„é”™è¯¯ä¿¡æ¯
+    QJsonObject root;    // Json µÄ¸ù½Úµã
+    QJsonDocument doc;   // Json µÄÎÄµµ¶ÔÏó
+    bool valid = true;   // Json ÊÇ·ñÓĞĞ§
+    QString errorString; // Json ÎŞĞ§Ê±µÄ´íÎóĞÅÏ¢
 };
 
 JsonPrivate::JsonPrivate(const QString &jsonOrJsonFilePath, bool fromFile) {
-    QByteArray json("{}"); // json çš„å†…å®¹
+    QByteArray json("{}"); // json µÄÄÚÈİ
 
-    // å¦‚æœä¼ äººçš„æ˜¯ Json æ–‡ä»¶çš„è·¯å¾„ï¼Œåˆ™è¯»å–å†…å®¹
+    // Èç¹û´«ÈËµÄÊÇ Json ÎÄ¼şµÄÂ·¾¶£¬Ôò¶ÁÈ¡ÄÚÈİ
     if (fromFile) {
         QFile file(jsonOrJsonFilePath);
 
@@ -38,7 +38,7 @@ JsonPrivate::JsonPrivate(const QString &jsonOrJsonFilePath, bool fromFile) {
         } else {
             valid = false;
             errorString = QString("Cannot open the file: %1").arg(jsonOrJsonFilePath);
-            INFOE(errorString.toStdString().c_str());
+//            INFOE(errorString.toStdString().c_str());
             return;
         }
         file.close();
@@ -46,7 +46,7 @@ JsonPrivate::JsonPrivate(const QString &jsonOrJsonFilePath, bool fromFile) {
         json = jsonOrJsonFilePath.toUtf8();
     }
 
-    // è§£æ Json
+    // ½âÎö Json
     QJsonParseError error;
     doc = QJsonDocument::fromJson(json, &error);
 
@@ -59,56 +59,56 @@ JsonPrivate::JsonPrivate(const QString &jsonOrJsonFilePath, bool fromFile) {
     }
 }
 
-// åˆ é™¤ path å¯¹åº”çš„å±æ€§
+// É¾³ı path ¶ÔÓ¦µÄÊôĞÔ
 void JsonPrivate::remove(QJsonObject &parent, const QString &path) {
-    const int indexOfDot   = path.indexOf('.');     // ç¬¬ä¸€ä¸ª . çš„ä½ç½®
-    const QString property = path.left(indexOfDot); // ç¬¬ä¸€ä¸ª . ä¹‹å‰çš„å†…å®¹ï¼Œå¦‚æœ indexOfDot æ˜¯ -1 åˆ™è¿”å›æ•´ä¸ªå­—ç¬¦ä¸²
-    const QString restPath = (indexOfDot>0) ? path.mid(indexOfDot+1) : QString(); // ç¬¬ä¸€ä¸ª . åé¢çš„å†…å®¹
+    const int indexOfDot   = path.indexOf('.');     // µÚÒ»¸ö . µÄÎ»ÖÃ
+    const QString property = path.left(indexOfDot); // µÚÒ»¸ö . Ö®Ç°µÄÄÚÈİ£¬Èç¹û indexOfDot ÊÇ -1 Ôò·µ»ØÕû¸ö×Ö·û´®
+    const QString restPath = (indexOfDot>0) ? path.mid(indexOfDot+1) : QString(); // µÚÒ»¸ö . ºóÃæµÄÄÚÈİ
 
     if(restPath.isEmpty()) {
-        // restPath ä¸ºç©º, è¯´æ˜ property å°±æ˜¯ path ä¸­æœ€åä¸€ä¸ª . å³è¾¹çš„éƒ¨åˆ†, ä¹Ÿå°±æ˜¯è¦åˆ é™¤çš„å±æ€§
+        // restPath Îª¿Õ, ËµÃ÷ property ¾ÍÊÇ path ÖĞ×îºóÒ»¸ö . ÓÒ±ßµÄ²¿·Ö, Ò²¾ÍÊÇÒªÉ¾³ıµÄÊôĞÔ
         parent.remove(property);
     } else {
-        // è·¯å¾„ä¸­é—´çš„å±æ€§ï¼Œé€’å½’è®¿é—®å®ƒçš„å­å±æ€§
+        // Â·¾¶ÖĞ¼äµÄÊôĞÔ£¬µİ¹é·ÃÎÊËüµÄ×ÓÊôĞÔ
         QJsonObject child = parent[property].toObject();
         remove(child, restPath);
         parent[property] = child;
     }
 }
 
-// ä½¿ç”¨é€’å½’+å¼•ç”¨è®¾ç½® Json çš„å€¼ï¼Œå› ä¸º toObject() ç­‰è¿”å›çš„æ˜¯å¯¹è±¡çš„å‰¯æœ¬ï¼Œå¯¹å…¶ä¿®æ”¹ä¸ä¼šæ”¹å˜åŸæ¥çš„å¯¹è±¡ï¼Œæ‰€ä»¥éœ€è¦ç”¨å¼•ç”¨æ¥å®ç°
+// Ê¹ÓÃµİ¹é+ÒıÓÃÉèÖÃ Json µÄÖµ£¬ÒòÎª toObject() µÈ·µ»ØµÄÊÇ¶ÔÏóµÄ¸±±¾£¬¶ÔÆäĞŞ¸Ä²»»á¸Ä±äÔ­À´µÄ¶ÔÏó£¬ËùÒÔĞèÒªÓÃÒıÓÃÀ´ÊµÏÖ
 void JsonPrivate::setValue(QJsonObject &parent, const QString &path, const QJsonValue &newValue) {
-    const int indexOfDot   = path.indexOf('.');     // ç¬¬ä¸€ä¸ª . çš„ä½ç½®
-    const QString property = path.left(indexOfDot); // ç¬¬ä¸€ä¸ª . ä¹‹å‰çš„å†…å®¹ï¼Œå¦‚æœ indexOfDot æ˜¯ -1 åˆ™è¿”å›æ•´ä¸ªå­—ç¬¦ä¸²
-    const QString restPath = (indexOfDot>0) ? path.mid(indexOfDot+1) : QString(); // ç¬¬ä¸€ä¸ª . åé¢çš„å†…å®¹
+    const int indexOfDot   = path.indexOf('.');     // µÚÒ»¸ö . µÄÎ»ÖÃ
+    const QString property = path.left(indexOfDot); // µÚÒ»¸ö . Ö®Ç°µÄÄÚÈİ£¬Èç¹û indexOfDot ÊÇ -1 Ôò·µ»ØÕû¸ö×Ö·û´®
+    const QString restPath = (indexOfDot>0) ? path.mid(indexOfDot+1) : QString(); // µÚÒ»¸ö . ºóÃæµÄÄÚÈİ
 
     QJsonValue fieldValue = parent[property];
 
     if(restPath.isEmpty()) {
-        // restPath ä¸ºç©º, è¯´æ˜ property å°±æ˜¯ path ä¸­æœ€åä¸€ä¸ª . å³è¾¹çš„éƒ¨åˆ†, ä¹Ÿå°±æ˜¯è¦è®¾ç½®çš„å±æ€§
-        parent[property] = newValue; // å¦‚æœä¸å­˜åœ¨åˆ™ä¼šåˆ›å»º
+        // restPath Îª¿Õ, ËµÃ÷ property ¾ÍÊÇ path ÖĞ×îºóÒ»¸ö . ÓÒ±ßµÄ²¿·Ö, Ò²¾ÍÊÇÒªÉèÖÃµÄÊôĞÔ
+        parent[property] = newValue; // Èç¹û²»´æÔÚÔò»á´´½¨
     } else {
-        // è·¯å¾„ä¸­é—´çš„å±æ€§ï¼Œé€’å½’è®¿é—®å®ƒçš„å­å±æ€§
+        // Â·¾¶ÖĞ¼äµÄÊôĞÔ£¬µİ¹é·ÃÎÊËüµÄ×ÓÊôĞÔ
         QJsonObject child = parent[property].toObject();
         setValue(child, restPath, newValue);
-        parent[property] = child; // å› ä¸º QJsonObject æ“ä½œçš„éƒ½æ˜¯å¯¹è±¡çš„å‰¯æœ¬ï¼Œæ‰€ä»¥é€’å½’ç»“æŸåéœ€è¦ä¿å­˜èµ·æ¥å†æ¬¡è®¾ç½®å› parent
+        parent[property] = child; // ÒòÎª QJsonObject ²Ù×÷µÄ¶¼ÊÇ¶ÔÏóµÄ¸±±¾£¬ËùÒÔµİ¹é½áÊøºóĞèÒª±£´æÆğÀ´ÔÙ´ÎÉèÖÃ»Ø parent
     }
 }
 
-// è¯»å–å±æ€§çš„å€¼ï¼Œå¦‚æœ fromNode ä¸ºç©ºï¼Œåˆ™ä»è·ŸèŠ‚ç‚¹å¼€å§‹è®¿é—®
+// ¶ÁÈ¡ÊôĞÔµÄÖµ£¬Èç¹û fromNode Îª¿Õ£¬Ôò´Ó¸ú½Úµã¿ªÊ¼·ÃÎÊ
 QJsonValue JsonPrivate::getValue(const QString &path, const QJsonObject &fromNode) const {
-    // 1. ç¡®å®šæœç´¢çš„æ ¹èŠ‚ç‚¹ï¼Œå¦‚æœ fromNode ä¸ºç©ºåˆ™æœç´¢çš„æ ¹èŠ‚ç‚¹ä¸º root
-    // 2. æŠŠ path ä½¿ç”¨åˆ†éš”ç¬¦ . åˆ†è§£æˆå¤šä¸ªå±æ€§åå­—
-    // 3. ä»æœç´¢çš„æ ¹èŠ‚ç‚¹å¼€å§‹å‘ä¸‹æŸ¥æ‰¾åˆ°å€’æ•°ç¬¬äºŒä¸ªå±æ€§åå­—å¯¹åº”çš„ QJsonObject parent
-    //    å¦‚ "user.address.street"ï¼Œè¦è®¾ç½®çš„å±æ€§ä¸º streetï¼Œå®ƒçš„ parent æ˜¯ address
-    // 4. è¿”å› parent ä¸­å±æ€§åä¸ºå€’æ•°ç¬¬ä¸€ä¸ªå±æ€§åå­—å¯¹åº”çš„å±æ€§å€¼
+    // 1. È·¶¨ËÑË÷µÄ¸ù½Úµã£¬Èç¹û fromNode Îª¿ÕÔòËÑË÷µÄ¸ù½ÚµãÎª root
+    // 2. °Ñ path Ê¹ÓÃ·Ö¸ô·û . ·Ö½â³É¶à¸öÊôĞÔÃû×Ö
+    // 3. ´ÓËÑË÷µÄ¸ù½Úµã¿ªÊ¼ÏòÏÂ²éÕÒµ½µ¹ÊıµÚ¶ş¸öÊôĞÔÃû×Ö¶ÔÓ¦µÄ QJsonObject parent
+    //    Èç "user.address.street"£¬ÒªÉèÖÃµÄÊôĞÔÎª street£¬ËüµÄ parent ÊÇ address
+    // 4. ·µ»Ø parent ÖĞÊôĞÔÃûÎªµ¹ÊıµÚÒ»¸öÊôĞÔÃû×Ö¶ÔÓ¦µÄÊôĞÔÖµ
 
-    // [1] ç¡®å®šæœç´¢çš„æ ¹èŠ‚ç‚¹ï¼Œå¦‚æœ fromNode ä¸ºç©ºåˆ™æœç´¢çš„æ ¹èŠ‚ç‚¹ä¸º root
-    // [2] æŠŠ path ä½¿ç”¨åˆ†éš”ç¬¦ . åˆ†è§£æˆå¤šä¸ªå±æ€§åå­—
+    // [1] È·¶¨ËÑË÷µÄ¸ù½Úµã£¬Èç¹û fromNode Îª¿ÕÔòËÑË÷µÄ¸ù½ÚµãÎª root
+    // [2] °Ñ path Ê¹ÓÃ·Ö¸ô·û . ·Ö½â³É¶à¸öÊôĞÔÃû×Ö
     QJsonObject parent = fromNode.isEmpty() ? root : fromNode;
     QStringList names  = path.split(QRegularExpression("\\."));
 
-    // [3] ä»æœç´¢çš„æ ¹èŠ‚ç‚¹å¼€å§‹å‘ä¸‹æŸ¥æ‰¾åˆ°å€’æ•°ç¬¬äºŒä¸ªå±æ€§åå­—å¯¹åº”çš„ QJsonObject parent
+    // [3] ´ÓËÑË÷µÄ¸ù½Úµã¿ªÊ¼ÏòÏÂ²éÕÒµ½µ¹ÊıµÚ¶ş¸öÊôĞÔÃû×Ö¶ÔÓ¦µÄ QJsonObject parent
     int size = names.size();
     for (int i = 0; i < size - 1; ++i) {
         if (parent.isEmpty()) {
@@ -118,7 +118,7 @@ QJsonValue JsonPrivate::getValue(const QString &path, const QJsonObject &fromNod
         parent = parent.value(names.at(i)).toObject();
     }
 
-    // [4] è¿”å› parent ä¸­å±æ€§åä¸ºå€’æ•°ç¬¬ä¸€ä¸ªå±æ€§åå­—å¯¹åº”çš„å±æ€§å€¼
+    // [4] ·µ»Ø parent ÖĞÊôĞÔÃûÎªµ¹ÊıµÚÒ»¸öÊôĞÔÃû×Ö¶ÔÓ¦µÄÊôĞÔÖµ
     return parent.value(names.last());
 }
 
@@ -132,12 +132,12 @@ Json::~Json() {
     delete d;
 }
 
-// JSON æ˜¯å¦æœ‰æ•ˆï¼Œæœ‰æ•ˆçš„ JSON è¿”å› trueï¼Œå¦åˆ™è¿”å› false
+// JSON ÊÇ·ñÓĞĞ§£¬ÓĞĞ§µÄ JSON ·µ»Ø true£¬·ñÔò·µ»Ø false
 bool Json::isValid() const {
     return d->valid;
 }
 
-// JSON æ— æ•ˆæ—¶çš„é”™è¯¯ä¿¡æ¯
+// JSON ÎŞĞ§Ê±µÄ´íÎóĞÅÏ¢
 QString Json::errorString() const {
     return d->errorString;
 }
@@ -171,7 +171,7 @@ QStringList Json::getStringList(const QString &path, const QJsonObject &fromNode
 }
 
 QJsonArray Json::getJsonArray(const QString &path, const QJsonObject &fromNode) const {
-    // å¦‚æœæ ¹èŠ‚ç‚¹æ˜¯æ•°ç»„æ—¶ç‰¹æ®Šå¤„ç†
+    // Èç¹û¸ù½ÚµãÊÇÊı×éÊ±ÌØÊâ´¦Àí
     if (("." == path || "" == path) && fromNode.isEmpty()) {
         return d->doc.array();
     }
@@ -202,26 +202,24 @@ void Json::set(const QString &path, const QStringList &strings) {
     d->setValue(d->root, path, array);
 }
 
-// åˆ é™¤ path å¯¹åº”çš„å±æ€§
+// É¾³ı path ¶ÔÓ¦µÄÊôĞÔ
 void Json::remove(const QString &path) {
     d->remove(d->root, path);
 }
 
-// æŠŠ JSON ä¿å­˜åˆ° path æŒ‡å®šçš„æ–‡ä»¶
+// °Ñ JSON ±£´æµ½ path Ö¸¶¨µÄÎÄ¼ş
 void Json::save(const QString &path, bool pretty) const {
     QFile file(path);
 
-    if (!file.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text)) {
-        return;
+    if (file.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text)) {
+        QTextStream out(&file);
+        out << toString(pretty);
+        out.flush();
     }
-
-    QTextStream out(&file);
-    out << toString(pretty);
-    out.flush();
     file.close();
 }
 
-// æŠŠ Json å¯¹è±¡è½¬æ¢ä¸º JSON å­—ç¬¦ä¸²
+// °Ñ Json ¶ÔÏó×ª»»Îª JSON ×Ö·û´®
 QString Json::toString(bool pretty) const {
     return QJsonDocument(d->root).toJson(pretty ? QJsonDocument::Indented : QJsonDocument::Compact);
 }

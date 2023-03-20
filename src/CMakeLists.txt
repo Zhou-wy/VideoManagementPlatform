@@ -1,14 +1,15 @@
 cmake_minimum_required(VERSION 3.17)
 project(vidManPlatUi)
 
-# find QT5
-include(${CMAKE_SOURCE_DIR}/cmake/findQt5.cmake)
+# find
+include(${CMAKE_SOURCE_DIR}/cmake/3drparty.cmake)
 
 add_subdirectory(utils)
 add_subdirectory(iconHelper)
 add_subdirectory(videoPanel)
 add_subdirectory(playFFmpeg)
 add_subdirectory(addVideoDevice)
+set(CMAKE_EXE_LINKER_FLAGS "-SHARED")
 
 set(EXTRA_LIBS ${EXTRA_LIBS} utils IconHelper VideoPanel PlayFFmpeg addVideo)
 
@@ -17,5 +18,6 @@ add_library(${PROJECT_NAME} sevimanplat.cpp sevimanplat.h sevimanplat.ui resourc
 
 target_link_libraries(${PROJECT_NAME}
         ${Qt5_Libs}
+        spdlog
         ${EXTRA_LIBS}
         )
