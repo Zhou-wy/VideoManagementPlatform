@@ -48,7 +48,7 @@ void FFmpegThread::initlib() {
 #endif
         //初始化网络流格式,使用网络流时必须先执行
         avformat_network_init();
-
+        av_log_set_level(AV_LOG_QUIET); //屏蔽ffmepg自带的log
         isInit = true;
         iINFO(ROOT_LOG) << "init ffmpeg lib ok" << " version:" << FFMPEG_VERSION;
 #if 0
@@ -83,7 +83,7 @@ bool FFmpegThread::init() {
 
     int result = avformat_open_input(&avFormatContext, url.toStdString().data(), NULL, &options);
     if (result < 0) {
-        qDebug() << TIMEMS << "open input error" << url;
+       iERROR(ROOT_LOG)<< "open input error : " << url.toStdString();
         return false;
     }
 
@@ -233,7 +233,10 @@ void FFmpegThread::run() {
     while (!stopped) {
         //根据标志位执行初始化操作
         if (isPlay) {
-            this->init();
+            bool isSuccess = this->init();
+            if (!isSuccess) {
+                continue;
+            }
             isPlay = false;
             continue;
         }

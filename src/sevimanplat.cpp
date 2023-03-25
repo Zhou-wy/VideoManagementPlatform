@@ -11,12 +11,6 @@
 #include "ui_sevimanplat.h"
 #include "utils/iLOG.hpp"
 
-//void Print_video_conf(QList<std::shared_ptr<VideoConf>> &m_videoConf) {
-//    for (const auto& conf : m_videoConf) {
-//        iINFO(ROOT_LOG) << "Video Name: " << conf->video_name.toStdString();
-//    }
-//}
-
 SeViManPlat::SeViManPlat(const QString &video_conf_json, const QString &log_save_dir, QWidget *parent) :
         QWidget(parent), ui(new Ui::SeViManPlat), m_video_conf_json(video_conf_json), m_log_save_dir(log_save_dir) {
     ui->setupUi(this);
@@ -170,6 +164,9 @@ void SeViManPlat::loadStyle(const QString &qssFile) {
         qApp->setPalette(QPalette(paletteColor));
         //用时主要在下面这句
         qApp->setStyleSheet(qss);
+    }
+    else {
+        iERROR(ROOT_LOG) << "Failed to open camera configuration file";
     }
 }
 

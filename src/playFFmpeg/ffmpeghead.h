@@ -21,6 +21,7 @@ extern "C" {
 #include "libswresample/swresample.h"
 #include "libavformat/avformat.h"
 #include "libavfilter/avfilter.h"
+#include "libavutil/log.h"
 
 #ifdef ffmpegdevice
 #include "libavdevice/avdevice.h"
