@@ -51,6 +51,20 @@ public:
 
     void VideoConf2Json();
 
+    // Page_2 视频回放页面
+    void initPage2();
+
+    void getPlayDeviceInfo();
+
+    // Page_3 设备管理页面
+
+    // Page_4 日志查询页面
+    void initPage4();
+
+
+    // Page_5 系统设置页面
+
+
 public slots:
 
     void btnClicked(); //切换主页面
@@ -64,6 +78,11 @@ public slots:
     void onTreeViewClickedStream(const QModelIndex &index);
 
     void delVideoPlay(); // 删除摄像头槽函数
+
+    // Page_2 视频回放页面
+
+    // Page_4 日志查询页面
+    void iLog2LocalShow();
 
 private:
     void destroyAll();

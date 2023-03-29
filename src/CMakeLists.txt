@@ -14,7 +14,7 @@ set(CMAKE_EXE_LINKER_FLAGS "-SHARED")
 set(EXTRA_LIBS ${EXTRA_LIBS} utils IconHelper VideoPanel PlayFFmpeg addVideo)
 
 #qt_add_resources(resource.qrc)
-add_library(${PROJECT_NAME} sevimanplat.cpp sevimanplat.h sevimanplat.ui resource.qrc)
+add_library(${PROJECT_NAME} sevimanplat_1.cpp sevimanplat.h sevimanplat.ui resource.qrc sevimanplat_2.cpp sevimanplat_4.cpp)
 
 target_link_libraries(${PROJECT_NAME}
         ${Qt5_Libs}

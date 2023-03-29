@@ -510,7 +510,7 @@ QTreeView, QListView, QTableView, QTabWidget::pane {
     alternate-background-color: #DAEFFF;
     gridline-color: #C0DCF2;
 }
-
+/*自己改的*/
 QTreeView::branch:closed:has-children {
     margin: 4px, 4px;
     border-image: url(:/qss/lightblue/web_cam_disable.png);
@@ -528,6 +528,11 @@ QTreeWidget{
     font-style: normal;
 }
 
+/*#QFrame{*/
+/*    border: 1px solid black;*/
+/*}*/
+
+/***======================================***/
 QTreeView, QListView, QTableView, QSplitter::handle, QTreeView::branch {
     background: #EAF7FF;
 }
