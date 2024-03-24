@@ -1,6 +1,6 @@
 //
 // Created by zhouwy on 2023/2/19.
-//
+// 
 
 #include <QApplication>
 
@@ -20,4 +20,9 @@ int main(int argc, char *argv[]) {
  * 1、在构造函数判断appender是文件还是控制台等重要设置
  * 2、可变参数和string流方式实现debug、info、warn、Error、Fatal 方法。
  *
+ * */
+
+/*
+ * rtmp://192.168.0.25:1935/eCharger/stream
+ * http://192.168.0.25/live?port=1935&app=eCharger&stream=stream
  * */

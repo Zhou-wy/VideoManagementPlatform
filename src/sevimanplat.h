@@ -56,7 +56,8 @@ public:
 
     void getPlayDeviceInfo();
 
-    // Page_3 设备管理页面
+    // Page_3 机器人管理页面
+    void InitPage3();
 
     // Page_4 日志查询页面
     void initPage4();
@@ -80,6 +81,10 @@ public slots:
     void delVideoPlay(); // 删除摄像头槽函数
 
     // Page_2 视频回放页面
+    void getHistoryVideoList();
+    void onVideoItemDoubleClicked(const QModelIndex &index);
+    // Page_3 机器人管理页面
+
 
     // Page_4 日志查询页面
     void iLog2LocalShow();

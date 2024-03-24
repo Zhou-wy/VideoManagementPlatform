@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1463</width>
-    <height>902</height>
+    <width>1522</width>
+    <height>904</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -34,7 +34,13 @@
   <property name="windowTitle">
    <string>SeViManPlat</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout_3">
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_24">
+   <property name="spacing">
+    <number>3</number>
+   </property>
    <property name="leftMargin">
     <number>0</number>
    </property>
@@ -47,7 +53,7 @@
    <property name="bottomMargin">
     <number>0</number>
    </property>
-   <item row="0" column="0">
+   <item>
     <widget class="QWidget" name="widget_title" native="true">
      <property name="minimumSize">
       <size>
@@ -66,6 +72,9 @@
        <family>Songti SC</family>
        <pointsize>18</pointsize>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <property name="spacing">
@@ -181,7 +190,7 @@
 color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));</string>
            </property>
            <property name="text">
-            <string>管道缺陷检测检测平台</string>
+            <string>管道缺陷检测平台</string>
            </property>
           </widget>
          </item>
@@ -270,7 +279,7 @@ color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 
        </widget>
       </item>
       <item>
-       <widget class="QToolButton" name="logBtn">
+       <widget class="QToolButton" name="robotBtn">
         <property name="minimumSize">
          <size>
           <width>80</width>
@@ -466,7 +475,7 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
      </layout>
     </widget>
    </item>
-   <item row="1" column="0">
+   <item>
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="font">
       <font>
@@ -475,7 +484,7 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
       </font>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="page_1">
       <property name="styleSheet">
@@ -533,7 +542,7 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
            <pointsize>18</pointsize>
           </font>
          </property>
-         <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,10,10">
+         <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,10,0">
           <property name="spacing">
            <number>0</number>
           </property>
@@ -690,46 +699,320 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
             </item>
            </widget>
           </item>
-          <item alignment="Qt::AlignHCenter">
-           <widget class="QTreeWidget" name="p1_camContorlList">
-            <property name="font">
-             <font>
-              <family>Songti SC</family>
-              <pointsize>18</pointsize>
-             </font>
+          <item>
+           <widget class="QWidget" name="widget_31" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>200</height>
+             </size>
             </property>
-            <property name="autoExpandDelay">
-             <number>1</number>
+            <property name="autoFillBackground">
+             <bool>false</bool>
             </property>
-            <attribute name="headerVisible">
-             <bool>false</bool>
-            </attribute>
-            <attribute name="headerCascadingSectionResizes">
-             <bool>false</bool>
-            </attribute>
-            <attribute name="headerMinimumSectionSize">
-             <number>1</number>
-            </attribute>
-            <attribute name="headerDefaultSectionSize">
-             <number>100</number>
-            </attribute>
-            <attribute name="headerHighlightSections">
-             <bool>false</bool>
-            </attribute>
-            <column>
-             <property name="text">
-              <string notr="true">设备管理</string>
-             </property>
-             <property name="font">
-              <font>
-               <family>Songti SC</family>
-               <pointsize>18</pointsize>
-              </font>
-             </property>
-             <property name="textAlignment">
-              <set>AlignCenter</set>
-             </property>
-            </column>
+            <layout class="QVBoxLayout" name="verticalLayout_25">
+             <item>
+              <widget class="QWidget" name="widget_40" native="true">
+               <layout class="QHBoxLayout" name="horizontalLayout_41">
+                <item>
+                 <spacer name="horizontalSpacer_32">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_61">
+                  <property name="layoutDirection">
+                   <enum>Qt::LeftToRight</enum>
+                  </property>
+                  <property name="text">
+                   <string>图像配置</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_33">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_39" native="true">
+               <layout class="QHBoxLayout" name="horizontalLayout_40" stretch="1,3">
+                <item>
+                 <widget class="QLabel" name="label_69">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>风格：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_18">
+                  <property name="font">
+                   <font>
+                    <family>AMS</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>标准</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>艳丽</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_32" native="true">
+               <layout class="QHBoxLayout" name="horizontalLayout_33">
+                <item>
+                 <widget class="QLabel" name="label_62">
+                  <property name="font">
+                   <font>
+                    <family>新宋体</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>亮度：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSlider" name="horizontalSlider">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_33" native="true">
+               <layout class="QHBoxLayout" name="horizontalLayout_34">
+                <item>
+                 <widget class="QLabel" name="label_63">
+                  <property name="font">
+                   <font>
+                    <family>新宋体</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>对比度：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSlider" name="horizontalSlider_2">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_34" native="true">
+               <layout class="QHBoxLayout" name="horizontalLayout_35">
+                <item>
+                 <widget class="QLabel" name="label_64">
+                  <property name="font">
+                   <font>
+                    <family>新宋体</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>饱和度：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSlider" name="horizontalSlider_3">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_35" native="true">
+               <layout class="QHBoxLayout" name="horizontalLayout_36">
+                <item>
+                 <widget class="QLabel" name="label_65">
+                  <property name="font">
+                   <font>
+                    <family>新宋体</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>锐度：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSlider" name="horizontalSlider_4">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_36" native="true">
+               <layout class="QHBoxLayout" name="horizontalLayout_37">
+                <item>
+                 <widget class="QLabel" name="label_66">
+                  <property name="font">
+                   <font>
+                    <family>新宋体</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>伽马：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSlider" name="horizontalSlider_5">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_37" native="true">
+               <layout class="QHBoxLayout" name="horizontalLayout_38">
+                <item>
+                 <widget class="QLabel" name="label_67">
+                  <property name="font">
+                   <font>
+                    <family>新宋体</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>镜像：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QRadioButton" name="radioButton">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>开启</string>
+                  </property>
+                  <property name="checked">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QRadioButton" name="radioButton_2">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>关闭</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_38" native="true">
+               <layout class="QHBoxLayout" name="horizontalLayout_39" stretch="1,3">
+                <item>
+                 <widget class="QLabel" name="label_68">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>视角：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_17">
+                  <property name="font">
+                   <font>
+                    <family>AMS</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>正常</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>校准</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
            </widget>
           </item>
          </layout>
@@ -816,7 +1099,22 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
        </item>
        <item>
         <widget class="QWidget" name="widget_7" native="true">
-         <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1,4,2,10">
+         <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1,4,2,6">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
           <item>
            <widget class="QWidget" name="widget_4" native="true">
             <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -887,7 +1185,7 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
               <number>5</number>
              </property>
              <property name="verticalSpacing">
-              <number>3</number>
+              <number>10</number>
              </property>
              <property name="leftMargin">
               <number>5</number>
@@ -1061,9 +1359,9 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QPushButton" name="p2_pbtDownload">
+              <widget class="QPushButton" name="p2_pbtPlay">
                <property name="text">
-                <string>下载</string>
+                <string>播放</string>
                </property>
               </widget>
              </item>
@@ -1072,7 +1370,7 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
           </item>
           <item>
            <widget class="QWidget" name="widget_10" native="true">
-            <layout class="QVBoxLayout" name="verticalLayout_8" stretch="1,9">
+            <layout class="QVBoxLayout" name="verticalLayout_8" stretch="1,5">
              <property name="spacing">
               <number>1</number>
              </property>
@@ -1091,6 +1389,21 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
              <item>
               <widget class="QWidget" name="widget_11" native="true">
                <layout class="QHBoxLayout" name="horizontalLayout_5">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
                 <item>
                  <spacer name="horizontalSpacer_4">
                   <property name="orientation">
@@ -1134,7 +1447,7 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
               </widget>
              </item>
              <item>
-              <widget class="QTreeView" name="p2_VideoListTreeView"/>
+              <widget class="QListView" name="p2_VideoListView"/>
              </item>
             </layout>
            </widget>
@@ -1163,7 +1476,7 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
        </property>
        <item>
         <widget class="QWidget" name="widget_15" native="true">
-         <layout class="QVBoxLayout" name="verticalLayout_10" stretch="1,5,5,1,8">
+         <layout class="QVBoxLayout" name="verticalLayout_10" stretch="1,0,1,8">
           <property name="spacing">
            <number>1</number>
           </property>
@@ -1193,10 +1506,49 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
            </widget>
           </item>
           <item>
-           <widget class="AdsWidget" name="p3_HistoryImage_1"/>
-          </item>
-          <item>
-           <widget class="AdsWidget" name="p3_HistortImage_2"/>
+           <widget class="ImageView" name="p3_imageView">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="bgColorStart">
+             <color>
+              <red>240</red>
+              <green>255</green>
+              <blue>254</blue>
+             </color>
+            </property>
+            <property name="bgColorEnd">
+             <color>
+              <red>174</red>
+              <green>254</green>
+              <blue>255</blue>
+             </color>
+            </property>
+            <property name="bottomSpace">
+             <number>5</number>
+            </property>
+            <property name="buttonSpace">
+             <number>5</number>
+            </property>
+            <property name="icoSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="fill">
+             <bool>false</bool>
+            </property>
+            <property name="fade">
+             <bool>false</bool>
+            </property>
+            <property name="keyMove">
+             <bool>false</bool>
+            </property>
+           </widget>
           </item>
           <item>
            <widget class="NavLabel" name="navLabel_2">
@@ -1673,7 +2025,14 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
            </widget>
           </item>
           <item>
-           <widget class="QTextEdit" name="p4_ConsoleLog"/>
+           <widget class="QTextEdit" name="p4_ConsoleLog">
+            <property name="font">
+             <font>
+              <family>宋体</family>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+           </widget>
           </item>
          </layout>
         </widget>
@@ -1785,7 +2144,7 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
                     <pointsize>14</pointsize>
                    </font>
                   </property>
-                  <layout class="QHBoxLayout" name="horizontalLayout_16" stretch="1,2,1,2,1,2">
+                  <layout class="QHBoxLayout" name="horizontalLayout_16" stretch="1,2,0,1,2,0,1,2">
                    <property name="spacing">
                     <number>2</number>
                    </property>
@@ -1803,6 +2162,12 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
                    </property>
                    <item>
                     <widget class="QLabel" name="label_17">
+                     <property name="maximumSize">
+                      <size>
+                       <width>40</width>
+                       <height>30</height>
+                      </size>
+                     </property>
                      <property name="font">
                       <font>
                        <family>宋体</family>
@@ -1815,10 +2180,56 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QComboBox" name="comboBox"/>
+                    <widget class="QComboBox" name="comboBox">
+                     <property name="font">
+                      <font>
+                       <family>Times New Roman</family>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>2023</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>2022</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>2021</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>2020</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_34">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
                    </item>
                    <item>
                     <widget class="QLabel" name="label_19">
+                     <property name="maximumSize">
+                      <size>
+                       <width>40</width>
+                       <height>30</height>
+                      </size>
+                     </property>
                      <property name="font">
                       <font>
                        <family>宋体</family>
@@ -1831,10 +2242,96 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QComboBox" name="comboBox_2"/>
+                    <widget class="QComboBox" name="comboBox_2">
+                     <property name="font">
+                      <font>
+                       <family>Times New Roman</family>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>1</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>2</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>3</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>4</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>5</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>6</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>7</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>8</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>9</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>10</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>11</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>12</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_35">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
                    </item>
                    <item>
                     <widget class="QLabel" name="label_20">
+                     <property name="maximumSize">
+                      <size>
+                       <width>40</width>
+                       <height>30</height>
+                      </size>
+                     </property>
                      <property name="font">
                       <font>
                        <family>宋体</family>
@@ -1847,13 +2344,182 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QComboBox" name="comboBox_3"/>
+                    <widget class="QComboBox" name="comboBox_3">
+                     <property name="font">
+                      <font>
+                       <family>Times New Roman</family>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>1</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>2</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>3</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>4</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>5</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>6</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>7</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>8</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>9</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>10</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>11</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>12</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>13</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>14</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>15</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>16</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>17</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>18</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>19</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>20</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>21</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>22</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>23</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>24</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>25</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>26</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>27</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>28</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>29</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>30</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>31</string>
+                      </property>
+                     </item>
+                    </widget>
                    </item>
                   </layout>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QTextEdit" name="textEdit"/>
+                 <widget class="QTextEdit" name="textEdit">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                 </widget>
                 </item>
                </layout>
               </widget>
@@ -1900,7 +2566,7 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
              <item>
               <widget class="QLabel" name="label_25">
                <property name="text">
-                <string>分析监测结果，折线图、柱状图等</string>
+                <string/>
                </property>
               </widget>
              </item>
@@ -1913,339 +2579,1660 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
       </layout>
      </widget>
      <widget class="QWidget" name="page_5">
-      <widget class="QFrame" name="m_frame">
-       <property name="geometry">
-        <rect>
-         <x>70</x>
-         <y>60</y>
-         <width>587</width>
-         <height>268</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true"/>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout_16">
-        <item>
-         <widget class="QWidget" name="widget_29" native="true">
-          <layout class="QGridLayout" name="gridLayout_4">
-           <item row="2" column="1">
-            <widget class="SwitchButton" name="switchButton_3">
-             <property name="font">
-              <font>
-               <family>Arial</family>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="4">
-            <widget class="QLineEdit" name="lineEdit_2">
-             <property name="font">
-              <font>
-               <family>Times New Roman</family>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="3">
-            <widget class="QLabel" name="label_24">
-             <property name="font">
-              <font>
-               <family>宋体</family>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>英文标题：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="SwitchButton" name="switchButton">
-             <property name="font">
-              <font>
-               <family>Arial</family>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="3">
-            <widget class="QLabel" name="label_22">
-             <property name="font">
-              <font>
-               <family>宋体</family>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>中文标题：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="4">
-            <widget class="QLineEdit" name="lineEdit_3">
-             <property name="font">
-              <font>
-               <family>Times New Roman</family>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="4">
-            <widget class="QLineEdit" name="lineEdit">
-             <property name="font">
-              <font>
-               <family>宋体</family>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="label_23">
-             <property name="font">
-              <font>
-               <family>宋体</family>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>自动登录：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_21">
-             <property name="font">
-              <font>
-               <family>宋体</family>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>开机自启动：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="3">
-            <widget class="QLabel" name="label_27">
-             <property name="font">
-              <font>
-               <family>宋体</family>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>版权所有：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="SwitchButton" name="switchButton_2">
-             <property name="font">
-              <font>
-               <family>Arial</family>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="label_26">
-             <property name="font">
-              <font>
-               <family>宋体</family>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>记住密码：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="2">
-            <spacer name="horizontalSpacer_17">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QWidget" name="widget_30" native="true">
-          <layout class="QGridLayout" name="gridLayout_5">
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_28">
-             <property name="font">
-              <font>
-               <family>宋体</family>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>调试日志：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="SwitchButton" name="switchButton_5">
-             <property name="font">
-              <font>
-               <family>Arial</family>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="label_30">
-             <property name="font">
-              <font>
-               <family>宋体</family>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>播放记录：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="3">
-            <widget class="QLabel" name="label_29">
-             <property name="font">
-              <font>
-               <family>宋体</family>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>调试级别：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="SwitchButton" name="switchButton_4">
-             <property name="font">
-              <font>
-               <family>Arial</family>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="4">
-            <widget class="QLineEdit" name="lineEdit_4"/>
-           </item>
-           <item row="1" column="3">
-            <widget class="QLabel" name="label_31">
-             <property name="font">
-              <font>
-               <family>宋体</family>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>监测时间：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="3">
-            <widget class="QLabel" name="label_33">
-             <property name="font">
-              <font>
-               <family>宋体</family>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>自动全屏：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="4">
-            <widget class="QComboBox" name="comboBox_4"/>
-           </item>
-           <item row="2" column="4">
-            <widget class="QLineEdit" name="lineEdit_5"/>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="label_32">
-             <property name="font">
-              <font>
-               <family>宋体</family>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>弹窗开关：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="SwitchButton" name="switchButton_6">
-             <property name="font">
-              <font>
-               <family>Arial</family>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="2">
-            <spacer name="horizontalSpacer_18">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-          </layout>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QLabel" name="label_6">
-       <property name="geometry">
-        <rect>
-         <x>230</x>
-         <y>40</y>
-         <width>191</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Arial</family>
-         <pointsize>16</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>常规设置-立即生效</string>
-       </property>
-      </widget>
+      <layout class="QHBoxLayout" name="horizontalLayout_32">
+       <item>
+        <widget class="QWidget" name="widget_29" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_22">
+          <item>
+           <widget class="QFrame" name="m_frame">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_16">
+             <item>
+              <widget class="QLabel" name="label_6">
+               <property name="font">
+                <font>
+                 <family>Arial</family>
+                 <pointsize>20</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>常规设置-立即生效</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="frame_29">
+               <layout class="QGridLayout" name="gridLayout_4">
+                <item row="2" column="1">
+                 <widget class="SwitchButton" name="switchButton_3">
+                  <property name="font">
+                   <font>
+                    <family>Arial</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="4">
+                 <widget class="QLineEdit" name="lineEdit_2">
+                  <property name="font">
+                   <font>
+                    <family>Times New Roman</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Pipeline Defect Detection Platform</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="3">
+                 <widget class="QLabel" name="label_24">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>英文标题：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="SwitchButton" name="switchButton">
+                  <property name="font">
+                   <font>
+                    <family>Arial</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="3">
+                 <widget class="QLabel" name="label_22">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>中文标题：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="4">
+                 <widget class="QLineEdit" name="lineEdit_3">
+                  <property name="font">
+                   <font>
+                    <family>Times New Roman</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>上海电力大学</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="4">
+                 <widget class="QLineEdit" name="lineEdit">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>管道缺陷检测平台</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_23">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>自动登录：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_21">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>开机自启动：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="3">
+                 <widget class="QLabel" name="label_27">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>版权所有：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="SwitchButton" name="switchButton_2">
+                  <property name="font">
+                   <font>
+                    <family>Arial</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="label_26">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>记住密码：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <spacer name="horizontalSpacer_17">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_5">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QFrame" name="frame_30">
+               <layout class="QGridLayout" name="gridLayout_5">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_28">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>调试日志：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="SwitchButton" name="switchButton_5">
+                  <property name="font">
+                   <font>
+                    <family>Arial</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_30">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>播放记录：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="3">
+                 <widget class="QLabel" name="label_29">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>调试级别：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="SwitchButton" name="switchButton_4">
+                  <property name="font">
+                   <font>
+                    <family>Arial</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="4">
+                 <widget class="QLineEdit" name="lineEdit_4"/>
+                </item>
+                <item row="1" column="3">
+                 <widget class="QLabel" name="label_31">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>监测时间：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="3">
+                 <widget class="QLabel" name="label_33">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>自动全屏：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="4">
+                 <widget class="QComboBox" name="comboBox_4">
+                  <property name="font">
+                   <font>
+                    <family>Times New Roman</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>Debug</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Info</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Warning</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Error</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Fatal</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item row="2" column="4">
+                 <widget class="QLineEdit" name="lineEdit_5"/>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="label_32">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>弹窗开关：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="SwitchButton" name="switchButton_6">
+                  <property name="font">
+                   <font>
+                    <family>Arial</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <spacer name="horizontalSpacer_18">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_36">
+            <layout class="QVBoxLayout" name="verticalLayout_17">
+             <item>
+              <widget class="QLabel" name="label_34">
+               <property name="font">
+                <font>
+                 <family>Arial</family>
+                 <pointsize>20</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>视频参数-立即生效</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="frame_31">
+               <layout class="QHBoxLayout" name="horizontalLayout_17">
+                <item>
+                 <widget class="QLabel" name="label_35">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>共享解码：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="SwitchButton" name="switchButton_7">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_19">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_40">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>画面显示：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_5">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>拉伸填充</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>保持比例</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_20">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_41">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>显示模式：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_6">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>绘制</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QFrame" name="frame_32">
+               <layout class="QHBoxLayout" name="horizontalLayout_18">
+                <item>
+                 <widget class="QLabel" name="label_36">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>播放声音：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="SwitchButton" name="switchButton_8">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_21">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_42">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>硬件加速：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_7">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>CUDA</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_22">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_43">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>通信协议：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_8">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>TCP</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>UDP</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QFrame" name="frame_33">
+               <layout class="QHBoxLayout" name="horizontalLayout_22">
+                <item>
+                 <widget class="QLabel" name="label_37">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>保存视频：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="SwitchButton" name="switchButton_9">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_23">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_45">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>解码策略：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_10">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>速度优先</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>质量优先</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_24">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_44">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>缓存大小：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_9">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>0.5秒</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>1秒</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QFrame" name="frame_34">
+               <layout class="QHBoxLayout" name="horizontalLayout_23">
+                <item>
+                 <widget class="QLabel" name="label_38">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>事件订阅：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="SwitchButton" name="switchButton_10">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_25">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_46">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>读取超时：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_11">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>5秒</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>10秒</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_26">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_47">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>连接超时：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_12">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>5秒</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>10秒</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_4">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QFrame" name="frame_35">
+               <layout class="QHBoxLayout" name="horizontalLayout_24">
+                <item>
+                 <widget class="QLabel" name="label_39">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>自动校准：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="SwitchButton" name="switchButton_11">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_27">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_48">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>表格策略：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_13">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>双击添加</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_28">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_49">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>视频边框</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_14">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>3像素</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>5像素</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_30" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_23">
+          <item>
+           <widget class="QFrame" name="frame_37">
+            <layout class="QVBoxLayout" name="verticalLayout_18">
+             <item>
+              <widget class="QLabel" name="label_50">
+               <property name="font">
+                <font>
+                 <family>Arial</family>
+                 <pointsize>20</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>功能激活-重启生效</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="frame_3">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_25">
+                <item>
+                 <widget class="QCheckBox" name="checkBox">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>1分屏</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkBox_2">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>4分屏</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkBox_3">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>6分屏</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkBox_10">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>8分屏</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkBox_4">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>9分屏</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="frame_4">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_26">
+                <item>
+                 <widget class="QCheckBox" name="checkBox_5">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>13分屏</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkBox_6">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>16分屏</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkBox_7">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>25分屏</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkBox_8">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>36分屏</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkBox_9">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>64分屏</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_38">
+            <layout class="QVBoxLayout" name="verticalLayout_19">
+             <item>
+              <widget class="QLabel" name="label_51">
+               <property name="font">
+                <font>
+                 <family>Arial</family>
+                 <pointsize>20</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>地图设置-重启生效</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="frame_5">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_27">
+                <item>
+                 <widget class="QLabel" name="label_52">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>地图密钥：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_6">
+                  <property name="font">
+                   <font>
+                    <family>Times New Roman</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>hsjaijsadkahsjdh</string>
+                  </property>
+                  <property name="echoMode">
+                   <enum>QLineEdit::Password</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="frame_6">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_28">
+                <item>
+                 <widget class="QLabel" name="label_53">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>地图中心：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_7">
+                  <property name="font">
+                   <font>
+                    <family>Times New Roman</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>131.4762000,232.987640</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_29">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_54">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>缩放级别：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_8">
+                  <property name="font">
+                   <font>
+                    <family>Times New Roman</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>19</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_39">
+            <layout class="QVBoxLayout" name="verticalLayout_20">
+             <item>
+              <widget class="QLabel" name="label_55">
+               <property name="font">
+                <font>
+                 <family>Arial</family>
+                 <pointsize>20</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>数据库设置-重启生效</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="frame_7">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_29">
+                <item>
+                 <widget class="QLabel" name="label_56">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>连接方式：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_15">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>直接连接</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_31">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_59">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>主机类型：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_16">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>Sqlite</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Mysql</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="frame_8">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_30">
+                <item>
+                 <widget class="QLabel" name="label_57">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>用户名：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_10">
+                  <property name="font">
+                   <font>
+                    <family>Times New Roman</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>root</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_30">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_58">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>密码</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_11">
+                  <property name="font">
+                   <font>
+                    <family>Times New Roman</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>SUEP@changyang2588</string>
+                  </property>
+                  <property name="echoMode">
+                   <enum>QLineEdit::Password</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_40">
+            <layout class="QVBoxLayout" name="verticalLayout_21">
+             <item>
+              <widget class="QLabel" name="label_60">
+               <property name="font">
+                <font>
+                 <family>Arial</family>
+                 <pointsize>20</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>主题设置-重启生效</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="frame_9">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_31">
+                <item>
+                 <widget class="QCheckBox" name="checkBox_13">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>清新白</string>
+                  </property>
+                  <property name="checked">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkBox_11">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>天空蓝</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkBox_12">
+                  <property name="font">
+                   <font>
+                    <family>宋体</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>暗夜黑</string>
+                  </property>
+                  <property name="checked">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
    </item>
@@ -2283,9 +4270,9 @@ font: 75 14pt &quot;Yuanti SC&quot;;</string>
    <header>navlabel.h</header>
   </customwidget>
   <customwidget>
-   <class>AdsWidget</class>
+   <class>ImageView</class>
    <extends>QWidget</extends>
-   <header>adswidget.h</header>
+   <header>imageview.h</header>
   </customwidget>
   <customwidget>
    <class>VideoWidget</class>

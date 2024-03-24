@@ -25,11 +25,12 @@ class QTimer;
 #ifdef quc
 class Q_DECL_EXPORT VideoWidget : public QWidget
 #else
+
 class VideoWidget : public QWidget
 #endif
 
 {
-    Q_OBJECT
+Q_OBJECT
     Q_ENUMS(OSDFormat)
     Q_ENUMS(OSDPosition)
 
@@ -85,18 +86,28 @@ public:
     };
 
     explicit VideoWidget(QWidget *parent = 0);
+
     ~VideoWidget();
 
 protected:
     void resizeEvent(QResizeEvent *);
+
     void enterEvent(QEvent *);
+
     void leaveEvent(QEvent *);
+
     void dropEvent(QDropEvent *event);
+
     void dragEnterEvent(QDragEnterEvent *event);
+
     void paintEvent(QPaintEvent *);
+
     void drawBorder(QPainter *painter);
+
     void drawBg(QPainter *painter);
+
     void drawImg(QPainter *painter, QImage img);
+
     void drawOSD(QPainter *painter,
                  bool osdVisible,
                  int osdFontSize,
@@ -151,80 +162,121 @@ private:
 private:
     //初始化解码线程
     void initThread();
+
     //初始化悬浮条
     void initFlowPanel();
+
     //初始化悬浮条样式
     void initFlowStyle();
 
 public:
-    QImage getImage()               const;
-    QPixmap getPixmap()             const;
-    QString getUrl()                const;
-    QDateTime getLastTime()         const;
+    QImage getImage() const;
 
-    bool getCallback()              const;
-    bool getIsPlaying()             const;
-    bool getIsRtsp()                const;
-    bool getIsUsbCamera()           const;
+    QPixmap getPixmap() const;
 
-    bool getCopyImage()             const;
-    bool getCheckLive()             const;
-    bool getDrawImage()             const;
-    bool getFillImage()             const;
+    QString getUrl() const;
 
-    bool getFlowEnable()            const;
-    QColor getFlowBgColor()         const;
-    QColor getFlowPressColor()      const;
+    QDateTime getLastTime() const;
 
-    int getTimeout()                const;
-    int getBorderWidth()            const;
-    QColor getBorderColor()         const;
-    QColor getFocusColor()          const;
-    QColor getBgColor()             const;
-    QString getBgText()             const;
-    QImage getBgImage()             const;
+    bool getCallback() const;
 
-    bool getOSD1Visible()           const;
-    int getOSD1FontSize()           const;
-    QString getOSD1Text()           const;
-    QColor getOSD1Color()           const;
-    QImage getOSD1Image()           const;
-    OSDFormat getOSD1Format()       const;
-    OSDPosition getOSD1Position()   const;
+    bool getIsPlaying() const;
 
-    bool getOSD2Visible()           const;
-    int getOSD2FontSize()           const;
-    QString getOSD2Text()           const;
-    QColor getOSD2Color()           const;
-    QImage getOSD2Image()           const;
-    OSDFormat getOSD2Format()       const;
-    OSDPosition getOSD2Position()   const;
+    bool getIsRtsp() const;
 
-    int getFaceBorder()             const;
-    QColor getFaceColor()           const;
-    QList<QRect> getFaceRects()     const;
+    bool getIsUsbCamera() const;
 
-    QSize sizeHint()                const;
-    QSize minimumSizeHint()         const;
+    bool getCopyImage() const;
+
+    bool getCheckLive() const;
+
+    bool getDrawImage() const;
+
+    bool getFillImage() const;
+
+    bool getFlowEnable() const;
+
+    QColor getFlowBgColor() const;
+
+    QColor getFlowPressColor() const;
+
+    int getTimeout() const;
+
+    int getBorderWidth() const;
+
+    QColor getBorderColor() const;
+
+    QColor getFocusColor() const;
+
+    QColor getBgColor() const;
+
+    QString getBgText() const;
+
+    QImage getBgImage() const;
+
+    bool getOSD1Visible() const;
+
+    int getOSD1FontSize() const;
+
+    QString getOSD1Text() const;
+
+    QColor getOSD1Color() const;
+
+    QImage getOSD1Image() const;
+
+    OSDFormat getOSD1Format() const;
+
+    OSDPosition getOSD1Position() const;
+
+    bool getOSD2Visible() const;
+
+    int getOSD2FontSize() const;
+
+    QString getOSD2Text() const;
+
+    QColor getOSD2Color() const;
+
+    QImage getOSD2Image() const;
+
+    OSDFormat getOSD2Format() const;
+
+    OSDPosition getOSD2Position() const;
+
+    int getFaceBorder() const;
+
+    QColor getFaceColor() const;
+
+    QList<QRect> getFaceRects() const;
+
+    QSize sizeHint() const;
+
+    QSize minimumSizeHint() const;
 
 private slots:
+
     //接收图像并绘制
     void updateImage(const QImage &image);
+
     //校验设备
     void checkVideo();
+
     //处理按钮单击
     void btnClicked();
 
 signals:
+
     //播放成功
     void receivePlayStart();
+
     //播放失败
     void receivePlayError();
+
     //播放结束
     void receivePlayFinsh();
 
     //总时长
     void fileLengthReceive(qint64 length);
+
     //当前播放时长
     void filePositionReceive(qint64 position);
 
@@ -238,138 +290,187 @@ signals:
     void btnClicked(const QString &objName);
 
 public slots:
+
     //获取长度
     uint getLength();
+
     //获取当前播放位置
     uint getPosition();
+
     //设置播放位置
     void setPosition(int position);
 
     //获取静音状态
     bool getMuted();
+
     //设置静音
     void setMuted(bool muted);
 
     //获取音量
     int getVolume();
+
     //设置音量
     void setVolume(int volume);
 
     //设置显示间隔
     void setInterval(int interval);
+
     //设置休眠时间
     void setSleepTime(int sleepTime);
+
     //设置检测连接超时
     void setCheckTime(int checkTime);
+
     //设置是否检测连接
     void setCheckConn(bool checkConn);
 
     //设置视频流地址
     void setUrl(const QString &url);
+
     //设置是否采用回调
     void setCallback(bool callback);
+
     //设置硬件解码器名称
     void setHardware(const QString &hardware);
+
     //设置通信协议
     void setTransport(const QString &transport);
 
     //设置是否保存文件
     void setSaveFile(bool saveFile);
+
     //设置保存间隔
     void setSaveInterval(int saveInterval);
+
     //设置定时保存文件唯一标识符
     void setFileFlag(const QString &fileFlag);
+
     //设置保存文件夹
     void setSavePath(const QString &savePath);
+
     //设置保存文件名称
     void setFileName(const QString &fileName);
 
     //设置是否拷贝图片
     void setCopyImage(bool copyImage);
+
     //设置是否检测活着
     void setCheckLive(bool checkLive);
+
     //设置是否实时绘制图片
     void setDrawImage(bool drawImage);
+
     //设置是否拉伸填充
     void setFillImage(bool fillImage);
 
     //设置是否启用悬浮条
     void setFlowEnable(bool flowEnable);
+
     //设置悬浮条背景颜色
     void setFlowBgColor(const QColor &flowBgColor);
+
     //设置悬浮条按下颜色
     void setFlowPressColor(const QColor &flowPressColor);
 
     //设置超时时间
     void setTimeout(int timeout);
+
     //设置边框宽度
     void setBorderWidth(int borderWidth);
+
     //设置边框颜色
     void setBorderColor(const QColor &borderColor);
+
     //设置有焦点边框颜色
     void setFocusColor(const QColor &focusColor);
+
     //设置背景颜色
     void setBgColor(const QColor &bgColor);
+
     //设置无图像文字
     void setBgText(const QString &bgText);
+
     //设置无图像背景图
     void setBgImage(const QImage &bgImage);
 
     //设置标签1是否可见
     void setOSD1Visible(bool osdVisible);
+
     //设置标签1文字字号
     void setOSD1FontSize(int osdFontSize);
+
     //设置标签1文本
     void setOSD1Text(const QString &osdText);
+
     //设置标签1文字颜色
     void setOSD1Color(const QColor &osdColor);
+
     //设置标签1图片
     void setOSD1Image(const QImage &osdImage);
+
     //设置标签1格式
     void setOSD1Format(const OSDFormat &osdFormat);
+
     //设置标签1位置
     void setOSD1Position(const OSDPosition &osdPosition);
 
     //设置标签2是否可见
     void setOSD2Visible(bool osdVisible);
+
     //设置标签2文字字号
     void setOSD2FontSize(int osdFontSize);
+
     //设置标签2文本
     void setOSD2Text(const QString &osdText);
+
     //设置标签2文字颜色
     void setOSD2Color(const QColor &osdColor);
+
     //设置标签2图片
     void setOSD2Image(const QImage &osdImage);
+
     //设置标签2格式
     void setOSD2Format(const OSDFormat &osdFormat);
+
     //设置标签2位置
     void setOSD2Position(const OSDPosition &osdPosition);
 
     //设置值自动进行枚举转换
     void setOSD1Format(quint8 osdFormat);
+
     void setOSD2Format(quint8 osdFormat);
+
     void setOSD1Position(quint8 osdPosition);
+
     void setOSD2Position(quint8 osdPosition);
 
     //设置人脸框粗细
     void setFaceBorder(int faceBorder);
+
     //设置人脸框颜色
     void setFaceColor(const QColor &faceColor);
+
     //设置人脸框区域集合
     void setFaceRects(const QList<QRect> &faceRects);
 
     //打开设备
     void open();
+
     //暂停播放
     void pause();
+
     //继续播放
     void next();
+
     //关闭设备
     void close();
+
     //重新加载
     void restart(const QString &url, int delayOpen = 500);
+
     //清空图片
     void clear();
+
     //截图快照
     void snap(const QString &fileName);
 };

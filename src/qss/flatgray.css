@@ -692,3 +692,34 @@ background:none;
 /*DarkColorStart:#F6F6F6*/
 /*DarkColorEnd:#F6F6F6*/
 /*HighColor:#575959*/
+
+/*自己的配置*/
+QTreeView, QListView, QTableView, QTabWidget::pane {
+    border: 1px solid #C0DCF2;
+    selection-background-color: #F2F9FF;
+    selection-color: #ff0062;
+    alternate-background-color: #DAEFFF;
+    gridline-color: #C0DCF2;
+}
+
+QWidget[form="bottom"] QLabel, QWidget[form="title"] QLabel {
+    border-radius: 0px;
+    color: #9aff85;
+    background: none;
+    border-style: none;
+}
+
+
+QWidget[form="title"], QWidget[nav="left"], QWidget[nav="top"] QAbstractButton {
+    border-style: none;
+    border-radius: 0px;
+    padding: 5px;
+    color: #9aff85;
+    background: qlineargradient(spread:pad,
+    x1: 0,
+    y1: 0,
+    x2: 0,
+    y2: 1,
+    stop: 0 #DEF0FE,
+    stop: 1 #C0DEF6);
+}

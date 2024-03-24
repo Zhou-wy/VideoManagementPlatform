@@ -22,10 +22,8 @@ SeViManPlat::SeViManPlat(const QString &video_conf_json, const QString &log_save
     this->initVideoPlay();
     this->initLogger();
 
-    // page2初始化
-    this->initPage2();
-    // page4初始化
-    this->initPage4();
+
+
 
     connect(ui->p1_addVideoDevice, SIGNAL(clicked(bool)), this, SLOT(addVideoDialog()));
     connect(ui->p1_delVideoDevice, SIGNAL(clicked(bool)), this, SLOT(delVideoPlay()));
@@ -60,7 +58,7 @@ void SeViManPlat::initTimer() {
     cpuMonTimer->start();
     connect(cpuMonTimer, SIGNAL(timeout()), this, SLOT(onTimerOut()));
 
-    this->loadStyle(":/qss/lightblue.css");
+    this->loadStyle(":/qss/flatgray.css");
 }
 
 void SeViManPlat::initMenuPbt() {
@@ -71,7 +69,7 @@ void SeViManPlat::initMenuPbt() {
     QButtonGroup *btnGroup = new QButtonGroup(this);
     btnGroup->addButton(ui->monitorBtn);
     btnGroup->addButton(ui->videoBtn);
-    btnGroup->addButton(ui->logBtn);
+    btnGroup->addButton(ui->robotBtn);
     btnGroup->addButton(ui->dataBtn);
     btnGroup->addButton(ui->setupBtn);
 
@@ -89,7 +87,7 @@ void SeViManPlat::initMenuPbt() {
     styleColor.iconHeight = 35;
     styleColor.borderWidth = 3;
     styleColor.borderColor = "#A279C5";
-    styleColor.setColor("#396488", "#B6D7E3", "#10689A", "#F0F0F0");
+    styleColor.setColor("#ffc29c", "#ff6966", "#ff99d3", "#ff61e2");
     IconHelper::setStyle(ui->widget_title, btnGroup->buttons(), icons, styleColor);
 
     //默认选中某个按钮
@@ -120,10 +118,16 @@ void SeViManPlat::btnClicked() {
         ui->stackedWidget->setCurrentIndex(0);
     } else if (name == "视频回放") {
         ui->stackedWidget->setCurrentIndex(1);
+        // page2初始化
+        this->initPage2();
     } else if (name == "设备管理") {
         ui->stackedWidget->setCurrentIndex(2);
+        // page3初始化
+        this->InitPage3();
     } else if (name == "数据分析") {
         ui->stackedWidget->setCurrentIndex(3);
+        // page4初始化
+        this->initPage4();
     } else if (name == "系统设置") {
         ui->stackedWidget->setCurrentIndex(4);
     }
@@ -382,7 +386,7 @@ void SeViManPlat::initVideoPlay() {
                 webCamItem->addChild(web_stream);
             }
 
-        } else if (video_type.toLower() == "http-flv") {
+        } else if (video_type.toLower() == "http") {
             url = conf->urls[0];
             if (url == "") {
                 QMessageBox::critical(this, tr("ERROR"), tr(QString(
@@ -465,7 +469,7 @@ void SeViManPlat::addVideoPlay() {
             auto *webCam_stream = new QTreeWidgetItem();
             webCam_stream->setText(0, "RTMP-视频流");
             webCamItem->addChild(webCam_stream);
-        } else if (_type.toLower() == "http-flv") {
+        } else if (_type.toLower() == "http") {
             url = video_i->urls.at(0);
             auto *webCam_stream = new QTreeWidgetItem();
             webCam_stream->setText(0, "HTTP-FLV-视频流");
