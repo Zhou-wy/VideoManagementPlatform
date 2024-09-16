@@ -12,6 +12,9 @@ QGraphicsView {
     qproperty-backgroundBrush: #EAF7FF;
 }
 
+SeViManPlat {
+    background: #F1F2F6;
+}
 QWidget[form="true"], QLabel[frameShape="1"], QGraphicsView {
     border: 1px solid #C0DCF2;
     border-radius: 0px;
@@ -510,7 +513,7 @@ QTreeView, QListView, QTableView, QTabWidget::pane {
     alternate-background-color: #DAEFFF;
     gridline-color: #C0DCF2;
 }
-
+/*自己改的*/
 QTreeView::branch:closed:has-children {
     margin: 4px, 4px;
     border-image: url(:/qss/lightblue/web_cam_disable.png);
@@ -522,6 +525,24 @@ QTreeView::branch:open:has-children {
 
 }
 
+QTreeWidget{
+    font-family: Arial;
+    font-size: 14px;
+    font-style: normal;
+}
+
+QListView{
+    font-family: Arial;
+    font-size: 14px;
+    font-style: normal;
+}
+
+
+/*#QFrame{*/
+/*    border: 1px solid black;*/
+/*}*/
+
+/***======================================***/
 QTreeView, QListView, QTableView, QSplitter::handle, QTreeView::branch {
     background: #EAF7FF;
 }

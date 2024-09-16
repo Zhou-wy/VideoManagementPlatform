@@ -1,9 +1,5 @@
-//
-// Created by zhouwy on 2023/2/20.
-//
-
-#ifndef VIDEOMANPLAT_FFMPEG_H
-#define VIDEOMANPLAT_FFMPEG_H
+#ifndef FFMPEG_H
+#define FFMPEG_H
 
 #include <QtGui>
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
@@ -11,7 +7,7 @@
 #endif
 
 #include "ffmpeghead.h"
-#include "../utils/iLogger.h"
+
 class FFmpegThread : public QThread
 {
 Q_OBJECT
@@ -107,4 +103,4 @@ public slots:
     void clear();
 };
 
-#endif //VIDEOMANPLAT_FFMPEG_H
+#endif // FFMPEG_H

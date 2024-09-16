@@ -1,4 +1,5 @@
 ﻿#include "iconhelper.h"
+#include "../utils/iLOG.hpp"
 
 IconHelper *IconHelper::iconFontAliBaBa = 0;
 IconHelper *IconHelper::iconFontAwesome = 0;
@@ -123,7 +124,7 @@ IconHelper::IconHelper(const QString &fontFile, const QString &fontName, QObject
         int fontId = fontDb.addApplicationFont(fontFile);
         QStringList listName = fontDb.applicationFontFamilies(fontId);
         if (listName.size() == 0) {
-            qDebug() << QString("load %1 error").arg(fontName);
+            iERROR(ROOT_LOG) << QString("load %1 error").arg(fontName).toStdString();
         }
     }
 

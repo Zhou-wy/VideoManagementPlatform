@@ -1,5 +1,7 @@
-0build-mac/
-0build-linux/
-bin/
-.idea/
-.DS_Store
+0build-MinGW-QT/
+0build-Visual-Studio/
+.vs 
+.idea
+log
+bin/VideoManPlat.pdb
+out

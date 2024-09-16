@@ -1,0 +1,14 @@
+prefix=/d/ffmpeg/ffmpeg_4.3.5_install
+exec_prefix=${prefix}
+libdir=/d/ffmpeg/ffmpeg_4.3.5_install/lib
+includedir=/d/ffmpeg/ffmpeg_4.3.5_install/include
+
+Name: libpostproc
+Description: FFmpeg postprocessing library
+Version: 55.7.100
+Requires: 
+Requires.private: libavutil >= 56.51.100
+Conflicts:
+Libs: -L${libdir}  -lpostproc 
+Libs.private: -lm
+Cflags: -I${includedir}
